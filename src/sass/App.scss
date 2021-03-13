@@ -1,0 +1,39 @@
+@import 'index';
+
+.app {
+
+  .app-content {
+  padding: 20px;
+  position: absolute;
+  left: 5%;
+
+  width: 90%;
+  }
+
+}
+
+.ant-layout-footer {
+
+  @include base;
+
+  padding: 15px 20px;
+  text-align: center;
+
+  .author {
+
+    padding: 5px;
+    font-size: 10px;
+
+    opacity: 0.8;
+    
+    &:hover {
+
+      font-size: 12px;
+
+      opacity: 1.0;
+
+    }
+
+  }
+
+}

@@ -1,0 +1,19 @@
+@import './index';
+
+.highlight {
+
+    color: $highGreen0;
+
+    &:hover {
+
+        font-size: 15px;
+
+    }
+}
+
+.ant-modal-content {
+
+    padding: 15px;
+    text-align: justify;
+    
+}

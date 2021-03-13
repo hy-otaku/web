@@ -1,0 +1,43 @@
+@import 'index';
+
+.navigator {
+
+    height: 150px;
+    
+    background-color: rgba($white0, 0.7);
+
+    position: relative;
+
+    .menu {
+
+        @include horizontal-menu;
+        
+        // margin-left: 100px;
+        position: absolute;
+
+        bottom: 5px;
+
+        li {
+            font-size: 25px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        a {
+            color: $black8;
+            &:hover {
+                color: $blue5;
+            }
+        }
+        
+    }
+
+    .logo {
+        position: absolute;
+        right: 10px;
+        // color: red;
+        padding: 10px;
+        font-size: 20px;
+        background-color: red;
+    }
+}

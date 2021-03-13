@@ -1,0 +1,22 @@
+@import 'index';
+
+.ribbon {
+    
+    @include horizontal-menu;
+    background-color: $black5;
+    display: flow-root;
+
+    a {
+
+        color: $highGreen0;
+
+    }
+
+    // .ribbon-manga {
+        
+    // }
+
+    // .ribbon-anime {
+        
+    // }
+}
