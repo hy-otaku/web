@@ -4,7 +4,7 @@
 
     height: 150px;
     
-    background-color: rgba($white0, 0.7);
+    background-color: rgba($black2, 0.7);
 
     position: relative;
 
@@ -16,18 +16,41 @@
 
         bottom: 5px;
 
+        ul {
+            margin-bottom: 0;
+        }
+
+        div {
+
+            // make it a horizontal list
+            display: inline;
+            padding-bottom: 6px;
+        
+            &.selected {
+
+                border-bottom: 5px solid $highGreen0;
+
+                a {
+                    color: $highGreen0;
+                }
+                
+            }
+
+        }  
+
         li {
             font-size: 25px;
-            font-weight: 900;
+            font-weight: 500;
             text-transform: uppercase;
         }
 
         a {
-            color: $black8;
+            color: $black0;
             &:hover {
-                color: $blue5;
+                color: $highGreen0;
             }
-        }
+
+        }      
         
     }
 
