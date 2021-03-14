@@ -4,9 +4,10 @@ import './sass/CompletedIndication.scss'
 
 class CompletedIndication extends Component {
   render () {
-    // todo(tado-mi): return nothing when there is no need to indicate completeness.
-    // for example, when it's a list of 'random' shorts
     const { complete } = this.props
+    if (complete === undefined) {
+      return null
+    }
 
     return (
       complete
