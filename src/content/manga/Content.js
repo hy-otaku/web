@@ -84,7 +84,7 @@ class Content extends Component {
     for (const item of data) {
       const path = `${self}/${item.path}`
       list.push(
-        <Card {...item} path={path} />
+        <Card {...item} path={path} key={path} />
       )
     }
 
