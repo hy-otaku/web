@@ -7,14 +7,25 @@ import SearchBar from './SearchBar.js'
 import Logo from './Logo.js'
 
 class Navigator extends Component {
+  constructor (props) {
+    super(props)
+    const { location: { pathname } } = this.props
+    this.state = {
+      selected: pathname.split('/')[1]
+    }
+  }
+
   render () {
     const val = []
+    const { selected } = this.state
     const { sections, searchFunction } = this.props
 
     for (const { path, title } of Object.values(sections)) {
       val.push(
         <li key={`/${path}`}>
-          <Link to={`/${path}`}> {title} </Link>
+          <div className={path === selected ? 'selected' : ''}>
+            <Link to={`/${path}`} onClick={() => this.setState({ selected: path })}> {title} </Link>
+          </div>
         </li>
       )
     }
