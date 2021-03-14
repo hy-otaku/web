@@ -4,6 +4,7 @@ import { Link, withRouter } from 'react-router-dom'
 import './sass/Navigator.scss'
 
 import SearchBar from './SearchBar.js'
+import Logo from './Logo.js'
 
 class Navigator extends Component {
   render () {
@@ -32,10 +33,9 @@ class Navigator extends Component {
             <SearchBar searchFunction={searchFunction} />
           </div>
           <div className='logo'>
-            LOGO?
+            <Logo />
           </div>
         </div>
-
       </div>
     )
   }
