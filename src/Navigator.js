@@ -3,10 +3,12 @@ import { Link, withRouter } from 'react-router-dom'
 
 import './sass/Navigator.scss'
 
+import SearchBar from './SearchBar.js'
+
 class Navigator extends Component {
   render () {
     const val = []
-    const { sections } = this.props
+    const { sections, searchFunction } = this.props
 
     for (const { path, title } of Object.values(sections)) {
       val.push(
@@ -25,8 +27,13 @@ class Navigator extends Component {
           </ul>
         </div>
 
-        <div className='logo'>
-          LOGO?
+        <div className='right-pane'>
+          <div className='searchbar'>
+            <SearchBar searchFunction={searchFunction} />
+          </div>
+          <div className='logo'>
+            LOGO?
+          </div>
         </div>
 
       </div>
