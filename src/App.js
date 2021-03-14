@@ -16,19 +16,27 @@ import Anime, { getRoutes as animeRoutes } from './content/Anime.js'
 class App extends Component {
   constructor (props) {
     super(props)
+    this.state = {
+      query: ''
+    }
+  }
 
-    this.sections = {
+  render () {
+    const { Footer } = Layout
+
+    const { query } = this.state
+    const sections = {
 
       anime: {
         path: 'anime',
         title: 'անիմե',
-        content: () => <Anime />
+        content: () => <Anime query={query} />
       },
 
       manga: {
         path: 'manga',
         title: 'մանգա',
-        content: () => <Manga />
+        content: () => <Manga query={query} />
       },
 
       about: {
@@ -38,13 +46,9 @@ class App extends Component {
       }
 
     }
-  }
-
-  render () {
-    const { Footer } = Layout
 
     const routes = []
-    for (const { path, content } of Object.values(this.sections)) {
+    for (const { path, content } of Object.values(sections)) {
       routes.push(
         <Route
           exact path={`/${path}`} key={`/${path}`}
@@ -61,7 +65,7 @@ class App extends Component {
         <Router>
           <Ribbon />
 
-          <Piccha sections={this.sections} />
+          <Piccha sections={sections} searchFunction={query => this.setState({ query })} />
           <div className='app-content'>
 
             <Switch>

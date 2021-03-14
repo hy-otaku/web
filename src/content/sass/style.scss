@@ -1,26 +1,14 @@
 @import '../../sass/index';
 
 .ant-row {
+
     padding-left: $left; 
+    
 }
 
 .main-content {
+
     padding: 10px;
-
-    h1 {
-
-        white-space: nowrap;
-        position: relative;
-
-    }
-
-    .ant-input-search {
-        width: 60%;
-        
-        position:absolute;
-        bottom: 0px;
-        right: 0px;
-      }
 
 }
 
