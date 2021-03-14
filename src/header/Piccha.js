@@ -10,7 +10,7 @@ class Piccha extends Component {
     const { sections, searchFunction, location: { pathname } } = this.props
     const collapsed = pathname.startsWith('/anime') || pathname.startsWith('/manga')
     return (
-      <div className={`piccha${collapsed? ' collapsed': ''}`}>
+      <div className={`piccha${collapsed ? ' collapsed' : ''}`}>
 
         <Navigator sections={sections} searchFunction={searchFunction} />
 
