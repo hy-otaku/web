@@ -6,8 +6,8 @@ import './sass/App.scss'
 import { Layout } from 'antd'
 
 import Disclaimer from './Disclaimer.js'
-import Ribbon from './Ribbon.js'
-import Piccha from './Piccha.js'
+import Ribbon from './header/Ribbon.js'
+import Piccha from './header/Piccha.js'
 
 import About from './content/About.js'
 import Manga, { getRoutes as mangaRoutes } from './content/Manga.js'
