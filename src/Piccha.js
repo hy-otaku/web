@@ -6,10 +6,11 @@ import Navigator from './Navigator.js'
 
 class Piccha extends Component {
   render () {
+    const { sections, searchFunction } = this.props
     return (
       <div className='piccha'>
 
-        <Navigator sections={this.props.sections} />
+        <Navigator sections={sections} searchFunction={searchFunction} />
 
         <div className='info'>
           <h1> Lorem ipsum </h1>

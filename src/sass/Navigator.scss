@@ -12,7 +12,6 @@
 
         @include horizontal-menu;
         
-        // margin-left: 100px;
         position: absolute;
 
         bottom: 5px;
@@ -32,12 +31,36 @@
         
     }
 
-    .logo {
+    .right-pane {
+
         position: absolute;
-        right: 10px;
-        // color: red;
-        padding: 10px;
-        font-size: 20px;
-        background-color: red;
+        right: 0;
+        
+        div {
+            display: inline-block;
+            padding: 10px;
+        }
+
+        .searchbar {
+
+            .ant-input-search {
+
+                width: 20vw;
+                // location
+                position: absolute;
+                bottom: 0px;
+                right: 18.5vw;
+
+            }
+
+        }
+
+        .logo {
+
+            font-size: 20px;
+            width: 18vw;
+            background-color: red;
+
+        }
     }
 }
