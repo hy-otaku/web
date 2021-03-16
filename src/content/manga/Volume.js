@@ -7,10 +7,9 @@ import enumeratedData from './enumeratedData'
 
 import './sass/Volume.scss'
 
-import { Row, Col } from 'antd'
-
 import Lightbox from 'react-awesome-lightbox'
 
+import Grid from '../Grid.js'
 import CompletedIndication from '../CompletedIndication.js'
 
 class Volume extends Component {
@@ -24,7 +23,7 @@ class Volume extends Component {
 
     }
 
-    const { manga } = this.props
+    const { manga, num } = this.props
     if (manga.includes('/')) {
       const path = manga.split('/')
 
@@ -40,6 +39,28 @@ class Volume extends Component {
 
       this.data = enumeratedData[manga]
     }
+
+    const { data: { volumes }, jsonData: { chapters } } = this
+    const enumeratedChapters = volumes[num]
+    const chapterList = Object.keys(enumeratedChapters).filter(item => item !== 'cover').sort()
+
+    this.chapters = chapterList.map(item => {
+      const _item = parseInt(item)
+      let src = enumeratedChapters[item][0]
+      if (chapters && chapters[_item]) {
+        const { cover } = chapters[_item]
+        src = find(
+          enumeratedChapters[item], url => url.includes(cover)
+        ) || src
+      }
+
+      return {
+        cover: src,
+        text: `գլուխ #${_item}`,
+        name: 'chapter',
+        callback: () => this.onChapterChoice(item)
+      }
+    })
 
     this.onChapterChoice = this.onChapterChoice.bind(this)
     this.handleClose = this.onClose.bind(this)
@@ -60,38 +81,6 @@ class Volume extends Component {
       open: true
 
     })
-  }
-
-  renderChapters () {
-    const enumeratedChapters = this.data.volumes[this.props.num]
-    const chapterList = Object.keys(enumeratedChapters).filter(item => item !== 'cover').sort()
-
-    const { chapters } = this.jsonData
-    const cols = chapterList.map(item => {
-      const _item = parseInt(item)
-      let src = enumeratedChapters[item][0]
-      if (chapters && chapters[_item]) {
-        const { cover } = chapters[_item]
-        src = find(
-          enumeratedChapters[item], url => url.includes(cover)
-        ) || src
-      }
-      return (
-        <Col flex='15%' key={item} className='clickable chapter'>
-          <img
-            src={src} title={item} alt=''
-            onClick={() => this.onChapterChoice(item)}
-          />
-          <span> գլուխ #{item} </span>
-        </Col>
-      )
-    })
-
-    cols.push(
-      <Col flex='auto' key={cols.length}> </Col>
-    )
-
-    return <Row gutter={[20, 20]}> {cols} </Row>
   }
 
   renderOpenChapter () {
@@ -130,7 +119,7 @@ class Volume extends Component {
           <CompletedIndication complete={volumes[parseInt(num)].complete} />
         </h4>
 
-        {this.renderChapters()}
+        <Grid data={this.chapters} />
         {this.renderOpenChapter()}
 
       </>
