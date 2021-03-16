@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 
-import './sass/SearchBar.scss'
-
 import { Input } from 'antd'
 
 class SearchBar extends Component {

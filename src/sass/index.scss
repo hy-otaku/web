@@ -2,18 +2,6 @@
 
 // variables
 
-// ant blue
-$blue0: #e6f7ff;
-$blue1: #bae7ff;
-$blue2: #91d5ff;
-$blue3: #69c0ff;
-$blue4: #40a9ff;
-$blue5: #1890ff;
-$blue6: #096dd9;
-$blue7: #0050b3;
-$blue8: #003a8c;
-$blue9: #002766;
-
 // ant gray scale
 $white0: #ffffff;
 $white1: #fafafa;
@@ -29,12 +17,10 @@ $black6: #1f1f1f;
 $black7: #141414;
 $black8: #000000;
 
-// hy otaku
-$highGreen0: #1abc9c;
-$highGreen1: #0c9076;
-
-$highOrange0: #f27935;
-$highOrange1: #bf602a; 
+// tri chromatic color scheme
+$color0: #1890ff;
+$color1: #1abc9c;
+$color2: #f27935;
 
 $left: 20px;
 
@@ -76,7 +62,7 @@ body {
 
 @mixin heading {
 
-  color: $blue5;
+  color: $color0;
 
   // top right bottom left
   padding: 5px 0px 0px $left;
@@ -108,7 +94,7 @@ h4 {
 }
 
 code {
-  color: $highGreen1;
+  color: $color1;
 }
 
 .clickable {
