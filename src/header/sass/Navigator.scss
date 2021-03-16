@@ -4,7 +4,7 @@
 
     height: 150px;
     
-    background-color: rgba($black2, 0.7);
+    background-color: rgba($white3, 0.7);
 
     position: relative;
 
@@ -28,10 +28,10 @@
         
             &.selected {
 
-                border-bottom: 5px solid $highGreen0;
+                border-bottom: 5px solid $color0;
 
                 a {
-                    color: $highGreen0;
+                    color: $color0;
                 }
                 
             }
@@ -45,9 +45,9 @@
         }
 
         a {
-            color: $black0;
+            color: $black6;
             &:hover {
-                color: $highGreen0;
+                color: $color0;
             }
 
         }      
