@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 
+import { routes as allRoutes } from './routes.js'
+
 import './sass/App.scss'
 
 import { Layout } from 'antd'
 
-import Disclaimer from './Disclaimer.js'
 import Ribbon from './header/Ribbon.js'
 import Piccha from './header/Piccha.js'
 
 import About from './content/About.js'
-import Manga, { getRoutes as mangaRoutes } from './content/Manga.js'
-import Anime, { getRoutes as animeRoutes } from './content/Anime.js'
+import Content from './content/Content.js'
+
+import Disclaimer from './Disclaimer.js'
 
 class App extends Component {
   constructor (props) {
@@ -30,13 +32,13 @@ class App extends Component {
       anime: {
         path: 'anime',
         title: 'անիմե',
-        content: () => <Anime query={query} />
+        content: () => <Content anime query={query} />
       },
 
       manga: {
         path: 'manga',
         title: 'մանգա',
-        content: () => <Manga query={query} />
+        content: () => <Content manga query={query} />
       },
 
       about: {
@@ -57,15 +59,15 @@ class App extends Component {
       )
     }
 
-    routes.push(...mangaRoutes())
-    routes.push(...animeRoutes())
+    routes.push(...allRoutes)
 
     return (
       <div className='app'>
         <Router>
-          <Ribbon />
 
+          <Ribbon />
           <Piccha sections={sections} searchFunction={query => this.setState({ query })} />
+
           <div className='app-content'>
 
             <Switch>
