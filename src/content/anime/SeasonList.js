@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
 import { animeJson } from '../../constants.js'
 
 import { normalize } from '../../functions.js'
 
 import CompletedIndication from '../CompletedIndication.js'
+import List from '../List.js'
 import EpisodeList from './EpisodeList'
 
 class SeasonList extends Component {
@@ -14,33 +15,28 @@ class SeasonList extends Component {
 
     const { anime } = this.props
     this.jsonData = animeJson.find(item => item.path === anime)
-  }
 
-  getSeasonList () {
-    const { path: animePath, seasons } = this.jsonData
-    const seasonList = []
+    const { path, seasons } = this.jsonData
+    this.seasonList = []
 
     for (const index in seasons) {
       const { complete } = seasons[index]
 
       const _index = normalize(index)
-      const path = `${animePath}/${_index}`
 
-      seasonList.push(
-        <li key={path}>
-          <Link to={path}> եթերաշրջան #{_index} </Link> <CompletedIndication complete={complete} />
-        </li>
-      )
+      this.seasonList.push({
+        path: `${path}/${_index}`,
+        complete,
+        text: `եթերաշրջան #${_index}`
+      })
     }
-
-    return <ul> {seasonList} </ul>
   }
 
   render () {
     const { title, complete, feature, seasons } = this.jsonData
 
     const content = seasons
-      ? this.getSeasonList()
+      ? <List data={this.seasonList} />
       : <EpisodeList anime={this.props.anime} />
 
     return (
