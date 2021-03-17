@@ -9,7 +9,7 @@ import './sass/Volume.scss'
 
 import Lightbox from 'react-awesome-lightbox'
 
-import Grid from '../Grid.js'
+import View from '../View.js'
 import CompletedIndication from '../CompletedIndication.js'
 
 class Volume extends Component {
@@ -119,7 +119,7 @@ class Volume extends Component {
           <CompletedIndication complete={volumes[parseInt(num)].complete} />
         </h4>
 
-        <Grid data={this.chapters} />
+        <View data={this.chapters} />
         {this.renderOpenChapter()}
 
       </>

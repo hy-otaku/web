@@ -6,7 +6,7 @@ import { animeJson } from '../../constants.js'
 import { normalize } from '../../functions.js'
 
 import CompletedIndication from '../CompletedIndication.js'
-import List from '../List.js'
+import View from '../View.js'
 import EpisodeList from './EpisodeList'
 
 class SeasonList extends Component {
@@ -36,7 +36,7 @@ class SeasonList extends Component {
     const { title, complete, feature, seasons } = this.jsonData
 
     const content = seasons
-      ? <List data={this.seasonList} />
+      ? <View data={this.seasonList} />
       : <EpisodeList anime={this.props.anime} />
 
     return (

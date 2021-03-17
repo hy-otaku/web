@@ -7,7 +7,7 @@ import { normalize } from '../../functions.js'
 
 import './sass/VolumeList.scss'
 
-import Grid from '../Grid.js'
+import View from '../View.js'
 import CompletedIndication from '../CompletedIndication.js'
 
 class VolumeList extends Component {
@@ -50,7 +50,7 @@ class VolumeList extends Component {
     return (
       <>
         {header}
-        <Grid data={volumeList} />
+        <View data={volumeList} />
 
       </>
     )

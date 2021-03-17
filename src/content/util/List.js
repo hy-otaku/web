@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 
-import CompletedIndication from './CompletedIndication.js'
+import CompletedIndication from '../CompletedIndication.js'
 
 class List extends Component {
   render () {
     const { data } = this.props
     const list = []
-    for (const { path, cover, complete, text, callback, name } of data) {
+    for (const { path, complete, text, callback, name } of data) {
       const content = (
         <>
           <span> {text} </span> <CompletedIndication complete={complete} />
