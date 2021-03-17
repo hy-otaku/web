@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
+import './sass/View.scss'
+
 import { Switch } from 'antd'
 
 import Grid from './util/Grid.js'
@@ -20,16 +22,17 @@ class View extends Component {
     const { isGrid } = this.state
 
     return (
-      <div>
+      <div className='view'>
         <Switch
           defaultChecked={isGrid} checkedChildren='ցանց'
           unCheckedChildren='ցանկ'
           onChange={(val) => this.setState({ isGrid: val })}
         />
-        {isGrid
-          ? <Grid data={data} defaultCover={defaultCover} />
-          : <List data={data} />}
-
+        <div className='data'>
+          {isGrid
+            ? <Grid data={data} defaultCover={defaultCover} />
+            : <List data={data} />}
+        </div>
       </div>
     )
   }
