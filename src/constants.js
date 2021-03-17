@@ -2,6 +2,7 @@ export const mangaJson = [
   {
     path: 'bleach',
     title: 'բլիչ',
+    complete: false,
     volumes: {
       55: {
         title: 'արյունարբու պատերազմը',
@@ -61,6 +62,7 @@ export const mangaJson = [
   {
     path: 'death-note',
     title: 'մահվան տետրը',
+    complete: false,
     volumes: {
       1: {
         complete: true
@@ -135,11 +137,13 @@ export const mangaJson = [
   {
     path: 'hellsing',
     title: 'հելլսինգ',
+    complete: false,
     submanga: [
 
       {
         path: 'main',
         title: 'հիմանական',
+        complete: false,
         volumes: {
           1: {
             complete: true
@@ -210,8 +214,11 @@ export const mangaJson = [
   {
     path: 'k-on',
     title: 'քեյ֊օն',
+    complete: false,
     volumes: {
-      1: { }
+      1: {
+        complete: false
+      }
     },
     chapters: {
       0: { cover: '02.png' },
@@ -231,13 +238,17 @@ export const mangaJson = [
   {
     path: 'kuroko-no-baske',
     title: 'կուրոկոյի բասկետբոլը',
+    complete: false,
     submanga: [
 
       {
         path: 'extra-cut',
         title: 'էքստրա քաթ',
+        complete: false,
         volumes: {
-          1: {}
+          1: {
+            complete: false
+          }
         }
       }
 
@@ -254,8 +265,10 @@ export const mangaJson = [
   {
     path: 'naruto',
     title: 'նարուտո',
+    complete: false,
     volumes: {
       60: {
+        complete: false,
         title: 'Քուրամա'
       }
     },
@@ -269,8 +282,10 @@ export const mangaJson = [
   {
     path: 'naruto-wst',
     title: 'նարուտո (արևմտահայերեն)',
+    complete: false,
     volumes: {
       60: {
+        complete: false,
         title: 'Քուրամա'
       }
     },
@@ -284,13 +299,15 @@ export const mangaJson = [
   {
     path: 'one-piece',
     title: 'վան փիս',
+    complete: false,
     volumes: {
       1: {
         title: 'արկածների լուսաբացը',
         complete: true
       },
       2: {
-        title: 'ընդհարում․ բագիի ծովահենախումբը'
+        title: 'ընդհարում․ բագիի ծովահենախումբը',
+        complete: false
       }
     },
     chapters: {
@@ -316,6 +333,7 @@ export const mangaJson = [
   {
     path: 'rurouni-kenshin',
     title: 'րուրոունի քենշին',
+    complete: false,
     submanga: [
       {
         path: 'master-of-the-flame',
@@ -520,6 +538,7 @@ export const animeJson = [
     path: 'attack-on-titan',
     title: 'տիտանների գրոհը',
     channel: 'attack_on_titans',
+    complete: false,
     seasons: {
       1: {
         complete: true
@@ -789,6 +808,7 @@ export const animeJson = [
   {
     path: 'magi',
     title: 'մագի',
+    complete: false,
     seasons: {
       1: {
         complete: true
@@ -885,8 +905,11 @@ export const animeJson = [
     path: 'sword-art-online',
     title: 'թրերի վարպետ օնլայն',
     channel: 'sword_art_online',
+    complete: false,
     seasons: {
-      1: { }
+      1: {
+        complete: false
+      }
     },
     episodes: {
       1: {

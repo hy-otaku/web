@@ -105,11 +105,11 @@ class Card extends Component {
   }
 
   render () {
-    const { path, title, complete, feature, shorts } = this.props
+    const { path, title, complete } = this.props
 
     return (
       <div className='information-card'>
-        <Link to={path}> «{title}» </Link> <CompletedIndication complete={complete || feature || shorts} />
+        <Link to={path}> «{title}» </Link> <CompletedIndication complete={complete} />
         <table>
           <tbody>
 
