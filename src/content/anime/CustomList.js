@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 
-import { cloneDeep, find } from 'lodash'
+import { find } from 'lodash'
 
 import enumeratedData from './enumeratedData.js'
 import { animeJson } from '../../constants.js'
 
 import Video from './Video.js'
+import View from '../View.js'
 
 class CustomList extends Component {
   constructor (props) {
@@ -16,55 +17,34 @@ class CustomList extends Component {
     this.jsonData = animeJson.find(item => item.path === anime)
     const { title, list } = this.jsonData
 
-    this.component = []
+    const parsedEnumeratedData = list ? enumeratedData.shorts : enumeratedData.feature;
+    const values = list ? Object.values(list) : [{ title }]
 
-    if (list) { // shorts
-      for (const index in Object.values(list)) {
-        const { title } = Object.values(list)[index]
-        const { url } = find(enumeratedData.shorts, item => item.name.includes(title))
-        this.component.push(
-          <li key={title}>
-            <span onClick={() => this.setState({ url, title, index })} className='clickable video-listing'> «{title}» </span>
-          </li>
-        )
-      }
-    } else { // feature
-      const { url } = find(enumeratedData.feature, item => item.name.includes(title))
-      this.component.push(
-        <Video url={url} key='key' />
-      )
+    this.data = []
+    for (const { title } of values) {
+      const { url } = find(parsedEnumeratedData, item => item.name.includes(title))
+      this.data.push({
+        text: `«${title}»`,
+        name: 'video-listing',
+        callback: () => this.setState({ url, on: true }),
+      });
     }
 
-    this.state = {}
+    this.state = {
+      on: false,
+      url: null,
+    }
   }
 
   render () {
     const { title } = this.jsonData
-
-    const { url, title: selectedTitle, index } = this.state
-    let component = this.component
-
-    if (url) {
-      component = [
-        ...cloneDeep(this.component).slice(0, index),
-        (
-          <li key={selectedTitle}>
-            <h3 onClick={() => this.setState({ url: undefined })} className='clickable'> «{selectedTitle}» </h3>
-            <Video url={url} />
-          </li>
-        ),
-        ...cloneDeep(this.component).slice(index + 1)
-      ]
-    }
-
-    component = <ul> {component} </ul>
+    const { url, on } = this.state
 
     return (
       <>
-
         <h2> {title} </h2>
-        {component}
-
+        <View data={this.data} />
+        <Video url={url} on={on} onClose={() => this.setState({on: false})}/>
       </>
     )
   }
