@@ -7,7 +7,7 @@ import { normalize } from '../../functions.js'
 
 import CompletedIndication from '../CompletedIndication.js'
 import View from '../View.js'
-import EpisodeList from './EpisodeList'
+import Season from './Season'
 
 class SeasonList extends Component {
   constructor (props) {
@@ -37,7 +37,7 @@ class SeasonList extends Component {
 
     const content = seasons
       ? <View data={this.seasonList} />
-      : <EpisodeList anime={this.props.anime} />
+      : <Season anime={this.props.anime} />
 
     return (
       <>
