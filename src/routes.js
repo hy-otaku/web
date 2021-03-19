@@ -10,7 +10,7 @@ import Submanga from './content/manga/Submanga.js'
 
 import SeasonList from './content/anime/SeasonList.js'
 import CustomList from './content/anime/CustomList.js'
-import EpisodeList from './content/anime/EpisodeList.js'
+import Season from './content/anime/Season.js'
 
 const mangaRoutes = () => {
   const self = '/manga'
@@ -93,7 +93,7 @@ const animeRoutes = () => {
     for (const index in seasons) {
       const _index = normalize(index)
       const _path = `${path}/${_index}`
-      const _content = () => <EpisodeList anime={animePath} num={index} />
+      const _content = () => <Season anime={animePath} num={index} />
       routes.push(
         <Route
           exact path={_path} key={_path}

@@ -2,22 +2,21 @@ import React, { Component } from 'react'
 
 import enumeratedData from './enumeratedData.js'
 
-import './sass/Video.scss'
+import GenericLightbox from './GenericLightbox.js'
 
 class Video extends Component {
   render () {
-    const { anime, channel, index } = this.props
-
+    const { anime, channel, index, on, onClose } = this.props
+    
     const data = enumeratedData[channel || anime]
-    const url = this.props.url || data[index]
+    const url = this.props.url || data && data[index]
 
     return (
-      <iframe
-        src={url}
-        title={`${anime}/${index}`}
-        width='720px' height='405px'
-        allowFullScreen
+      on
+      ? <GenericLightbox iframe item={url} 
+          onClose={() => onClose()} 
       />
+      : null
     )
   }
 }
