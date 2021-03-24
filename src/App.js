@@ -7,13 +7,12 @@ import './sass/App.scss'
 
 import { Layout } from 'antd'
 
-import Ribbon from './header/Ribbon.js'
-import Piccha from './header/Piccha.js'
+import Header from './header/Header.js'
 
 import About from './content/About.js'
 import Content from './content/Content.js'
 
-import Disclaimer from './Disclaimer.js'
+import Disclaimer from './footer/Disclaimer.js'
 
 class App extends Component {
   constructor (props) {
@@ -65,8 +64,10 @@ class App extends Component {
       <div className='app'>
         <Router>
 
-          <Ribbon />
-          <Piccha sections={sections} searchFunction={query => this.setState({ query })} />
+          <Header
+            sections={sections}
+            searchFunction={query => this.setState({ query })}
+          />
 
           <div className='app-content'>
 
@@ -77,7 +78,9 @@ class App extends Component {
             <Footer>
               <Disclaimer />
             </Footer>
+
           </div>
+
         </Router>
 
       </div>

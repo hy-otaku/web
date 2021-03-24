@@ -22,7 +22,7 @@ function Cond(props){
         </React.Fragment>
     );
 }
-export default class GenericLightbox extends React.Component {
+export default class Lightbox extends React.Component {
     initX = 0;
     initY = 0;
     lastX = 0;

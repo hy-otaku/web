@@ -7,7 +7,7 @@ import { animeJson, mangaJson } from '../constants.js'
 
 import './sass/style.scss'
 
-import Card from './Card.js'
+import Card from './util/Card.js'
 
 class Content extends Component {
   render () {

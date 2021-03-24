@@ -1,16 +1,7 @@
-def enumerate_to_file(dirname, data):
 
-    filename = '%s/enumeratedData.js' %dirname
-
-    import pprint
-    output = pprint.pformat(data)
-    with open(filename, 'w') as file:
-        file.write(
-            'export default %s' %output
-        )
 
 '''
-    enumerates all the animes, and writes the outcome a JS file
+    enumerates all the animes
     note: need to update the list of channels in line 49
 '''
 def get_anime():
@@ -56,10 +47,10 @@ def get_anime():
     for channel in ['feature', 'shorts']:
         data[channel] = get(channel, True)
 
-    enumerate_to_file('anime', data)
+    return data
 
 '''
-    enumerates all the mangas, and writes the outcome a JS file
+    enumerates all the mangas
 '''
 def get_manga():
 
@@ -154,11 +145,25 @@ def get_manga():
 
     root = '../../../manga-data'
     data = get_mangajson(root, root, 'https://raw.githubusercontent.com/high-otaku/manga-data/master')
-    enumerate_to_file('manga', data)
+    return data
 
 def main():
-    get_anime()
-    get_manga()
+
+    anime_data = get_anime()
+    manga_data = get_manga()
+
+    filename = './enumeratedData.js'
+
+    import pprint
+    # output = pprint.pformat(data)
+    with open(filename, 'w') as file:
+        file.write(
+            'export const animeData = %s\n' %pprint.pformat(anime_data)
+        )
+        file.write(
+            'export const mangaData = %s\n' %pprint.pformat(manga_data)
+        )
+
 
 if __name__ == '__main__':
     main()
