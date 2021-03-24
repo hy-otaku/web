@@ -31,11 +31,11 @@ class Season extends Component {
       count = this.season.episodeCount || count
     }
 
-    this.Season = []
+    this.season = []
 
     for (let item = offset; item < offset + count; item = item + 1) {
       const { title } = episodes[item]
-      this.Season.push({
+      this.season.push({
         text: `սերիա #${normalize(item)} ${title && `«${title}»`}`,
         name: 'video-listing',
         callback: () => this.setState({ item, title, open: true })
@@ -55,7 +55,7 @@ class Season extends Component {
             ? <h2> {title} | եթերաշրջան #{normalize(num)} <CompletedIndication complete={this.season.complete} /> </h2>
             : null
         }
-        <View data={this.Season} />
+        <View data={this.season} />
         <Custombox stream channel={channel} anime={anime} index={item - 1} on={open} onClose={() => this.setState({ open: false })} />
       </>
     )
