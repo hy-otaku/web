@@ -5,8 +5,8 @@ import './sass/View.scss'
 
 import { Switch } from 'antd'
 
-import Grid from './util/Grid.js'
-import List from './util/List.js'
+import Grid from './Grid.js'
+import List from './List.js'
 
 class View extends Component {
   constructor (props) {

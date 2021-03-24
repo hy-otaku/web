@@ -3,13 +3,19 @@ import React, { Component } from 'react'
 import { animeJson } from '../../constants.js'
 import { normalize } from '../../functions.js'
 
-import CompletedIndication from '../CompletedIndication.js'
-import View from '../View.js'
-import Video from './Video'
+import View from '../util/view/View.js'
+import CompletedIndication from '../util/CompletedIndication.js'
+import Custombox from '../util/Custombox.js'
 
 class Season extends Component {
   constructor (props) {
     super(props)
+
+    this.state = {
+
+      open: false
+
+    }
 
     const { anime, num } = this.props
     this.jsonData = animeJson.find(item => item.path === anime)
@@ -32,33 +38,27 @@ class Season extends Component {
       this.Season.push({
         text: `սերիա #${normalize(item)} ${title && `«${title}»`}`,
         name: 'video-listing',
-        callback: () => this.setState({ item, title, on: true }),
+        callback: () => this.setState({ item, title, open: true })
       })
-      
-    }
-
-    this.state = { 
-      on: false
     }
   }
 
   render () {
     const { num, anime } = this.props
-    const { item, on } = this.state
+    const { item, open } = this.state
     const { title, channel } = this.jsonData
-  
+
     return (
       <>
         {
-          this.season 
-          ? <h2> {title} | եթերաշրջան #{normalize(num)} <CompletedIndication complete={this.season.complete} /> </h2> 
-          : null 
+          this.season
+            ? <h2> {title} | եթերաշրջան #{normalize(num)} <CompletedIndication complete={this.season.complete} /> </h2>
+            : null
         }
         <View data={this.Season} />
-        <Video channel={channel} anime={anime} index={item - 1} on={on} onClose={() => this.setState({on: false})}/>
+        <Custombox stream channel={channel} anime={anime} index={item - 1} on={open} onClose={() => this.setState({ open: false })} />
       </>
     )
-      
   }
 }
 

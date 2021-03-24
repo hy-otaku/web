@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
-import enumeratedData from './enumeratedData.js'
+import { mangaData } from '../enumeratedData.js'
 
 import { normalize } from '../../functions.js'
 
 import './sass/VolumeList.scss'
 
-import View from '../View.js'
-import CompletedIndication from '../CompletedIndication.js'
+import View from '../util/view/View.js'
+import CompletedIndication from '../util/CompletedIndication.js'
 
 class VolumeList extends Component {
   render () {
     const { manga, volumes, title, superTitle, complete, match: { path } } = this.props
 
-    let data = enumeratedData
+    let data = mangaData
     if (manga.includes('/')) {
       const path = manga.split('/')
       data = data[path[0]][path[1]]

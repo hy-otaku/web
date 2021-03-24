@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 
 import { find } from 'lodash'
 
-import enumeratedData from './enumeratedData.js'
+import { animeData } from '../enumeratedData.js'
 import { animeJson } from '../../constants.js'
 
-import Video from './Video.js'
-import View from '../View.js'
+import Custombox from '../util/Custombox.js'
+import View from '../util/view/View.js'
 
 class CustomList extends Component {
   constructor (props) {
@@ -17,7 +17,7 @@ class CustomList extends Component {
     this.jsonData = animeJson.find(item => item.path === anime)
     const { title, list } = this.jsonData
 
-    const parsedEnumeratedData = list ? enumeratedData.shorts : enumeratedData.feature;
+    const parsedEnumeratedData = list ? animeData.shorts : animeData.feature
     const values = list ? Object.values(list) : [{ title }]
 
     this.data = []
@@ -26,13 +26,13 @@ class CustomList extends Component {
       this.data.push({
         text: `«${title}»`,
         name: 'video-listing',
-        callback: () => this.setState({ url, on: true }),
-      });
+        callback: () => this.setState({ url, on: true })
+      })
     }
 
     this.state = {
       on: false,
-      url: null,
+      url: null
     }
   }
 
@@ -44,7 +44,7 @@ class CustomList extends Component {
       <>
         <h2> {title} </h2>
         <View data={this.data} />
-        <Video url={url} on={on} onClose={() => this.setState({on: false})}/>
+        <Custombox stream url={url} on={on} onClose={() => this.setState({ on: false })} />
       </>
     )
   }

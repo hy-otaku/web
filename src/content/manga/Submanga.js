@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
-import CompletedIndication from '../CompletedIndication.js'
+import CompletedIndication from '../util/CompletedIndication.js'
+import View from '../util/view/View.js'
 
 class Submanga extends Component {
   render () {
@@ -9,21 +10,20 @@ class Submanga extends Component {
     const { data, title, complete } = this.props
 
     const list = []
-    for (const { path: submangaPath, title, complete: _complete } of data) {
-      const path = `${self}/${submangaPath}`
+    for (const { path, title, complete: _complete } of data) {
       list.push(
-        <li key={path}>
-          <Link to={path}> «{title}» </Link> <CompletedIndication complete={_complete} />
-        </li>
+        {
+          path: `${self}/${path}`,
+          complete: _complete,
+          text: `«${title}»`
+        }
       )
     }
 
     return (
       <>
         <h2> {title} <CompletedIndication complete={complete} /></h2>
-        <ul>
-          {list}
-        </ul>
+        <View data={list} />
       </>
     )
   }

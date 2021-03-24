@@ -5,8 +5,8 @@ import { animeJson } from '../../constants.js'
 
 import { normalize } from '../../functions.js'
 
-import CompletedIndication from '../CompletedIndication.js'
-import View from '../View.js'
+import CompletedIndication from '../util/CompletedIndication.js'
+import View from '../util/view/View.js'
 import Season from './Season'
 
 class SeasonList extends Component {
