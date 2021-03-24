@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+import { animeData } from '../enumeratedData.js'
 import { animeJson } from '../../constants.js'
 import { normalize } from '../../functions.js'
 
@@ -20,7 +21,8 @@ class Season extends Component {
     const { anime, num } = this.props
     this.jsonData = animeJson.find(item => item.path === anime)
 
-    const { episodes, seasons } = this.jsonData
+    const { episodes, seasons, channel } = this.jsonData
+    const enumeratedData = animeData[channel || anime]
 
     let offset = 1
     let count = Object.values(episodes).length
@@ -35,8 +37,10 @@ class Season extends Component {
 
     for (let item = offset; item < offset + count; item = item + 1) {
       const { title } = episodes[item]
+      const _item = normalize(item)
       this.season.push({
-        text: `սերիա #${normalize(item)} ${title && `«${title}»`}`,
+        text: `սերիա #${_item} ${title && `«${title}»`}`,
+        thumbnail: enumeratedData[_item - 1].thumbnail,
         name: 'video-listing',
         callback: () => this.setState({ item, title, open: true })
       })
@@ -56,7 +60,13 @@ class Season extends Component {
             : null
         }
         <View data={this.season} />
-        <Custombox stream channel={channel} anime={anime} index={item - 1} on={open} onClose={() => this.setState({ open: false })} />
+        <Custombox
+          stream
+          channel={channel} anime={anime}
+          index={item - 1}
+          on={open}
+          onClose={() => this.setState({ open: false })}
+        />
       </>
     )
   }

@@ -1,0 +1,18 @@
+@import '../../../../sass/index';
+
+img {
+
+    display: block;
+    border: 1px solid $white0;
+
+    .ant-col &{
+        height: 350px;
+
+        &.thumbnail {
+            width: 280px;
+            height: unset;
+        }
+    
+    }
+
+}

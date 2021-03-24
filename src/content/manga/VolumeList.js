@@ -5,8 +5,6 @@ import { mangaData } from '../enumeratedData.js'
 
 import { normalize } from '../../functions.js'
 
-import './sass/VolumeList.scss'
-
 import View from '../util/view/View.js'
 import CompletedIndication from '../util/CompletedIndication.js'
 

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 
+import './sass/Grid.scss'
+
 import { Row, Col } from 'antd'
 
 import CompletedIndication from '../CompletedIndication.js'
@@ -9,10 +11,10 @@ class Grid extends Component {
   render () {
     const { data, defaultCover } = this.props
     const cols = []
-    for (const { path, cover, complete, text, callback, name } of data) {
+    for (const { path, thumbnail, cover, complete, text, callback, name } of data) {
       const content = (
         <>
-          <img src={cover || defaultCover} title={text} alt='' />
+          <img src={thumbnail || cover || defaultCover} title={text} className={thumbnail ? 'thumbnail' : 'cover'} alt='' />
           <span> {text} </span> <CompletedIndication complete={complete} />
 
         </>

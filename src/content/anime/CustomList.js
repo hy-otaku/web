@@ -22,10 +22,11 @@ class CustomList extends Component {
 
     this.data = []
     for (const { title } of values) {
-      const { url } = find(parsedEnumeratedData, item => item.name.includes(title))
+      const { url, thumbnail } = find(parsedEnumeratedData, item => item.name.includes(title))
       this.data.push({
         text: `«${title}»`,
         name: 'video-listing',
+        thumbnail,
         callback: () => this.setState({ url, on: true })
       })
     }
