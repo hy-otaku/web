@@ -29,7 +29,7 @@ class Custombox extends Component {
     if (stream) {
       const { animeData } = require('../enumeratedData.js')
       const data = animeData[channel || anime]
-      const url = this.props.url || (data ? data[index] : undefined)
+      const url = this.props.url || (data ? data[index].url : undefined)
 
       return (
         <Lightbox

@@ -34,18 +34,14 @@ def get_anime():
             { 
                 'name': item['name'], 
                 'url': 'https://%s%s' %(instance, item['embedPath']),
-            } if elaborate else
-            'https://%s%s' %(instance, item['embedPath'])
-        for item in json['data'] ]
+                'cover': 'https://%s%s' %(instance, item['previewPath']),
+            } for item in json['data'] ]
 
         return videos
 
     data = {}
-    for channel in ['toradora', 'xxxholic', 'attack_on_titans', 'magi', 'no_game_no_life', 'gurren_lagann', 'sword_art_online', 'kyoukai_no_kanata']:
+    for channel in ['toradora', 'xxxholic', 'attack_on_titans', 'magi', 'no_game_no_life', 'gurren_lagann', 'sword_art_online', 'kyoukai_no_kanata', 'feature', 'shorts']:
         data[channel] = get(channel)
-
-    for channel in ['feature', 'shorts']:
-        data[channel] = get(channel, True)
 
     return data
 

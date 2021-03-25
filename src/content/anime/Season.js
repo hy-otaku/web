@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+import { animeData } from '../enumeratedData.js'
 import { animeJson } from '../../constants.js'
 import { normalize } from '../../functions.js'
 
@@ -20,7 +21,8 @@ class Season extends Component {
     const { anime, num } = this.props
     this.jsonData = animeJson.find(item => item.path === anime)
 
-    const { episodes, seasons } = this.jsonData
+    const { episodes, seasons, channel } = this.jsonData
+    const enumeratedData = animeData[channel || anime]
 
     let offset = 1
     let count = Object.values(episodes).length
@@ -31,12 +33,14 @@ class Season extends Component {
       count = this.season.episodeCount || count
     }
 
-    this.Season = []
+    this.season = []
 
     for (let item = offset; item < offset + count; item = item + 1) {
       const { title } = episodes[item]
-      this.Season.push({
-        text: `սերիա #${normalize(item)} ${title && `«${title}»`}`,
+      const _item = normalize(item)
+      this.season.push({
+        text: `սերիա #${_item} ${title && `«${title}»`}`,
+        thumbnail: enumeratedData[_item - 1].thumbnail,
         name: 'video-listing',
         callback: () => this.setState({ item, title, open: true })
       })
@@ -55,8 +59,14 @@ class Season extends Component {
             ? <h2> {title} | եթերաշրջան #{normalize(num)} <CompletedIndication complete={this.season.complete} /> </h2>
             : null
         }
-        <View data={this.Season} />
-        <Custombox stream channel={channel} anime={anime} index={item - 1} on={open} onClose={() => this.setState({ open: false })} />
+        <View data={this.season} />
+        <Custombox
+          stream
+          channel={channel} anime={anime}
+          index={item - 1}
+          on={open}
+          onClose={() => this.setState({ open: false })}
+        />
       </>
     )
   }
