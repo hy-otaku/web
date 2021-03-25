@@ -6,7 +6,6 @@
     padding: 8px;
 
     border: 2px solid $color0;
-    border-radius: 10px;
 
     a {
         font-size: 16px;
@@ -24,6 +23,16 @@
         padding: 5px;
         text-align: justify;
     }
+
+    img {
+        float: left;
+        padding: 10px;
+    }
+
+    .nested {
+        display: flex;
+    }
+
 }
 
 .translators {

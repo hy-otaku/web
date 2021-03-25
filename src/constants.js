@@ -362,7 +362,7 @@ export const mangaJson = [
 
 export const animeJson = [
   {
-    path: 'gurren֊lagann',
+    path: 'gurren-lagann',
     title: 'գուրրեն լագանն',
     channel: 'gurren_lagann',
     complete: true,
