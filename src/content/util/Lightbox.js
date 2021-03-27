@@ -197,53 +197,41 @@ export default class Lightbox extends React.Component {
         } = this.props;
         let {x, y, zoom, rotate, multi, loading, moving} = this.state;
         let _reset = allowReset && this.shouldShowReset();
+        let commonProps = {
+            draggable: "false",
+            style: {
+                transform  : this.createTransform(x,y,zoom,rotate),
+                cursor     : zoom>1?"grab":"unset",
+                transition : moving?"none":"all 0.1s"
+            },
+            onMouseDown: e=>this.startMove(e),
+            onTouchStart: e=>this.startMove(e),
+            onMouseMove: e=>this.duringMove(e),
+            onTouchMove: e=>this.duringMove(e),
+            onMouseUp: e=>this.endMove(e),
+            onMouseLeave: e=>this.endMove(e),
+            onTouchEnd: e=>this.endMove(e),
+            onClick: e=>this.stopSideEffect(e),
+            onDoubleClick: e=>this.shockZoom(e),
+            onLoad: e=>this.setState({loading: false}),
+            className: `lb-img${loading?" lb-loading":""}`,
+            title,
+            src: item,
+            alt: title,
+        }
+        
         let val = iframe
             ? (
                 <iframe
-                draggable = "false"
-                style={{
-                    transform  : this.createTransform(x,y,zoom,rotate),
-                    cursor     : zoom>1?"grab":"unset",
-                    transition : moving?"none":"all 0.1s"
-                }}
-                onMouseDown={e=>this.startMove(e)}
-                onTouchStart={e=>this.startMove(e)}
-                onMouseMove={e=>this.duringMove(e)}
-                onTouchMove={e=>this.duringMove(e)}
-                onMouseUp={e=>this.endMove(e)}
-                onMouseLeave={e=>this.endMove(e)}
-                onTouchEnd={e=>this.endMove(e)}
-                onClick={e=>this.stopSideEffect(e)}
-                onDoubleClick={e=>this.shockZoom(e)}
-                onLoad={e=>this.setState({loading: false})}
-                className={`lb-img${loading?" lb-loading":""}`}
-                title={title}
-                src={item} alt={title}
+                {...commonProps}
                 allowFullScreen
                 width='720px' height='405px'
                 />
             )
             : (
                 <img
-                draggable = "false"
-                style={{
-                    transform  : this.createTransform(x,y,zoom,rotate),
-                    cursor     : zoom>1?"grab":"unset",
-                    transition : moving?"none":"all 0.1s"
-                }}
-                onMouseDown={e=>this.startMove(e)}
-                onTouchStart={e=>this.startMove(e)}
-                onMouseMove={e=>this.duringMove(e)}
-                onTouchMove={e=>this.duringMove(e)}
-                onMouseUp={e=>this.endMove(e)}
-                onMouseLeave={e=>this.endMove(e)}
-                onTouchEnd={e=>this.endMove(e)}
-                onClick={e=>this.stopSideEffect(e)}
-                onDoubleClick={e=>this.shockZoom(e)}
-                onLoad={e=>this.setState({loading: false})}
-                className={`lb-img${loading?" lb-loading":""}`}
-                title={title}
-                src={item} alt={title}/>
+                {...commonProps}
+                />
             )
         return (
             <div className="lb-container">
