@@ -110,8 +110,12 @@ class Card extends Component {
     return (
       <div className='information-card'>
         <Link to={path}> «{title}» </Link> <CompletedIndication complete={complete} />
-        <div className='nested'>
-          <img src={`https://raw.githubusercontent.com/high-otaku/assets/master/${path}.png`} />
+        <div className='content'>
+          <div className='img-container'>
+
+            {/* <img src={`https://raw.githubusercontent.com/high-otaku/assets/master/${path}.png`} /> */}
+
+          </div>
 
           <table>
             <tbody>
@@ -125,9 +129,10 @@ class Card extends Component {
             </tbody>
 
           </table>
+
+          {this.description()}
         </div>
-        <br />
-        {this.description()}
+
         {this.notes()}
       </div>
     )

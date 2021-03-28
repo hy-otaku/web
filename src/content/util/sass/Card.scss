@@ -6,6 +6,7 @@
     padding: 8px;
 
     border: 2px solid $color0;
+    min-height: 300px;
 
     a {
         font-size: 16px;
@@ -24,14 +25,18 @@
         text-align: justify;
     }
 
-    img {
-        float: left;
-        padding: 10px;
-    }
+    .img-container {
 
-    .nested {
-        display: flex;
-    }
+        float: left;
+        margin: 10px;
+
+        width: 225px;
+        height: 225px;
+
+        background-color: $black1;
+        border-radius: 60px;
+
+}
 
 }
 
@@ -40,5 +45,5 @@
 }
 
 .editors {
-    color: $color2;
+    color: $color1;
 }
