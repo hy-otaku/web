@@ -23,7 +23,7 @@ class Submanga extends Component {
     return (
       <>
         <h2> {title} <CompletedIndication complete={complete} /></h2>
-        <View data={list} />
+        <View data={list} defaultCover='https://raw.githubusercontent.com/high-otaku/assets/master/manga/default-submanga.png' />
       </>
     )
   }

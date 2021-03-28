@@ -17,8 +17,7 @@ class View extends Component {
   }
 
   render () {
-    const defaultCover = 'https://images.unsplash.com/photo-1491884662610-dfcd28f30cfb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80'
-    const { data } = this.props
+    const { data, defaultCover } = this.props
     const { isGrid } = this.state
 
     return (
