@@ -20,15 +20,21 @@ class SeasonList extends Component {
     this.seasonList = []
 
     for (const index in seasons) {
-      const { complete } = seasons[index]
+      const { complete, cover: ext } = seasons[index]
 
       const _index = normalize(index)
 
-      this.seasonList.push({
+      const obj = {
         path: `${path}/${_index}`,
         complete,
         text: `եթերաշրջան #${_index}`
-      })
+      }
+
+      if (ext) {
+        obj.cover = `https://raw.githubusercontent.com/high-otaku/assets/master/anime/${path}-season-${_index}.${ext}`
+      }
+
+      this.seasonList.push(obj)
     }
   }
 
@@ -36,7 +42,12 @@ class SeasonList extends Component {
     const { title, complete, feature, seasons } = this.jsonData
 
     const content = seasons
-      ? <View data={this.seasonList} />
+      ? (
+        <View
+          data={this.seasonList}
+          defaultCover='https://raw.githubusercontent.com/high-otaku/assets/master/anime/default-season.png'
+        />
+        )
       : <Season anime={this.props.anime} />
 
     return (
