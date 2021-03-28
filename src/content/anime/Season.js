@@ -39,7 +39,7 @@ class Season extends Component {
       const { title } = episodes[item]
       const _item = normalize(item)
       this.season.push({
-        text: `սերիա #${_item} ${title && `«${title}»`}`,
+        text: `սերիա #${_item} ${title ? `«${title}»` : ''}`,
         thumbnail: enumeratedData[_item - 1].thumbnail,
         name: 'video-listing',
         callback: () => this.setState({ item, title, open: true })
