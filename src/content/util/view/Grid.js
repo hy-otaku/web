@@ -4,6 +4,7 @@ import { Link, withRouter } from 'react-router-dom'
 import './sass/Grid.scss'
 
 import { Row, Col } from 'antd'
+import { PlayCircleOutlined } from '@ant-design/icons'
 
 import CompletedIndication from '../CompletedIndication.js'
 
@@ -14,7 +15,24 @@ class Grid extends Component {
     for (const { path, thumbnail, cover, complete, text, callback, name } of data) {
       const content = (
         <>
-          <img src={thumbnail || cover || defaultCover} title={text} className={thumbnail ? 'thumbnail' : 'cover'} alt='' />
+          {
+          thumbnail
+            ? (
+              <div className='thumbnail'>
+                <img
+                  src={thumbnail}
+                  title={text} alt=''
+                />
+                <PlayCircleOutlined className='play-button' />
+              </div>
+              )
+            : (
+              <img
+                src={cover || defaultCover}
+                title={text} alt=''
+              />
+              )
+        }
           <span> {text} </span> <CompletedIndication complete={complete} />
 
         </>
