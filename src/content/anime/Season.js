@@ -55,7 +55,7 @@ class Season extends Component {
     return (
       <>
         {
-          this.season
+          num
             ? <h2> {title} | եթերաշրջան #{normalize(num)} <CompletedIndication complete={this.season.complete} /> </h2>
             : null
         }
