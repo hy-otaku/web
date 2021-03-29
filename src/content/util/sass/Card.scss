@@ -5,7 +5,7 @@
     margin: 8px;
     padding: 8px;
 
-    border: 2px solid $color0;
+    border: 2px solid $black3;
     min-height: 300px;
 
     a {
@@ -34,7 +34,12 @@
         height: 225px;
 
         background-color: $black1;
+        border: 2px solid $black3;
         border-radius: 60px;
+
+        img {
+            border-color: transparent
+        }
 
 }
 

@@ -113,7 +113,7 @@ class Card extends Component {
         <div className='content'>
           <div className='img-container'>
 
-            {/* <img src={`https://raw.githubusercontent.com/high-otaku/assets/master/${path}.png`} /> */}
+            <img src={`https://raw.githubusercontent.com/high-otaku/assets/master/${path}.png`} />
 
           </div>
 
