@@ -31,7 +31,7 @@ class SeasonList extends Component {
       }
 
       if (ext) {
-        obj.cover = `https://raw.githubusercontent.com/high-otaku/assets/master/anime/${path}-season-${_index}.${ext}`
+        obj.cover = `https://raw.githubusercontent.com/high-otaku/assets/master/anime/season/${path}-${_index}.${ext}`
       }
 
       this.seasonList.push(obj)
@@ -45,7 +45,7 @@ class SeasonList extends Component {
       ? (
         <View
           data={this.seasonList}
-          defaultCover='https://raw.githubusercontent.com/high-otaku/assets/master/anime/default-season.png'
+          defaultCover='https://raw.githubusercontent.com/high-otaku/assets/master/anime/season/default.png'
         />
         )
       : <Season anime={this.props.anime} />
