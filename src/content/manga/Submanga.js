@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
+import { get } from 'lodash'
+
+import { mangaData } from '../enumeratedData.js'
+
 import CompletedIndication from '../util/CompletedIndication.js'
 import View from '../util/view/View.js'
 
@@ -11,19 +15,30 @@ class Submanga extends Component {
 
     const list = []
     for (const { path, title, complete: _complete } of data) {
-      list.push(
-        {
-          path: `${self}/${path}`,
-          complete: _complete,
-          text: `«${title}»`
-        }
+      const { cover } = get(mangaData,
+        `${self.split('/')[2]}.${path}` // constructing a string for lodash
       )
+
+      const obj = {
+        path: `${self}/${path}`,
+        complete: _complete,
+        text: `«${title}»`
+      }
+
+      if (cover) {
+        obj.cover = cover
+      }
+
+      list.push(obj)
     }
 
     return (
       <>
         <h2> {title} <CompletedIndication complete={complete} /></h2>
-        <View data={list} defaultCover='https://raw.githubusercontent.com/high-otaku/assets/master/manga/default-submanga.png' />
+        <View
+          data={list}
+          defaultCover='https://raw.githubusercontent.com/high-otaku/assets/master/manga/submanga/default.png'
+        />
       </>
     )
   }

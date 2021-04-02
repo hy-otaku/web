@@ -2159,6 +2159,7 @@ export const mangaData = {
   },
   hellsing: {
     crossfire: {
+      cover: 'https://raw.githubusercontent.com/high-otaku/manga-data/master//hellsing/crossfire/cover.png',
       volumes: {
         '01': {
           '01': ['https://raw.githubusercontent.com/high-otaku/manga-data/master//hellsing/crossfire/01/01/01.png',
@@ -2237,6 +2238,7 @@ export const mangaData = {
       }
     },
     dawn: {
+      cover: 'https://raw.githubusercontent.com/high-otaku/manga-data/master//hellsing/dawn/cover.jpg',
       volumes: {
         '01': {
           '01': ['https://raw.githubusercontent.com/high-otaku/manga-data/master//hellsing/dawn/01/01/00.jpg',
@@ -2351,6 +2353,7 @@ export const mangaData = {
       }
     },
     main: {
+      cover: 'https://raw.githubusercontent.com/high-otaku/manga-data/master//hellsing/main/cover.png',
       volumes: {
         '01': {
           '01': ['https://raw.githubusercontent.com/high-otaku/manga-data/master//hellsing/main/01/01/00.png',
@@ -2728,6 +2731,7 @@ export const mangaData = {
   },
   'kuroko-no-baske': {
     'extra-cut': {
+      cover: 'https://raw.githubusercontent.com/high-otaku/manga-data/master//kuroko-no-baske/extra-cut/cover.jpg',
       volumes: {
         '01': {
           '01': ['https://raw.githubusercontent.com/high-otaku/manga-data/master//kuroko-no-baske/extra-cut/01/01/01.jpg',
@@ -3189,6 +3193,7 @@ export const mangaData = {
   },
   'rurouni-kenshin': {
     'master-of-the-flame': {
+      cover: 'https://raw.githubusercontent.com/high-otaku/manga-data/master//rurouni-kenshin/master-of-the-flame/cover.png',
       volumes: {
         '01': {
           '01': ['https://raw.githubusercontent.com/high-otaku/manga-data/master//rurouni-kenshin/master-of-the-flame/01/01/02-03.png',
