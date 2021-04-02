@@ -812,7 +812,8 @@ export const animeJson = [
     complete: false,
     seasons: {
       1: {
-        complete: true
+        complete: true,
+        cover: 'jpg'
       }
     },
     episodes: {
@@ -909,7 +910,8 @@ export const animeJson = [
     complete: false,
     seasons: {
       1: {
-        complete: false
+        complete: false,
+        cover: 'jpg'
       }
     },
     episodes: {
