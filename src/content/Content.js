@@ -32,8 +32,10 @@ class Content extends Component {
     }
 
     return (
-      <div className='main-class'>
-        {list}
+      <div className='main-content'>
+        {list.length > 0
+          ? list
+          : <span className='inform-msg'> <b>«{query}»</b> հարցմամբ արդյունքներ չկան։ </span>}
       </div>
     )
   }

@@ -18,6 +18,10 @@ class SearchBar extends Component {
   }
 
   render () {
+    if (!this.props.show) {
+      return null
+    }
+
     const { Search } = Input
 
     return (

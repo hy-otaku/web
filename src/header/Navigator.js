@@ -33,7 +33,10 @@ class Navigator extends Component {
 
         <div className='right-pane'>
           <div className='searchbar'>
-            <SearchBar searchFunction={searchFunction} />
+            <SearchBar
+              show={pathname === '/anime' || pathname === '/manga'}
+              searchFunction={searchFunction}
+            />
           </div>
           <div className='logo'>
             <Logo />
