@@ -3,7 +3,9 @@ export const mangaJson = [
     path: 'bleach',
     title: 'բլիչ',
     meta: {
-      en: ['bleach']
+      en: ['bleach'],
+      jp: ['ブリーチ'],
+      ru: ['блич']
     },
     complete: false,
     volumes: {
@@ -66,7 +68,9 @@ export const mangaJson = [
     path: 'death-note',
     title: 'մահվան տետրը',
     meta: {
-      en: ['death note']
+      en: ['death note'],
+      jp: ['デスノート'],
+      ru: ['тетрадь смерти']
     },
     complete: false,
     volumes: {
@@ -144,7 +148,9 @@ export const mangaJson = [
     path: 'hellsing',
     title: 'հելլսինգ',
     meta: {
-      en: ['hellsing']
+      en: ['hellsing'],
+      jp: ['ヘルシング'],
+      ru: ['хеллсинг']
     },
     complete: false,
     submanga: [
@@ -233,7 +239,9 @@ export const mangaJson = [
     path: 'k-on',
     title: 'քեյ֊օն',
     meta: {
-      en: ['k-on']
+      en: ['k-on!'],
+      jp: ['けいおん!'],
+      ru: ['кей-он!']
     },
     complete: false,
     volumes: {
@@ -260,7 +268,9 @@ export const mangaJson = [
     path: 'kuroko-no-baske',
     title: 'կուրոկոյի բասկետբոլը',
     meta: {
-      en: ['kuroko\'s basketball']
+      en: ['kuroko\'s basketball'],
+      jp: ['黒子のバスケ'],
+      ru: ['баскетбол куроко']
     },
     complete: false,
     submanga: [
@@ -293,7 +303,9 @@ export const mangaJson = [
     path: 'naruto',
     title: 'նարուտո',
     meta: {
-      en: ['naruto']
+      en: ['naruto'],
+      jp: ['ナルト'],
+      ru: ['наруто']
     },
     complete: false,
     volumes: {
@@ -313,7 +325,9 @@ export const mangaJson = [
     path: 'naruto-wst',
     title: 'նարուտո (արևմտահայերեն)',
     meta: {
-      en: ['naruto (western armenian)']
+      en: ['naruto (western armenian)'],
+      jp: ['ナルト (西アルメニア語)'],
+      ru: ['наруто (восточный армянский)']
     },
     complete: false,
     volumes: {
@@ -333,7 +347,9 @@ export const mangaJson = [
     path: 'one-piece',
     title: 'վան փիս',
     meta: {
-      en: ['one piece']
+      en: ['one piece'],
+      jp: ['ワンピース'],
+      ru: ['ван пис', 'большой куш']
     },
     complete: false,
     volumes: {
@@ -370,7 +386,9 @@ export const mangaJson = [
     path: 'rurouni-kenshin',
     title: 'րուրոունի քենշին',
     meta: {
-      en: ['samurai x']
+      en: ['samurai x', 'rurouni kenshin: meiji swordsman romantic story'],
+      jp: ['るろうに剣心 - 明治剣客浪漫譚'],
+      ru: ['самурай икс', 'бродяга кэнсин: романтическое сказание о мечнике эпохи мэйдзи']
     },
     complete: false,
     submanga: [
@@ -407,7 +425,9 @@ export const animeJson = [
     path: 'gurren-lagann',
     title: 'գուրրեն լագանն',
     meta: {
-      en: ['gurren lagann']
+      en: ['gurren lagann', 'tengen toppa gurren lagann', 'heaven-piercing gurren lagann'],
+      jp: ['天元突破グレンラガン'],
+      ru: ['гуррен лаганн', 'тэнгэн топпа гурэн раган', 'гуррен-лаганн пронзающий небеса']
     },
     channel: 'gurren_lagann',
     complete: true,
@@ -508,7 +528,9 @@ export const animeJson = [
     path: 'nogame-nolife',
     title: 'չկա խաղ՝ չկա կյանք',
     meta: {
-      en: ['no game no life']
+      en: ['no game no life'],
+      jp: ['ノーゲーム・ノーライフ'],
+      ru: ['без игры жизни нет']
     },
     channel: 'no_game_no_life',
     complete: true,
@@ -564,7 +586,9 @@ export const animeJson = [
     path: 'makoto-shinkai',
     title: 'մակոտո շինկայ',
     meta: {
-      en: ['makoto shinkai']
+      en: ['makoto shinkai'],
+      jp: ['新海 誠'],
+      ru: ['макото синкай']
     },
     shorts: true,
     list: {
@@ -592,10 +616,12 @@ export const animeJson = [
   },
 
   {
-    path: 'attack-on-titans',
+    path: 'attack-on-titan',
     title: 'տիտանների գրոհը',
     meta: {
-      en: ['attack on titans']
+      en: ['attack on titan'],
+      jp: ['進撃の巨人'],
+      ru: ['атака на титанов', 'атака титанов', 'атакующий титан']
     },
     channel: 'attack_on_titans',
     complete: false,
@@ -691,7 +717,9 @@ export const animeJson = [
     path: 'toradora',
     title: 'տորադորա',
     meta: {
-      en: ['toradora']
+      en: ['toradora'],
+      jp: ['とらドラ!'],
+      ru: ['торадора']
     },
     complete: true,
     episodes: {
@@ -785,7 +813,8 @@ export const animeJson = [
     path: 'xxxholic',
     title: 'եռիքսահոլիք',
     meta: {
-      en: ['xxxholic']
+      en: ['xxxholic'],
+      jp: ['×××ホリック']
     },
     complete: true,
     episodes: {
@@ -876,7 +905,9 @@ export const animeJson = [
     path: 'magi',
     title: 'մագի',
     meta: {
-      en: ['magi']
+      en: ['magi: the labyrinth of magic'],
+      jp: ['マギ'],
+      ru: ['маги']
     },
     complete: false,
     seasons: {
@@ -976,7 +1007,9 @@ export const animeJson = [
     path: 'sword-art-online',
     title: 'թրերի վարպետ օնլայն',
     meta: {
-      en: ['sowrd art online']
+      en: ['sword art online'],
+      jp: ['ソードアート・オンライン'],
+      ru: ['мастера меча онлайн']
     },
     channel: 'sword_art_online',
     complete: false,
@@ -1038,7 +1071,9 @@ export const animeJson = [
     path: 'kyoukai-no-kanata',
     title: 'սահմանից այն կողմ',
     meta: {
-      en: ['beyond the boundary']
+      en: ['beyond the boundary'],
+      jp: ['境界の彼方'],
+      ru: ['за гранью']
     },
     channel: 'kyoukai_no_kanata',
     complete: true,
@@ -1093,15 +1128,13 @@ export const animeJson = [
   {
     path: 'random',
     title: 'խառը',
-    meta: {
-      en: ['random']
-    },
     shorts: true,
     list: {
       1: {
         title: 'ֆումիկոյի խոստովանությունը',
         meta: {
-          en: ['fumiko\'s confession']
+          en: ['fumiko\'s confession'],
+          jp: ['フミコの告白']
         }
       }
     }
@@ -1111,7 +1144,9 @@ export const animeJson = [
     path: 'kaguya-hime',
     title: 'քագույա արքայադստեր հեքիաթը',
     meta: {
-      en: ['the tale of princess kaguya']
+      en: ['the tale of princess kaguya'],
+      jp: ['かぐや姫の物語'],
+      ru: ['сказание о принцессе кагуя']
     },
     feature: true,
     authors: ['Իսաո Տաքահատա'],
@@ -1128,7 +1163,9 @@ export const animeJson = [
     path: 'kaze-tachinu',
     title: 'քամին ուժգնանում է',
     meta: {
-      en: ['the wind rises']
+      en: ['the wind rises'],
+      jp: ['風立ちぬ'],
+      ru: ['ветер крепчает']
     },
     feature: true,
     authors: ['Հայաո Միյաձակի'],
