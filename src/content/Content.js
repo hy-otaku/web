@@ -11,6 +11,8 @@ import Card from './util/Card.js'
 
 class Content extends Component {
   filterFunction (item) {
+    const { query } = this.props
+
     const arrFilterFunction = (data) => {
       if (!data) {
         return false
@@ -25,7 +27,6 @@ class Content extends Component {
       return false
     }
 
-    const { query } = this.props
     const { title, meta } = item
 
     return title.includes(query) || (
@@ -59,7 +60,7 @@ class Content extends Component {
       <div className='main-content'>
         {list.length > 0
           ? list
-          : <span className='inform-msg'> <b>«{query}»</b> հարցմամբ արդյունքներ չկան։ </span>}
+          : <span className='inform-msg'> «<b>{query}</b>» հարցմամբ արդյունքներ չկան։ </span>}
       </div>
     )
   }

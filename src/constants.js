@@ -327,7 +327,7 @@ export const mangaJson = [
     meta: {
       en: ['naruto (western armenian)'],
       jp: ['ナルト (西アルメニア語)'],
-      ru: ['наруто (восточный армянский)']
+      ru: ['наруто (западноармянский)']
     },
     complete: false,
     volumes: {
