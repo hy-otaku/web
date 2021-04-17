@@ -10,6 +10,30 @@ import './sass/style.scss'
 import Card from './util/Card.js'
 
 class Content extends Component {
+  filterFunction (item) {
+    const arrFilterFunction = (data) => {
+      if (!data) {
+        return false
+      }
+
+      for (item of data) {
+        if (item.includes(query)) {
+          return true
+        }
+      }
+
+      return false
+    }
+
+    const { query } = this.props
+    const { title, meta } = item
+
+    return title.includes(query) || (
+      meta &&
+      (arrFilterFunction(meta.jp) || arrFilterFunction(meta.en) || arrFilterFunction(meta.ru))
+    )
+  }
+
   render () {
     const { path: self } = this.props.match
 
@@ -19,7 +43,7 @@ class Content extends Component {
       console.error('content called neither for manga, nor for anime.')
     }
     const data = sortBy(
-      json.filter(item => item.title.includes(query)),
+      json.filter(item => this.filterFunction(item)),
       item => item.title
     )
 
