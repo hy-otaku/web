@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import './sass/Card.scss'
 
 import CompletedIndication from './CompletedIndication.js'
+import { CommentOutlined, CheckOutlined } from '@ant-design/icons'
 
 class Card extends Component {
   authors () {
@@ -34,6 +35,38 @@ class Card extends Component {
     )
   }
 
+  foreignLanguages () {
+    const getList = (data, lang, title) => {
+      if (!data) {
+        return null
+      }
+
+      const url = `https://raw.githubusercontent.com/high-otaku/assets/master/flags/${lang}.png`
+      return (
+        <div className='lang'>
+          <img className='flag' src={url} title={title} alt={title} />
+          {data.sort().join(', ')}
+        </div>
+      )
+    }
+
+    const { meta } = this.props
+    if (!meta) {
+      return null
+    }
+
+    return (
+      <tr>
+        <td>այլ լեզուներով՝</td>
+        <td>
+          {getList(meta.jp, 'jp', '日本語')}
+          {getList(meta.en, 'en', 'english')}
+          {getList(meta.ru, 'ru', 'русский')}
+        </td>
+      </tr>
+    )
+  }
+
   rating () {
     const { rating } = this.props
     if (!rating) {
@@ -59,16 +92,22 @@ class Card extends Component {
       <tr>
         <td>հայաֆիկացրին`</td>
         <td>
-          {
-            translators
-              ? <><span> <i> թարգմանիչներ․ </i> <span className='translators'>{translators.sort().join(', ')}</span> </span><br /></>
-              : null
-          }
-          {
-            editors
-              ? <span> <i> խմբագրողներ․ </i> <span className='editors'>{editors.sort().join(', ')}</span> </span>
-              : null
-          }
+          {translators
+            ? (
+              <div className='lang'>
+                <CommentOutlined title='թարգմանություն' className='icon' />
+                <span className='translators'> {translators.sort().join(', ')} </span>
+              </div>
+              )
+            : null}
+          {editors
+            ? (
+              <div className='lang'>
+                <CheckOutlined title='խմբագրություն' className='icon' />
+                <span className='editors'> {editors.sort().join(', ')} </span>
+              </div>
+              )
+            : null}
         </td>
       </tr>
     )
@@ -113,7 +152,7 @@ class Card extends Component {
         <div className='content'>
           <div className='img-container'>
 
-            <img src={`https://raw.githubusercontent.com/high-otaku/assets/master/${path}.png`} />
+            <img src={`https://raw.githubusercontent.com/high-otaku/assets/master/${path}.png`} alt='' />
 
           </div>
 
@@ -122,6 +161,7 @@ class Card extends Component {
 
               {this.authors()}
               {this.genres()}
+              {this.foreignLanguages()}
               {this.rating()}
               {this.team()}
 
