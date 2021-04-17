@@ -41,8 +41,34 @@
             border-color: transparent
         }
 
+    }
+
 }
 
+.lang {
+    float: left;
+    margin: 5px;
+}
+
+.flag {
+
+    float: left;
+    margin-right: 5px;
+
+    height: 20px;
+    width: 30px;
+
+    border-radius: 5px;
+    border: 2px solid $black3;
+}
+
+.icon {
+
+    margin-right: 5px;
+
+    font-size: 22px;
+    color: $black3;
+    
 }
 
 .translators {

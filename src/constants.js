@@ -2,6 +2,11 @@ export const mangaJson = [
   {
     path: 'bleach',
     title: 'բլիչ',
+    meta: {
+      en: ['bleach'],
+      jp: ['ブリーチ'],
+      ru: ['блич']
+    },
     complete: false,
     volumes: {
       55: {
@@ -62,6 +67,11 @@ export const mangaJson = [
   {
     path: 'death-note',
     title: 'մահվան տետրը',
+    meta: {
+      en: ['death note'],
+      jp: ['デスノート'],
+      ru: ['тетрадь смерти']
+    },
     complete: false,
     volumes: {
       1: {
@@ -137,12 +147,20 @@ export const mangaJson = [
   {
     path: 'hellsing',
     title: 'հելլսինգ',
+    meta: {
+      en: ['hellsing'],
+      jp: ['ヘルシング'],
+      ru: ['хеллсинг']
+    },
     complete: false,
     submanga: [
 
       {
         path: 'main',
         title: 'հիմանական',
+        meta: {
+          en: ['main']
+        },
         complete: false,
         volumes: {
           1: {
@@ -171,6 +189,9 @@ export const mangaJson = [
       {
         path: 'crossfire',
         title: 'ընդհարումը',
+        meta: {
+          en: ['the crossfire']
+        },
         complete: true,
         volumes: {
           1: {
@@ -187,6 +208,9 @@ export const mangaJson = [
       {
         path: 'dawn',
         title: 'լուսաբացը',
+        meta: {
+          en: ['the dawn']
+        },
         complete: true,
         volumes: {
           1: {
@@ -214,6 +238,11 @@ export const mangaJson = [
   {
     path: 'k-on',
     title: 'քեյ֊օն',
+    meta: {
+      en: ['k-on!'],
+      jp: ['けいおん!'],
+      ru: ['кей-он!']
+    },
     complete: false,
     volumes: {
       1: {
@@ -238,12 +267,20 @@ export const mangaJson = [
   {
     path: 'kuroko-no-baske',
     title: 'կուրոկոյի բասկետբոլը',
+    meta: {
+      en: ['kuroko\'s basketball'],
+      jp: ['黒子のバスケ'],
+      ru: ['баскетбол куроко']
+    },
     complete: false,
     submanga: [
 
       {
         path: 'extra-cut',
         title: 'էքստրա քաթ',
+        meta: {
+          en: ['extra cut']
+        },
         complete: false,
         volumes: {
           1: {
@@ -265,6 +302,11 @@ export const mangaJson = [
   {
     path: 'naruto',
     title: 'նարուտո',
+    meta: {
+      en: ['naruto'],
+      jp: ['ナルト'],
+      ru: ['наруто']
+    },
     complete: false,
     volumes: {
       60: {
@@ -282,6 +324,11 @@ export const mangaJson = [
   {
     path: 'naruto-wst',
     title: 'նարուտո (արևմտահայերեն)',
+    meta: {
+      en: ['naruto (western armenian)'],
+      jp: ['ナルト (西アルメニア語)'],
+      ru: ['наруто (западноармянский)']
+    },
     complete: false,
     volumes: {
       60: {
@@ -299,6 +346,11 @@ export const mangaJson = [
   {
     path: 'one-piece',
     title: 'վան փիս',
+    meta: {
+      en: ['one piece'],
+      jp: ['ワンピース'],
+      ru: ['ван пис', 'большой куш']
+    },
     complete: false,
     volumes: {
       1: {
@@ -333,11 +385,19 @@ export const mangaJson = [
   {
     path: 'rurouni-kenshin',
     title: 'րուրոունի քենշին',
+    meta: {
+      en: ['samurai x', 'rurouni kenshin: meiji swordsman romantic story'],
+      jp: ['るろうに剣心 - 明治剣客浪漫譚'],
+      ru: ['самурай икс', 'бродяга кэнсин: романтическое сказание о мечнике эпохи мэйдзи']
+    },
     complete: false,
     submanga: [
       {
         path: 'master-of-the-flame',
         title: 'կրակի վարպետը',
+        meta: {
+          en: ['master of the flame']
+        },
         complete: true,
         volumes: {
           1: {
@@ -364,6 +424,11 @@ export const animeJson = [
   {
     path: 'gurren-lagann',
     title: 'գուրրեն լագանն',
+    meta: {
+      en: ['gurren lagann', 'tengen toppa gurren lagann', 'heaven-piercing gurren lagann'],
+      jp: ['天元突破グレンラガン'],
+      ru: ['гуррен лаганн', 'тэнгэн топпа гурэн раган', 'гуррен-лаганн пронзающий небеса']
+    },
     channel: 'gurren_lagann',
     complete: true,
     episodes: {
@@ -462,6 +527,11 @@ export const animeJson = [
   {
     path: 'nogame-nolife',
     title: 'չկա խաղ՝ չկա կյանք',
+    meta: {
+      en: ['no game no life'],
+      jp: ['ノーゲーム・ノーライフ'],
+      ru: ['без игры жизни нет']
+    },
     channel: 'no_game_no_life',
     complete: true,
     episodes: {
@@ -515,13 +585,24 @@ export const animeJson = [
   {
     path: 'makoto-shinkai',
     title: 'մակոտո շինկայ',
+    meta: {
+      en: ['makoto shinkai'],
+      jp: ['新海 誠'],
+      ru: ['макото синкай']
+    },
     shorts: true,
     list: {
       1: {
-        title: 'ինչ֊որ մեկի հայացքը'
+        title: 'ինչ֊որ մեկի հայացքը',
+        meta: {
+          en: ['someone\'s gaze']
+        }
       },
       2: {
-        title: 'խաչմերուկ'
+        title: 'խաչմերուկ',
+        meta: {
+          en: ['crossroad']
+        }
       }
     },
     authors: ['Մակոտո Շինկայ'],
@@ -537,6 +618,11 @@ export const animeJson = [
   {
     path: 'attack-on-titan',
     title: 'տիտանների գրոհը',
+    meta: {
+      en: ['attack on titan'],
+      jp: ['進撃の巨人'],
+      ru: ['атака на титанов', 'атака титанов', 'атакующий титан']
+    },
     channel: 'attack_on_titans',
     complete: false,
     seasons: {
@@ -630,6 +716,11 @@ export const animeJson = [
   {
     path: 'toradora',
     title: 'տորադորա',
+    meta: {
+      en: ['toradora'],
+      jp: ['とらドラ!'],
+      ru: ['торадора']
+    },
     complete: true,
     episodes: {
       1: {
@@ -721,6 +812,10 @@ export const animeJson = [
   {
     path: 'xxxholic',
     title: 'եռիքսահոլիք',
+    meta: {
+      en: ['xxxholic'],
+      jp: ['×××ホリック']
+    },
     complete: true,
     episodes: {
       1: {
@@ -809,6 +904,11 @@ export const animeJson = [
   {
     path: 'magi',
     title: 'մագի',
+    meta: {
+      en: ['magi: the labyrinth of magic'],
+      jp: ['マギ'],
+      ru: ['маги']
+    },
     complete: false,
     seasons: {
       1: {
@@ -906,6 +1006,11 @@ export const animeJson = [
   {
     path: 'sword-art-online',
     title: 'թրերի վարպետ օնլայն',
+    meta: {
+      en: ['sword art online'],
+      jp: ['ソードアート・オンライン'],
+      ru: ['мастера меча онлайн']
+    },
     channel: 'sword_art_online',
     complete: false,
     seasons: {
@@ -965,6 +1070,11 @@ export const animeJson = [
   {
     path: 'kyoukai-no-kanata',
     title: 'սահմանից այն կողմ',
+    meta: {
+      en: ['beyond the boundary'],
+      jp: ['境界の彼方'],
+      ru: ['за гранью']
+    },
     channel: 'kyoukai_no_kanata',
     complete: true,
     episodes: {
@@ -1021,7 +1131,11 @@ export const animeJson = [
     shorts: true,
     list: {
       1: {
-        title: 'ֆումիկոյի խոստովանությունը'
+        title: 'ֆումիկոյի խոստովանությունը',
+        meta: {
+          en: ['fumiko\'s confession'],
+          jp: ['フミコの告白']
+        }
       }
     }
   },
@@ -1029,6 +1143,11 @@ export const animeJson = [
   {
     path: 'kaguya-hime',
     title: 'քագույա արքայադստեր հեքիաթը',
+    meta: {
+      en: ['the tale of princess kaguya'],
+      jp: ['かぐや姫の物語'],
+      ru: ['сказание о принцессе кагуя']
+    },
     feature: true,
     authors: ['Իսաո Տաքահատա'],
     genres: ['դրամա'],
@@ -1043,6 +1162,11 @@ export const animeJson = [
   {
     path: 'kaze-tachinu',
     title: 'քամին ուժգնանում է',
+    meta: {
+      en: ['the wind rises'],
+      jp: ['風立ちぬ'],
+      ru: ['ветер крепчает']
+    },
     feature: true,
     authors: ['Հայաո Միյաձակի'],
     genres: ['կենսագրություն', 'դրամա', 'պատմական'],
