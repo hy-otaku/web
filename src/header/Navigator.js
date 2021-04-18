@@ -3,13 +3,15 @@ import { Link, withRouter } from 'react-router-dom'
 
 import './sass/Navigator.scss'
 
+import { Switch } from 'antd'
+
 import SearchBar from './SearchBar.js'
 import Logo from './Logo.js'
 
 class Navigator extends Component {
   render () {
     const val = []
-    const { sections, searchFunction, location: { pathname } } = this.props
+    const { sections, searchFunction, themeSwitchFunction, location: { pathname } } = this.props
     const selected = pathname.split('/')[1]
 
     for (const { path, title } of Object.values(sections)) {
@@ -29,6 +31,14 @@ class Navigator extends Component {
           <ul>
             {val}
           </ul>
+          <div className='theme-switch'>
+            <Switch
+              checkedChildren='լույս'
+              unCheckedChildren='մութ'
+              onChange={(isLight) => themeSwitchFunction(isLight ? 'light' : 'dark')}
+              defaultChecked
+            />
+          </div>
         </div>
 
         <div className='right-pane'>
