@@ -1,0 +1,23 @@
+@import '../../sass/index.scss';
+
+.social-networks {
+
+    img {
+
+        float: left;
+
+        margin: 5px;
+        height: 25px;
+        border: unset;
+
+        filter: grayscale(100%);
+
+        &:hover {
+
+            filter: unset;
+
+        }
+
+    }
+
+}
