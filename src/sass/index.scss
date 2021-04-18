@@ -88,7 +88,8 @@ $left: 20px;
 
         }
     }
-}
+    
+  }
   
   .complete {
 
@@ -122,6 +123,15 @@ $left: 20px;
     }
   }
 
+  .ant-col {
+
+    img {
+
+      border-color: $outline-color;
+
+    }
+
+  }
 }
 
 @mixin dark-base {
@@ -188,7 +198,8 @@ $left: 20px;
 
         }
     }
-}
+
+  }
 
   .complete {
 
@@ -221,6 +232,16 @@ $left: 20px;
         color: $outline-color;
       }
     }
+  }
+
+  .ant-col {
+    
+    img {
+
+      border-color: $outline-color;
+
+    }
+
   }
 
 }
