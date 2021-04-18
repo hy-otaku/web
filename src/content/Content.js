@@ -31,7 +31,7 @@ class Content extends Component {
 
     return title.includes(query) || (
       meta &&
-      (arrFilterFunction(meta.jp) || arrFilterFunction(meta.en) || arrFilterFunction(meta.ru))
+      (arrFilterFunction(meta.jp) || arrFilterFunction(meta.en) || arrFilterFunction(meta.ru) || arrFilterFunction(meta.tags))
     )
   }
 

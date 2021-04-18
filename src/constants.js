@@ -349,7 +349,8 @@ export const mangaJson = [
     meta: {
       en: ['one piece'],
       jp: ['ワンピース'],
-      ru: ['ван пис', 'большой куш']
+      ru: ['ван пис'],
+      tags: ['большой куш', 'խոշոր շահում']
     },
     complete: false,
     volumes: {
@@ -386,9 +387,10 @@ export const mangaJson = [
     path: 'rurouni-kenshin',
     title: 'րուրոունի քենշին',
     meta: {
-      en: ['samurai x', 'rurouni kenshin: meiji swordsman romantic story'],
-      jp: ['るろうに剣心 - 明治剣客浪漫譚'],
-      ru: ['самурай икс', 'бродяга кэнсин: романтическое сказание о мечнике эпохи мэйдзи']
+      en: ['samurai x'],
+      jp: ['るろうに剣心'],
+      ru: ['самурай икс'],
+      tags: ['るろうに剣心 - 明治剣客浪漫譚', 'rurouni kenshin', 'meiji swordsman romantic story', 'бродяга кэнсин', 'романтическое сказание о мечнике эпохи мэйдзи']
     },
     complete: false,
     submanga: [
@@ -425,9 +427,10 @@ export const animeJson = [
     path: 'gurren-lagann',
     title: 'գուրրեն լագանն',
     meta: {
-      en: ['gurren lagann', 'tengen toppa gurren lagann', 'heaven-piercing gurren lagann'],
+      en: ['gurren lagann'],
       jp: ['天元突破グレンラガン'],
-      ru: ['гуррен лаганн', 'тэнгэн топпа гурэн раган', 'гуррен-лаганн пронзающий небеса']
+      ru: ['гуррен лаганн'],
+      tags: ['tengen toppa gurren lagann', 'heaven-piercing gurren lagann', 'тэнгэн топпа гурэн раган', 'гуррен-лаганн пронзающий небеса']
     },
     channel: 'gurren_lagann',
     complete: true,
@@ -621,7 +624,8 @@ export const animeJson = [
     meta: {
       en: ['attack on titan'],
       jp: ['進撃の巨人'],
-      ru: ['атака на титанов', 'атака титанов', 'атакующий титан']
+      ru: ['атака на титанов'],
+      tags: ['shingeki no kyoujin', 'атака титанов', 'атакующий титан']
     },
     channel: 'attack_on_titans',
     complete: false,
@@ -905,9 +909,10 @@ export const animeJson = [
     path: 'magi',
     title: 'մագի',
     meta: {
-      en: ['magi: the labyrinth of magic'],
+      en: ['magi'],
       jp: ['マギ'],
-      ru: ['маги']
+      ru: ['маги'],
+      tags: ['the labyrinth of magic']
     },
     complete: false,
     seasons: {
@@ -1009,7 +1014,8 @@ export const animeJson = [
     meta: {
       en: ['sword art online'],
       jp: ['ソードアート・オンライン'],
-      ru: ['мастера меча онлайн']
+      ru: ['мастера меча онлайн'],
+      tags: ['sao', 'սաօ']
     },
     channel: 'sword_art_online',
     complete: false,
@@ -1073,7 +1079,8 @@ export const animeJson = [
     meta: {
       en: ['beyond the boundary'],
       jp: ['境界の彼方'],
-      ru: ['за гранью']
+      ru: ['за гранью'],
+      tags: ['knk', 'kyoukai no kanata']
     },
     channel: 'kyoukai_no_kanata',
     complete: true,
@@ -1146,7 +1153,8 @@ export const animeJson = [
     meta: {
       en: ['the tale of princess kaguya'],
       jp: ['かぐや姫の物語'],
-      ru: ['сказание о принцессе кагуя']
+      ru: ['сказание о принцессе кагуя'],
+      tags: ['kaguya hime no monogatari']
     },
     feature: true,
     authors: ['Իսաո Տաքահատա'],
@@ -1165,7 +1173,8 @@ export const animeJson = [
     meta: {
       en: ['the wind rises'],
       jp: ['風立ちぬ'],
-      ru: ['ветер крепчает']
+      ru: ['ветер крепчает'],
+      tags: ['kaze tachinu']
     },
     feature: true,
     authors: ['Հայաո Միյաձակի'],
