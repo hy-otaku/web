@@ -15,7 +15,8 @@
 
 .ant-layout-footer {
 
-  @include base;
+  background-color: unset;
+  color: unset;
 
   padding: 15px 20px;
   text-align: center;

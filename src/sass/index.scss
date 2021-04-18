@@ -24,11 +24,226 @@ $color2: #f27935;
 
 $left: 20px;
 
-@mixin base {
+@mixin light-base {
 
   background-color: $white0;
   color: $black8;
+
+  $outline-color: $black3;
+
+  .piccha {
+
+    background-image: url('https://raw.githubusercontent.com/high-otaku/assets/master/background.png');
+
+    .info {
+
+      background-color: rgba($white0, 0.7);
+
+    }
+
+    h1 {
+      
+      color: $black8;
+
+    }
+
+  }
+
+  .navigator {
+    
+    background-color: rgba($white3, 0.7);
+
+    .menu {
+
+        div {
+        
+            &.selected {
+
+                border-color: $color0;
+
+                a {
+                    color: $color0;
+                }
+                
+            }
+
+        }  
+
+        a {
+            color: $black6;
+            &:hover {
+                color: $color0;
+            }
+
+        }
+        
+    }
+
+
+    .right-pane {
+
+        .logo {
+
+            background-color: $white0;
+
+        }
+    }
+    
+  }
   
+  .complete {
+
+    &.false {
+      
+      color: $black3;
+
+    }
+
+  }
+
+  .information-card {
+
+    border-color: $outline-color;
+
+    .img-container {
+      background-color: $black1;
+      border-color: $outline-color;
+    }
+
+    .icon-container {
+
+      .flag {
+        border-color: $outline-color;
+      }
+
+      .icon {
+        color: $outline-color;
+      }
+      
+    }
+  }
+
+  .ant-col {
+
+    img {
+
+      border-color: $outline-color;
+
+    }
+
+  }
+}
+
+@mixin dark-base {
+
+  background-color: $black6;
+  color: $white0;
+
+  $outline-color: $black1;
+
+  .piccha {
+
+    background-image: url('https://raw.githubusercontent.com/high-otaku/assets/master/background.png');
+
+    .info {
+
+      background-color: rgba($black7, 0.7);
+
+    }
+
+    h1 {
+      
+      color: $white0;
+      
+    }
+
+  }
+
+  .navigator {
+    
+    background-color: rgba($black6, 0.7);
+
+    .menu {
+
+        div {
+        
+            &.selected {
+
+                border-color: $color0;
+
+                a {
+                    color: $color0;
+                }
+                
+            }
+
+        }  
+
+        a {
+            color: $white3;
+            &:hover {
+                color: $color0;
+            }
+
+        }
+        
+    }
+
+
+    .right-pane {
+
+        .logo {
+
+            background-color: $black6;
+
+        }
+    }
+
+  }
+
+  .complete {
+
+    &.false {
+      
+      color: $black1;
+
+    }
+    
+  }
+
+  .information-card {
+
+    border-color: $outline-color;
+
+    .img-container {
+
+      background-color: $black4;
+      border-color: $outline-color;
+
+    }
+
+    .icon-container {
+
+      .flag {
+        border-color: $outline-color;
+      }
+
+      .icon {
+        color: $outline-color;
+      }
+    }
+  }
+
+  .ant-col {
+    
+    img {
+
+      border-color: $outline-color;
+
+    }
+
+  }
+
 }
 
 @mixin horizontal-menu {
@@ -56,7 +271,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @include base;
+  &.light-theme {
+
+    @include light-base;
+
+  }
+
+  &.dark-theme {
+
+    @include dark-base;
+
+  }
 
 }
 

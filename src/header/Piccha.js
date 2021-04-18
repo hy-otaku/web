@@ -7,12 +7,16 @@ import Navigator from './Navigator.js'
 
 class Piccha extends Component {
   render () {
-    const { sections, searchFunction, location: { pathname } } = this.props
+    const { sections, searchFunction, themeSwitchFunction, location: { pathname } } = this.props
     const collapsed = pathname.startsWith('/anime') || pathname.startsWith('/manga')
     return (
       <div className={`piccha${collapsed ? ' collapsed' : ''}`}>
 
-        <Navigator sections={sections} searchFunction={searchFunction} />
+        <Navigator
+          sections={sections}
+          searchFunction={searchFunction}
+          themeSwitchFunction={themeSwitchFunction}
+        />
 
         {
           !collapsed && (
