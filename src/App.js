@@ -18,14 +18,15 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      query: ''
+      query: '',
+      theme: 'light'
     }
   }
 
   render () {
     const { Footer } = Layout
 
-    const { query } = this.state
+    const { query, theme } = this.state
     const sections = {
 
       anime: {
@@ -60,6 +61,8 @@ class App extends Component {
 
     routes.push(...allRoutes)
 
+    document.body.className = `${theme}-theme`
+
     return (
       <div className='app'>
         <Router>
@@ -67,6 +70,7 @@ class App extends Component {
           <Header
             sections={sections}
             searchFunction={query => this.setState({ query })}
+            themeSwitchFunction={theme => this.setState({ theme })}
           />
 
           <div className='app-content'>
