@@ -113,6 +113,20 @@ class Card extends Component {
     )
   }
 
+  releaseDate () {
+    const { release } = this.props
+    if (!release) {
+      return null
+    }
+
+    return (
+      <tr>
+        <td>առաջին թողարկումը՝</td>
+        <td>{release}</td>
+      </tr>
+    )
+  }
+
   description () {
     const { description } = this.props
     if (!description) {
@@ -184,8 +198,9 @@ class Card extends Component {
               {this.authors()}
               {this.genres()}
               {this.foreignLanguages()}
-              {this.rating()}
               {this.team()}
+              {this.rating()}
+              {this.releaseDate()}
 
               <tr />
             </tbody>
