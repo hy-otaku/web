@@ -5,7 +5,7 @@
     margin: 8px;
     padding: 8px;
 
-    border: 2px solid $black3;
+    border: 2px solid;
     min-height: 300px;
 
     a {
@@ -33,8 +33,7 @@
         width: 225px;
         height: 225px;
 
-        background-color: $black1;
-        border: 2px solid $black3;
+        border: 2px solid;
         border-radius: 60px;
 
         img {
@@ -43,38 +42,38 @@
 
     }
 
-}
-
-.lang {
-    float: left;
-    margin: 5px;
-}
-
-.flag {
-
-    float: left;
-    margin-right: 5px;
-
-    height: 20px;
-    width: 30px;
-
-    border-radius: 5px;
-    border: 2px solid $black3;
-}
-
-.icon {
-
-    margin-right: 5px;
-
-    font-size: 22px;
-    color: $black3;
+    .translators {
+        color: $color1;
+    }
     
-}
+    .editors {
+        color: $color1;
+    }
 
-.translators {
-    color: $color1;
-}
+    .icon-container {
+        float: left;
+        margin: 5px;
+    
+    
+        .flag {
+    
+            float: left;
+            margin-right: 5px;
+    
+            height: 20px;
+            width: 30px;
+    
+            border: 2px solid;
+            border-radius: 5px;
 
-.editors {
-    color: $color1;
+        }
+    
+        .icon {
+    
+            margin-right: 5px;
+            font-size: 22px;
+            
+        }
+    }
+
 }

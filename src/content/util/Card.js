@@ -43,7 +43,7 @@ class Card extends Component {
 
       const url = `https://raw.githubusercontent.com/high-otaku/assets/master/flags/${lang}.png`
       return (
-        <div className='lang'>
+        <div className='icon-container'>
           <img className='flag' src={url} title={title} alt={title} />
           {data.sort().join(', ')}
         </div>
@@ -94,7 +94,7 @@ class Card extends Component {
         <td>
           {translators
             ? (
-              <div className='lang'>
+              <div className='icon-container'>
                 <CommentOutlined title='թարգմանություն' className='icon' />
                 <span className='translators'> {translators.sort().join(', ')} </span>
               </div>
@@ -102,7 +102,7 @@ class Card extends Component {
             : null}
           {editors
             ? (
-              <div className='lang'>
+              <div className='icon-container'>
                 <CheckOutlined title='խմբագրություն' className='icon' />
                 <span className='editors'> {editors.sort().join(', ')} </span>
               </div>

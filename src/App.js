@@ -18,14 +18,15 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      query: ''
+      query: '',
+      theme: 'light-theme'
     }
   }
 
   render () {
     const { Footer } = Layout
 
-    const { query } = this.state
+    const { query, theme } = this.state
     const sections = {
 
       anime: {
@@ -59,6 +60,8 @@ class App extends Component {
     }
 
     routes.push(...allRoutes)
+
+    document.body.className = theme
 
     return (
       <div className='app'>
