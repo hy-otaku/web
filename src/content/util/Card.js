@@ -143,6 +143,28 @@ class Card extends Component {
     )
   }
 
+  tags () {
+    const { meta } = this.props
+    if (!meta) {
+      return null
+    }
+
+    const { tags } = meta
+    if (!tags) {
+      return null
+    }
+
+    console.log('tags:', tags)
+
+    const tagList = tags.sort().map(tag => <span className='tag' key={tag}> {tag} </span>)
+
+    return (
+      <p>
+        {tagList}
+      </p>
+    )
+  }
+
   render () {
     const { path, title, complete } = this.props
 
@@ -173,7 +195,10 @@ class Card extends Component {
           {this.description()}
         </div>
 
-        {this.notes()}
+        <div className='secondary-content'>
+          {this.notes()}
+          {this.tags()}
+        </div>
       </div>
     )
   }

@@ -121,6 +121,13 @@ $left: 20px;
       }
       
     }
+
+    .tag {
+
+      background-color: $black0;
+      border-color: $outline-color;
+
+    }
   }
 
   .ant-col {
@@ -231,6 +238,13 @@ $left: 20px;
       .icon {
         color: $outline-color;
       }
+    }
+
+    .tag {
+
+      background-color: $black4;
+      border-color: $outline-color;
+
     }
   }
 
