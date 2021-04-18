@@ -4,7 +4,6 @@ import { Link, withRouter } from 'react-router-dom'
 import './sass/Grid.scss'
 
 import { Row, Col } from 'antd'
-import { PlayCircleOutlined } from '@ant-design/icons'
 
 import CompletedIndication from '../CompletedIndication.js'
 
@@ -23,7 +22,6 @@ class Grid extends Component {
                   src={thumbnail}
                   title={text} alt=''
                 />
-                <PlayCircleOutlined className='play-button' />
               </div>
               )
             : (
