@@ -31,14 +31,15 @@ class Navigator extends Component {
           <ul>
             {val}
           </ul>
-          <div className='theme-switch'>
-            <Switch
-              checkedChildren='լույս'
-              unCheckedChildren='մութ'
-              onChange={(isLight) => themeSwitchFunction(isLight ? 'light' : 'dark')}
-              defaultChecked
-            />
-          </div>
+        </div>
+
+        <div className='theme-switch'>
+          <Switch
+            checkedChildren='լույս'
+            unCheckedChildren='մութ'
+            onChange={(isLight) => themeSwitchFunction(isLight ? 'light' : 'dark')}
+            defaultChecked
+          />
         </div>
 
         <div className='right-pane'>

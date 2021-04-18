@@ -2,8 +2,6 @@
 
 .piccha {
 
-    
-    background-image: url('https://raw.githubusercontent.com/high-otaku/assets/master/background.png');
     height: 700px;
 
     margin-bottom: 30px;
@@ -16,7 +14,6 @@
 
     .info {
 
-        background-color: rgba($white0, 0.7);
         padding: 20px;
 
         // set dimensions
@@ -30,10 +27,6 @@
 
         overflow: hidden;
         text-overflow: ellipsis;
-
-        h1 {
-            color: $black8;
-        }
 
     }
 }
