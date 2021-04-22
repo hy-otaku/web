@@ -10,10 +10,24 @@ import './sass/style.scss'
 import Card from './util/Card.js'
 
 class Content extends Component {
-  filterFunction (item) {
+  byGenre (item) {
+    const { genre } = this.props
+    if (!genre) { // ignore genre when none is selected
+      return true
+    }
+
+    const { genres } = item
+    if (!genres) {
+      return false
+    }
+
+    return genres.includes(genre)
+  }
+
+  byQuery (item) {
     const { query } = this.props
 
-    const arrFilterFunction = (data) => {
+    const helper = (data) => {
       if (!data) {
         return false
       }
@@ -31,20 +45,35 @@ class Content extends Component {
 
     return title.includes(query) || (
       meta &&
-      (arrFilterFunction(meta.jp) || arrFilterFunction(meta.en) || arrFilterFunction(meta.ru) || arrFilterFunction(meta.keywords))
+      (helper(meta.jp) || helper(meta.en) || helper(meta.ru) || helper(meta.keywords))
+    )
+  }
+
+  genreBar () {
+    const { genre, genreFunc } = this.props
+    if (!genre) {
+      return null
+    }
+
+    return (
+      <div className='inform-msg'>
+        բոլոր {genre}ները։ <span className='clickable highlight' onClick={() => genreFunc(undefined)}> մաքրե՞լ </span> ընտրությունը․․․
+      </div>
     )
   }
 
   render () {
     const { path: self } = this.props.match
 
-    const { query, anime, manga } = this.props
+    const { query, anime, manga, genreFunc } = this.props
     const json = anime ? animeJson : manga ? mangaJson : null
     if (!json) {
       console.error('content called neither for manga, nor for anime.')
     }
     const data = sortBy(
-      json.filter(item => this.filterFunction(item)),
+      json
+        .filter(item => this.byGenre(item))
+        .filter(item => this.byQuery(item)),
       item => item.title
     )
 
@@ -52,12 +81,19 @@ class Content extends Component {
     for (const item of data) {
       const path = `${self}/${item.path}`
       list.push(
-        <Card {...item} path={path} key={path} />
+        <Card
+          {...item}
+          path={path} key={path}
+          onGenreSelected={genre => genreFunc(genre)}
+        />
       )
     }
 
     return (
       <div className='main-content'>
+        {
+          this.genreBar()
+        }
         {list.length > 0
           ? list
           : <span className='inform-msg'> «<b>{query}</b>» հարցմամբ արդյունքներ չկան։ </span>}

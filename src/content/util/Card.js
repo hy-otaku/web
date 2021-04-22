@@ -22,17 +22,21 @@ class Card extends Component {
   }
 
   genres () {
-    const { genres } = this.props
+    const { genres, onGenreSelected } = this.props
     if (!genres) {
       return null
     }
 
-    return (
-      <tr>
-        <td>ժանրեր՝</td>
-        <td>{genres.sort().join(', ')}</td>
-      </tr>
-    )
+    return genres
+      .sort()
+      .map(genre =>
+        <span
+          className='genre clickable' key={genre}
+          onClick={() => onGenreSelected(genre)}
+        >
+          {genre}
+        </span>
+      )
   }
 
   foreignLanguages () {
@@ -168,8 +172,6 @@ class Card extends Component {
       return null
     }
 
-    console.log('tags:', tags)
-
     const tagList = tags.sort().map(tag => <span className='tag' key={tag}> {tag} </span>)
 
     return (
@@ -196,7 +198,6 @@ class Card extends Component {
             <tbody>
 
               {this.authors()}
-              {this.genres()}
               {this.foreignLanguages()}
               {this.team()}
               {this.rating()}
@@ -207,11 +208,17 @@ class Card extends Component {
 
           </table>
 
-          {this.description()}
+          <div className='description'>
+
+            {this.description()}
+
+          </div>
+
         </div>
 
         <div className='secondary-content'>
           {this.notes()}
+          {this.genres()}
           {this.tags()}
         </div>
       </div>

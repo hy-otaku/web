@@ -128,6 +128,12 @@ $left: 20px;
       border-color: $outline-color;
 
     }
+
+    .genre {
+
+      background-color: $white3;
+      
+    }
   }
 
   .ant-col {
@@ -246,6 +252,12 @@ $left: 20px;
       border-color: $outline-color;
 
     }
+
+    .genre {
+
+      background-color: $black5;
+
+    }
   }
 
   .ant-col {
@@ -337,4 +349,15 @@ code {
 
   cursor: pointer;
   
+}
+
+.highlight {
+
+  color: $color1;
+
+  &:hover {
+
+      font-weight: bold;
+
+  }
 }

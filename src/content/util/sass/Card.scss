@@ -6,7 +6,6 @@
     padding: 8px;
 
     border: 2px solid;
-    min-height: 300px;
 
     a {
         font-size: 16px;
@@ -25,19 +24,26 @@
         text-align: justify;
     }
 
-    .img-container {
+    .content {
 
-        float: left;
-        margin: 10px;
+        min-height: 250px;
 
-        width: 225px;
-        height: 225px;
 
-        border: 2px solid;
-        border-radius: 60px;
+        .img-container {
 
-        img {
-            border-color: transparent
+            float: left;
+            margin: 10px;
+
+            width: 225px;
+            height: 225px;
+
+            border: 2px solid;
+            border-radius: 60px;
+
+            img {
+                border-color: transparent
+            }
+
         }
 
     }
@@ -78,12 +84,28 @@
 
     .secondary-content {
 
+        padding: 5px;
+
         .tag {
 
             margin-left: 5px;
             padding: 5px;
             border: 1px solid;
             border-radius: 5px;
+    
+        }
+
+        .genre {
+
+            margin-left: 5px;
+            padding: 5px;
+            border: 1px solid;
+            border-radius: 5px;
+    
+            &:hover {
+                color: $color1;
+                border-color: $color1;
+            }
     
         }
 

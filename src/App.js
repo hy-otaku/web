@@ -26,19 +26,19 @@ class App extends Component {
   render () {
     const { Footer } = Layout
 
-    const { query, theme } = this.state
+    const { query, genre, theme } = this.state
     const sections = {
 
       anime: {
         path: 'anime',
         title: 'անիմե',
-        content: () => <Content anime query={query} />
+        content: () => <Content anime query={query} genre={genre} genreFunc={genre => this.setState({ genre })} />
       },
 
       manga: {
         path: 'manga',
         title: 'մանգա',
-        content: () => <Content manga query={query} />
+        content: () => <Content manga query={query} genre={genre} genreFunc={genre => this.setState({ genre })} />
       },
 
       about: {
