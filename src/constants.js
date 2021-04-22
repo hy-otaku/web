@@ -86,7 +86,7 @@ export const mangaJson = [
       en: ['kuroko\'s basketball'],
       jp: ['黒子のバスケ'],
       ru: ['баскетбол куроко'],
-      tags: ['kuroko no basuke', 'the basketball which kuroko plays']
+      keywords: ['kuroko no basuke', 'the basketball which kuroko plays']
     },
     complete: false,
     submanga: [
@@ -388,7 +388,7 @@ export const mangaJson = [
       en: ['one piece'],
       jp: ['ワンピース'],
       ru: ['ван пис'],
-      tags: ['большой куш', 'խոշոր շահում']
+      keywords: ['большой куш', 'խոշոր շահում']
     },
     complete: false,
     volumes: {
@@ -440,7 +440,7 @@ export const mangaJson = [
       en: ['samurai x'],
       jp: ['るろうに剣心'],
       ru: ['самурай икс'],
-      tags: ['るろうに剣心 - 明治剣客浪漫譚', 'rurouni kenshin', 'meiji swordsman romantic story', 'бродяга кэнсин', 'романтическое сказание о мечнике эпохи мэйдзи']
+      keywords: ['るろうに剣心 - 明治剣客浪漫譚', 'rurouni kenshin', 'meiji swordsman romantic story', 'бродяга кэнсин', 'романтическое сказание о мечнике эпохи мэйдзи']
     },
     complete: false,
     submanga: [
@@ -517,7 +517,7 @@ export const animeJson = [
       en: ['gurren lagann'],
       jp: ['天元突破グレンラガン'],
       ru: ['гуррен лаганн'],
-      tags: ['tengen toppa gurren lagann', 'heaven-piercing gurren lagann', 'тэнгэн топпа гурэн раган', 'гуррен-лаганн пронзающий небеса']
+      keywords: ['tengen toppa gurren lagann', 'heaven-piercing gurren lagann', 'тэнгэн топпа гурэн раган', 'гуррен-лаганн пронзающий небеса']
     },
     channel: 'gurren_lagann',
     complete: true,
@@ -736,7 +736,7 @@ export const animeJson = [
       en: ['sword art online'],
       jp: ['ソードアート・オンライン'],
       ru: ['мастера меча онлайн'],
-      tags: ['sao', 'սաօ']
+      keywords: ['sao', 'սաօ']
     },
     channel: 'sword_art_online',
     complete: false,
@@ -811,7 +811,7 @@ export const animeJson = [
     shorts: true,
     meta: {
       en: ['random'],
-      tags: ['ֆումիկոյի խոստովանությունը', 'fumiko\'s confession', 'フミコの告白']
+      keywords: ['ֆումիկոյի խոստովանությունը', 'fumiko\'s confession', 'フミコの告白']
     },
     list: {
       1: {
@@ -832,7 +832,7 @@ export const animeJson = [
       en: ['magi'],
       jp: ['マギ'],
       ru: ['маги'],
-      tags: ['magi: the labyrinth of magic']
+      keywords: ['magi: the labyrinth of magic']
     },
     complete: false,
     seasons: {
@@ -944,7 +944,7 @@ export const animeJson = [
       en: ['makoto shinkai'],
       jp: ['新海 誠'],
       ru: ['макото синкай'],
-      tags: ['ինչ֊որ մեկի հայացքը', 'someone\'s gaze', 'խաչմերուկ', 'crossroad']
+      keywords: ['ինչ֊որ մեկի հայացքը', 'someone\'s gaze', 'խաչմերուկ', 'crossroad']
     },
     shorts: true,
     list: {
@@ -1054,7 +1054,7 @@ export const animeJson = [
       en: ['beyond the boundary'],
       jp: ['境界の彼方'],
       ru: ['за гранью'],
-      tags: ['knk', 'kyoukai no kanata']
+      keywords: ['knk', 'kyoukai no kanata']
     },
     channel: 'kyoukai_no_kanata',
     complete: true,
@@ -1121,7 +1121,7 @@ export const animeJson = [
       en: ['attack on titan'],
       jp: ['進撃の巨人'],
       ru: ['атака на титанов'],
-      tags: ['shingeki no kyoujin', 'атака титанов', 'атакующий титан']
+      keywords: ['shingeki no kyoujin', 'атака титанов', 'атакующий титан']
     },
     channel: 'attack_on_titans',
     complete: false,
@@ -1333,7 +1333,7 @@ export const animeJson = [
       en: ['the tale of princess kaguya'],
       jp: ['かぐや姫の物語'],
       ru: ['сказание о принцессе кагуя'],
-      tags: ['kaguya hime no monogatari']
+      keywords: ['kaguya hime no monogatari']
     },
     feature: true,
     authors: ['Իսաո Տաքահատա'],
@@ -1364,7 +1364,7 @@ export const animeJson = [
       en: ['the wind rises'],
       jp: ['風立ちぬ'],
       ru: ['ветер крепчает'],
-      tags: ['kaze tachinu']
+      keywords: ['kaze tachinu']
     },
     feature: true,
     authors: ['Հայաո Միյաձակի'],
