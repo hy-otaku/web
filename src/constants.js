@@ -1422,6 +1422,6 @@ export const animeJson = [
 
 // lists the ideces of the anime and manga entries that should go to the ribbon
 export const newJson = {
-  manga: [0, 1, 4],
-  anime: [3, 5, 6]
+  manga: [0, 3, 6],
+  anime: [0, 7, 8]
 }

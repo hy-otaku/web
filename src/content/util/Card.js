@@ -31,7 +31,7 @@ class Card extends Component {
       .sort()
       .map(genre =>
         <span
-          className='genre clickable' key={genre}
+          className='genre clickable button' key={genre}
           onClick={() => onGenreSelected(genre)}
         >
           {genre}
@@ -172,7 +172,9 @@ class Card extends Component {
       return null
     }
 
-    const tagList = tags.sort().map(tag => <span className='tag' key={tag}> {tag} </span>)
+    const tagList = tags
+      .sort()
+      .map(tag => <span className='button tag' key={tag}> {tag} </span>)
 
     return (
       <p>

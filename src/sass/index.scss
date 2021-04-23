@@ -24,6 +24,49 @@ $color2: #f27935;
 
 $left: 20px;
 
+@mixin base {
+
+  .navigator {
+
+    .menu {
+
+        div {
+        
+            &.selected {
+
+                border-color: $color0;
+
+                a {
+                    color: $color0;
+                }
+                
+            }
+
+        }  
+
+        a {
+
+          &:hover {
+                color: $color0;
+            }
+
+        }
+        
+    }
+
+  }
+
+  .button {
+
+    margin: 0px 5px 0px 5px;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+
+  }
+
+}
+
 @mixin light-base {
 
   background-color: $white0;
@@ -55,25 +98,8 @@ $left: 20px;
 
     .menu {
 
-        div {
-        
-            &.selected {
-
-                border-color: $color0;
-
-                a {
-                    color: $color0;
-                }
-                
-            }
-
-        }  
-
         a {
             color: $black6;
-            &:hover {
-                color: $color0;
-            }
 
         }
         
@@ -101,6 +127,13 @@ $left: 20px;
 
   }
 
+  .button {
+
+    background-color: $white3;
+    border-color: $outline-color;
+
+  }
+
   .information-card {
 
     border-color: $outline-color;
@@ -120,13 +153,6 @@ $left: 20px;
         color: $outline-color;
       }
       
-    }
-
-    .tag {
-
-      background-color: $black0;
-      border-color: $outline-color;
-
     }
 
     .genre {
@@ -178,30 +204,11 @@ $left: 20px;
 
     .menu {
 
-        div {
-        
-            &.selected {
-
-                border-color: $color0;
-
-                a {
-                    color: $color0;
-                }
-                
-            }
-
-        }  
-
         a {
             color: $white3;
-            &:hover {
-                color: $color0;
-            }
-
         }
         
     }
-
 
     .right-pane {
 
@@ -224,6 +231,13 @@ $left: 20px;
     
   }
 
+  .button {
+
+    background-color: $black4;
+    border-color: $outline-color;
+
+  }
+
   .information-card {
 
     border-color: $outline-color;
@@ -244,13 +258,6 @@ $left: 20px;
       .icon {
         color: $outline-color;
       }
-    }
-
-    .tag {
-
-      background-color: $black4;
-      border-color: $outline-color;
-
     }
 
     .genre {
@@ -297,6 +304,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  @include base;
   &.light-theme {
 
     @include light-base;

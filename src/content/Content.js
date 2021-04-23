@@ -57,7 +57,8 @@ class Content extends Component {
 
     return (
       <div className='inform-msg'>
-        բոլոր {genre}ները։ <span className='clickable highlight' onClick={() => genreFunc(undefined)}> մաքրե՞լ </span> ընտրությունը․․․
+        բոլոր <span className='highlighted button'>{genre}</span>ները |
+        <span className='clickable button' onClick={() => genreFunc(undefined)}> մաքրե՞լ </span> ընտրությունը
       </div>
     )
   }
