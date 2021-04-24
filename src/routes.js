@@ -1,20 +1,18 @@
-import React, { Component } from 'react'
-import { withRouter, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 
-import { sortBy } from 'lodash'
+import { mangaJson, animeJson } from './constants.js'
 
-import { mangaJson } from '../../constants.js'
+import { normalize } from './functions.js'
 
-import { normalize } from '../../functions.js'
+import Volume from './content/manga/Volume.js'
+import VolumeList from './content/manga/VolumeList.js'
+import Submanga from './content/manga/Submanga.js'
 
-import './sass/Content.scss'
+import SeasonList from './content/anime/SeasonList.js'
+import CustomList from './content/anime/CustomList.js'
+import Season from './content/anime/Season.js'
 
-import Card from '../Card.js'
-import Volume from './Volume.js'
-import VolumeList from './VolumeList.js'
-import Submanga from './Submanga.js'
-
-export const getRoutes = () => {
+const mangaRoutes = () => {
   const self = '/manga'
   const generateRoutes = (mangaList, source = undefined, superTitle = undefined) => {
     if (!mangaList) {
@@ -70,26 +68,46 @@ export const getRoutes = () => {
   return routes
 }
 
-class Content extends Component {
-  render () {
-    const { path: self } = this.props.match
+const animeRoutes = () => {
+  const data = animeJson
+  const self = '/anime'
 
-    const { searchValue } = this.props
-    const data = sortBy(
-      mangaJson.filter(manga => manga.title.includes(searchValue)),
-      manga => manga.title
+  // anime lists
+  const routes = []
+  for (const { path: animePath, feature, shorts, seasons } of data) {
+    const path = `${self}/${animePath}`
+    const content = feature || shorts
+      ? () => <CustomList anime={animePath} />
+      : () => <SeasonList anime={animePath} />
+    routes.push(
+      <Route
+        exact path={path} key={path}
+        component={content}
+      />
     )
 
-    const list = []
-    for (const item of data) {
-      const path = `${self}/${item.path}`
-      list.push(
-        <Card {...item} path={path} key={path} />
-      )
+    if (!seasons) {
+      continue
     }
 
-    return list
+    for (const index in seasons) {
+      const _index = normalize(index)
+      const _path = `${path}/${_index}`
+      const _content = () => <Season anime={animePath} num={index} />
+      routes.push(
+        <Route
+          exact path={_path} key={_path}
+          component={_content}
+        />
+      )
+    }
   }
+
+  // todo(tado-mi): individual episodes
+  return routes
 }
 
-export default withRouter(Content)
+export const routes = [
+  ...mangaRoutes(),
+  ...animeRoutes()
+]

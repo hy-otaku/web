@@ -1,0 +1,100 @@
+@import '../../../sass/index';
+
+.information-card {
+
+    margin: 8px;
+    padding: 8px;
+
+    border: 2px solid;
+
+    a {
+        font-size: 16px;
+    }
+
+    table {
+        margin: 5px;
+    }
+    
+    td {
+        padding-right: 20px;
+    }
+    
+    p {
+        padding: 5px;
+        text-align: justify;
+    }
+
+    .content {
+
+        min-height: 250px;
+
+
+        .img-container {
+
+            float: left;
+            margin: 10px;
+
+            width: 225px;
+            height: 225px;
+
+            border: 2px solid;
+            border-radius: 60px;
+
+            img {
+                border-color: transparent
+            }
+
+        }
+
+    }
+
+    .translators {
+        color: $color1;
+    }
+    
+    .editors {
+        color: $color1;
+    }
+
+    .icon-container {
+        float: left;
+        margin: 5px;
+    
+    
+        .flag {
+    
+            float: left;
+            margin-right: 5px;
+    
+            height: 20px;
+            width: 30px;
+    
+            border: 2px solid;
+            border-radius: 5px;
+
+        }
+    
+        .icon {
+    
+            margin-right: 5px;
+            font-size: 22px;
+            
+        }
+    }
+
+    .secondary-content {
+
+        padding: 5px;
+
+        .genre {
+    
+            &:hover {
+                color: $color1;
+                border-color: $color1;
+            }
+    
+        }
+
+    }
+
+}

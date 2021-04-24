@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 
-import { mangaJson, animeJson, newJson } from './constants.js'
+import { mangaJson, animeJson, newJson } from '../constants.js'
 
 import './sass/Ribbon.scss'
 

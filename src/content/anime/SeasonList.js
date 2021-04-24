@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
 import { animeJson } from '../../constants.js'
 
 import { normalize } from '../../functions.js'
 
-import CompletedIndication from '../CompletedIndication.js'
-import EpisodeList from './EpisodeList'
+import CompletedIndication from '../util/CompletedIndication.js'
+import View from '../util/view/View.js'
+import Season from './Season'
 
 class SeasonList extends Component {
   constructor (props) {
@@ -14,34 +15,40 @@ class SeasonList extends Component {
 
     const { anime } = this.props
     this.jsonData = animeJson.find(item => item.path === anime)
-  }
 
-  getSeasonList () {
-    const { path: animePath, seasons } = this.jsonData
-    const seasonList = []
+    const { path, seasons } = this.jsonData
+    this.seasonList = []
 
     for (const index in seasons) {
-      const { complete } = seasons[index]
+      const { complete, cover: ext } = seasons[index]
 
       const _index = normalize(index)
-      const path = `${animePath}/${_index}`
 
-      seasonList.push(
-        <li key={path}>
-          <Link to={path}> եթերաշրջան #{_index} </Link> <CompletedIndication complete={complete} />
-        </li>
-      )
+      const obj = {
+        path: `${path}/${_index}`,
+        complete,
+        text: `եթերաշրջան #${_index}`
+      }
+
+      if (ext) {
+        obj.cover = `https://raw.githubusercontent.com/high-otaku/assets/master/anime/season/${path}-${_index}.${ext}`
+      }
+
+      this.seasonList.push(obj)
     }
-
-    return <ul> {seasonList} </ul>
   }
 
   render () {
     const { title, complete, feature, seasons } = this.jsonData
 
     const content = seasons
-      ? this.getSeasonList()
-      : <EpisodeList anime={this.props.anime} />
+      ? (
+        <View
+          data={this.seasonList}
+          defaultCover='https://raw.githubusercontent.com/high-otaku/assets/master/anime/season/default.png'
+        />
+        )
+      : <Season anime={this.props.anime} />
 
     return (
       <>

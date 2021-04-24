@@ -1,14 +1,14 @@
-@import 'index';
+@import '../../sass/index';
 
 .ribbon {
     
     @include horizontal-menu;
-    background-color: $black5;
+    background-color: $black6;
     display: flow-root;
 
     a {
 
-        color: $highGreen0;
+        color: $color1;
 
     }
 

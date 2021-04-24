@@ -1,34 +1,44 @@
 import React, { Component } from 'react'
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 
+import { routes as allRoutes } from './routes.js'
+
 import './sass/App.scss'
 
 import { Layout } from 'antd'
 
-import Disclaimer from './Disclaimer.js'
-import Ribbon from './Ribbon.js'
-import Piccha from './Piccha.js'
+import Header from './header/Header.js'
 
 import About from './content/About.js'
-import Manga, { getRoutes as mangaRoutes } from './content/Manga.js'
-import Anime, { getRoutes as animeRoutes } from './content/Anime.js'
+import Content from './content/Content.js'
+
+import Disclaimer from './footer/Disclaimer.js'
 
 class App extends Component {
   constructor (props) {
     super(props)
+    this.state = {
+      query: '',
+      theme: 'light'
+    }
+  }
 
-    this.sections = {
+  render () {
+    const { Footer } = Layout
+
+    const { query, genre, theme } = this.state
+    const sections = {
 
       anime: {
         path: 'anime',
         title: 'անիմե',
-        content: () => <Anime />
+        content: () => <Content anime query={query} genre={genre} genreFunc={genre => this.setState({ genre })} />
       },
 
       manga: {
         path: 'manga',
         title: 'մանգա',
-        content: () => <Manga />
+        content: () => <Content manga query={query} genre={genre} genreFunc={genre => this.setState({ genre })} />
       },
 
       about: {
@@ -38,13 +48,9 @@ class App extends Component {
       }
 
     }
-  }
-
-  render () {
-    const { Footer } = Layout
 
     const routes = []
-    for (const { path, content } of Object.values(this.sections)) {
+    for (const { path, content } of Object.values(sections)) {
       routes.push(
         <Route
           exact path={`/${path}`} key={`/${path}`}
@@ -53,15 +59,20 @@ class App extends Component {
       )
     }
 
-    routes.push(...mangaRoutes())
-    routes.push(...animeRoutes())
+    routes.push(...allRoutes)
+
+    document.body.className = `${theme}-theme`
 
     return (
       <div className='app'>
         <Router>
-          <Ribbon />
 
-          <Piccha sections={this.sections} />
+          <Header
+            sections={sections}
+            searchFunction={query => this.setState({ query })}
+            themeSwitchFunction={theme => this.setState({ theme })}
+          />
+
           <div className='app-content'>
 
             <Switch>
@@ -71,7 +82,9 @@ class App extends Component {
             <Footer>
               <Disclaimer />
             </Footer>
+
           </div>
+
         </Router>
 
       </div>

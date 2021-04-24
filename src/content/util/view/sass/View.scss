@@ -1,0 +1,15 @@
+@import '../../../../sass/index';
+
+.view {
+
+    border: 1px solid transparent;
+
+    .ant-switch {
+        position: absolute;
+        right: 0;
+    }
+
+    .data {
+        margin-top: 30px;
+    }
+}
