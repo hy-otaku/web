@@ -193,7 +193,7 @@ export default class Lightbox extends React.Component {
             buttonAlign = "flex-end",
             showTitle   = true,
             allowReset  = true,
-            iframe
+            iframe, video
         } = this.props;
         let {x, y, zoom, rotate, multi, loading, moving} = this.state;
         let _reset = allowReset && this.shouldShowReset();
@@ -219,13 +219,27 @@ export default class Lightbox extends React.Component {
             src: item,
             alt: title,
         }
+
+        let videoProps = {
+            allowFullScreen: true,
+            width: '720px',
+            height: '405px'
+        }
+
+        let pdfProps = {
+            width: '65%',
+            height: '95%'
+        }
+
+        let additionalProps = video
+            ? videoProps
+            : pdfProps
         
         let val = iframe
             ? (
                 <iframe
                 {...commonProps}
-                allowFullScreen
-                width='720px' height='405px'
+                {...additionalProps}
                 />
             )
             : (

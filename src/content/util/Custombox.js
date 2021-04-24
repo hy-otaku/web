@@ -5,14 +5,23 @@ import Lightbox from './Lightbox.js'
 class Custombox extends Component {
   render () {
     const {
-      read, stream,
-      volume, chapter,
+      read, stream, pdf,
+      volume, chapter, doc,
       anime, channel, index,
       on, onClose
     } = this.props
 
     if (!on) {
       return null
+    }
+
+    if (pdf) {
+      return (
+        <Lightbox
+          iframe item={doc}
+          onClose={() => onClose()}
+        />
+      )
     }
 
     if (read) {
@@ -33,7 +42,7 @@ class Custombox extends Component {
 
       return (
         <Lightbox
-          iframe item={url}
+          iframe video item={url}
           onClose={() => onClose()}
         />
       )
