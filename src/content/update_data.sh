@@ -1,6 +1,5 @@
 # remove the old JS files
-rm anime/enumeratedData.js
-rm manga/enumeratedData.js
+rm ./enumeratedData.js
 
 # run the python script
 python3 enumerate_data.py

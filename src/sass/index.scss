@@ -2,18 +2,6 @@
 
 // variables
 
-// ant blue
-$blue0: #e6f7ff;
-$blue1: #bae7ff;
-$blue2: #91d5ff;
-$blue3: #69c0ff;
-$blue4: #40a9ff;
-$blue5: #1890ff;
-$blue6: #096dd9;
-$blue7: #0050b3;
-$blue8: #003a8c;
-$blue9: #002766;
-
 // ant gray scale
 $white0: #ffffff;
 $white1: #fafafa;
@@ -29,20 +17,266 @@ $black6: #1f1f1f;
 $black7: #141414;
 $black8: #000000;
 
-// hy otaku
-$highGreen0: #1abc9c;
-$highGreen1: #0c9076;
-
-$highOrange0: #f27935;
-$highOrange1: #bf602a; 
+// tri chromatic color scheme
+$color0: #1890ff;
+$color1: #1abc9c;
+$color2: #f27935;
 
 $left: 20px;
 
 @mixin base {
 
+  .navigator {
+
+    .menu {
+
+        div {
+        
+            &.selected {
+
+                border-color: $color0;
+
+                a {
+                    color: $color0;
+                }
+                
+            }
+
+        }  
+
+        a {
+
+          &:hover {
+                color: $color0;
+            }
+
+        }
+        
+    }
+
+  }
+
+  .button {
+
+    margin: 0px 5px 0px 5px;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+
+  }
+
+}
+
+@mixin light-base {
+
   background-color: $white0;
   color: $black8;
+
+  $outline-color: $black3;
+
+  .piccha {
+
+    background-image: url('https://raw.githubusercontent.com/high-otaku/assets/master/background.png');
+
+    .info {
+
+      background-color: rgba($white0, 0.7);
+
+    }
+
+    h1 {
+      
+      color: $black8;
+
+    }
+
+  }
+
+  .navigator {
+    
+    background-color: rgba($white3, 0.7);
+
+    .menu {
+
+        a {
+            color: $black6;
+
+        }
+        
+    }
+
+
+    .right-pane {
+
+        .logo {
+
+            background-color: $white0;
+
+        }
+    }
+    
+  }
   
+  .complete {
+
+    &.false {
+      
+      color: $black3;
+
+    }
+
+  }
+
+  .button {
+
+    background-color: $white3;
+    border-color: $outline-color;
+
+  }
+
+  .information-card {
+
+    border-color: $outline-color;
+
+    .img-container {
+      background-color: $black1;
+      border-color: $outline-color;
+    }
+
+    .icon-container {
+
+      .flag {
+        border-color: $outline-color;
+      }
+
+      .icon {
+        color: $outline-color;
+      }
+      
+    }
+
+    .genre {
+
+      background-color: $white3;
+      
+    }
+  }
+
+  .ant-col {
+
+    img {
+
+      border-color: $outline-color;
+
+    }
+
+  }
+}
+
+@mixin dark-base {
+
+  background-color: $black6;
+  color: $white0;
+
+  $outline-color: $black1;
+
+  .piccha {
+
+    background-image: url('https://raw.githubusercontent.com/high-otaku/assets/master/background.png');
+
+    .info {
+
+      background-color: rgba($black7, 0.7);
+
+    }
+
+    h1 {
+      
+      color: $white0;
+      
+    }
+
+  }
+
+  .navigator {
+    
+    background-color: rgba($black6, 0.7);
+
+    .menu {
+
+        a {
+            color: $white3;
+        }
+        
+    }
+
+    .right-pane {
+
+        .logo {
+
+            background-color: $black6;
+
+        }
+    }
+
+  }
+
+  .complete {
+
+    &.false {
+      
+      color: $black1;
+
+    }
+    
+  }
+
+  .button {
+
+    background-color: $black4;
+    border-color: $outline-color;
+
+  }
+
+  .information-card {
+
+    border-color: $outline-color;
+
+    .img-container {
+
+      background-color: $black4;
+      border-color: $outline-color;
+
+    }
+
+    .icon-container {
+
+      .flag {
+        border-color: $outline-color;
+      }
+
+      .icon {
+        color: $outline-color;
+      }
+    }
+
+    .genre {
+
+      background-color: $black5;
+
+    }
+  }
+
+  .ant-col {
+    
+    img {
+
+      border-color: $outline-color;
+
+    }
+
+  }
+
 }
 
 @mixin horizontal-menu {
@@ -71,15 +305,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   @include base;
+  &.light-theme {
+
+    @include light-base;
+
+  }
+
+  &.dark-theme {
+
+    @include dark-base;
+
+  }
 
 }
 
 @mixin heading {
 
-  color: $blue5;
-
-  // top right bottom left
-  padding: 5px 0px 0px $left;
+  color: $color0;
   
 }
 
@@ -108,11 +350,22 @@ h4 {
 }
 
 code {
-  color: $highGreen1;
+  color: $color1;
 }
 
 .clickable {
 
   cursor: pointer;
   
+}
+
+.highlight {
+
+  color: $color1;
+
+  &:hover {
+
+      font-weight: bold;
+
+  }
 }

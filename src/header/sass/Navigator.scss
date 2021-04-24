@@ -1,0 +1,82 @@
+@import '../../sass/index';
+
+.navigator {
+
+    height: 150px;
+
+    position: relative;
+
+    .menu {
+
+        @include horizontal-menu;
+        
+        position: absolute;
+
+        bottom: 5px;
+
+        ul {
+            margin-bottom: 0;
+        }
+
+        div {
+
+            // make it a horizontal list
+            display: inline;
+            padding-bottom: 6px;
+        
+            &.selected {
+
+                border-bottom: 5px solid;
+                
+            }
+
+        }  
+
+        li {
+            font-size: 25px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        
+    }
+
+    .theme-switch {
+
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+
+    }
+
+    .right-pane {
+
+        position: absolute;
+        right: 0;
+        
+        div {
+            display: inline-block;
+            padding: 10px;
+        }
+
+        .searchbar {
+
+            .ant-input-search {
+
+                width: 20vw;
+                // location
+                position: absolute;
+                bottom: 0px;
+                right: 18.5vw;
+
+            }
+
+        }
+
+        .logo {
+
+            font-size: 20px;
+            width: 18vw;
+
+        }
+    }
+}

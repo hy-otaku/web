@@ -1,16 +1,7 @@
-def enumerate_to_file(dirname, data):
 
-    filename = '%s/enumeratedData.js' %dirname
-
-    import pprint
-    output = pprint.pformat(data)
-    with open(filename, 'w') as file:
-        file.write(
-            'export default %s' %output
-        )
 
 '''
-    enumerates all the animes, and writes the outcome a JS file
+    enumerates all the animes
     note: need to update the list of channels in line 49
 '''
 def get_anime():
@@ -22,6 +13,15 @@ def get_anime():
         and enumerates all the embed urls to the videos in the channel
     '''
     def get(name, elaborate = False):
+
+        def get_item(item):
+            ans = {
+                'url': 'https://%s%s' %(instance, item['embedPath']), 
+                'thumbnail': 'https://%s%s' %(instance, item['previewPath']),
+            }
+            if elaborate:
+                ans ['name'] = item['name']
+            return ans
         
         instance = 'peertube.interhop.org'
         type = 'video-channels'
@@ -39,27 +39,18 @@ def get_anime():
             r = requests.get(url)
             json = r.json()
 
-        videos = [ 
-            { 
-                'name': item['name'], 
-                'url': 'https://%s%s' %(instance, item['embedPath']),
-            } if elaborate else
-            'https://%s%s' %(instance, item['embedPath'])
-        for item in json['data'] ]
+        videos = [get_item(item) for item in json['data']]
 
         return videos
 
     data = {}
-    for channel in ['toradora', 'xxxholic', 'attack_on_titans', 'magi', 'no_game_no_life', 'gurren_lagann', 'sword_art_online', 'kyoukai_no_kanata']:
-        data[channel] = get(channel)
+    for channel in ['toradora', 'xxxholic', 'attack_on_titans', 'magi', 'no_game_no_life', 'gurren_lagann', 'sword_art_online', 'kyoukai_no_kanata', 'feature', 'shorts']:
+        data[channel] = get(channel, channel in ['feature', 'shorts'])
 
-    for channel in ['feature', 'shorts']:
-        data[channel] = get(channel, True)
-
-    enumerate_to_file('anime', data)
+    return data
 
 '''
-    enumerates all the mangas, and writes the outcome a JS file
+    enumerates all the mangas
 '''
 def get_manga():
 
@@ -77,14 +68,14 @@ def get_manga():
         
         for volume in volumes:
 
-            ans[volume] = {}
-
             volume_path = '%s/%s' %(manga_path, volume)
 
             if os.path.isfile(volume_path):
                 # for now, assume it's the cover for the manga
                 ans['cover'] = get_url(volume_path)
                 continue
+
+            ans[volume] = {}
             
             chapters = os.listdir(volume_path)
             chapters.sort()
@@ -148,17 +139,36 @@ def get_manga():
                     submanga_path = '%s/%s' %(manga_path, submanga)
                     ans[manga][submanga] = {}
                     sub_volumes = os.listdir(submanga_path)
-                    ans[manga][submanga]['volumes'] = get_volumes(sub_volumes, submanga_path, extra_path, prefix)
+                    value = get_volumes(sub_volumes, submanga_path, extra_path, prefix)
+                    try:
+                        ans[manga][submanga]['cover'] = value['cover']
+                        value.pop('cover')
+                    except(KeyError):
+                        pass
+                    ans[manga][submanga]['volumes'] = value
 
         return ans
 
     root = '../../../manga-data'
     data = get_mangajson(root, root, 'https://raw.githubusercontent.com/high-otaku/manga-data/master')
-    enumerate_to_file('manga', data)
+    return data
 
 def main():
-    get_anime()
-    get_manga()
+
+    anime_data = get_anime()
+    manga_data = get_manga()
+
+    filename = './enumeratedData.js'
+
+    import pprint
+    with open(filename, 'w') as file:
+        file.write(
+            'export const animeData = %s\n' %pprint.pformat(anime_data)
+        )
+        file.write(
+            'export const mangaData = %s\n' %pprint.pformat(manga_data)
+        )
+
 
 if __name__ == '__main__':
     main()

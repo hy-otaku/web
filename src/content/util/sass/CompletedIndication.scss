@@ -1,0 +1,13 @@
+@import '../../../sass/index';
+
+.complete {
+
+    font-size: 10px;
+
+    &.true {
+
+        color: $color1;
+    
+    }    
+
+}

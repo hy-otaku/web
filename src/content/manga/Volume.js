@@ -3,15 +3,14 @@ import React, { Component } from 'react'
 import { find } from 'lodash'
 
 import { mangaJson } from '../../constants.js'
-import enumeratedData from './enumeratedData'
+import { mangaData } from '../enumeratedData.js'
 
 import './sass/Volume.scss'
 
-import { Row, Col } from 'antd'
+import View from '../util/view/View.js'
+import CompletedIndication from '../util/CompletedIndication.js'
 
-import Lightbox from 'react-awesome-lightbox'
-
-import CompletedIndication from '../CompletedIndication.js'
+import Custombox from '../util/Custombox.js'
 
 class Volume extends Component {
   constructor (props) {
@@ -19,12 +18,11 @@ class Volume extends Component {
 
     this.state = {
 
-      chapter: undefined,
       open: false
 
     }
 
-    const { manga } = this.props
+    const { manga, num } = this.props
     if (manga.includes('/')) {
       const path = manga.split('/')
 
@@ -33,81 +31,40 @@ class Volume extends Component {
         .submanga
         .find(item => item.path === path[1])
 
-      this.data = enumeratedData[path[0]][path[1]]
+      this.data = mangaData[path[0]][path[1]].volumes[num]
     } else {
       this.jsonData = mangaJson
         .find(item => item.path === manga)
 
-      this.data = enumeratedData[manga]
+      this.data = mangaData[manga].volumes[num]
     }
 
-    this.onChapterChoice = this.onChapterChoice.bind(this)
-    this.handleClose = this.onClose.bind(this)
-  }
+    const { jsonData: { chapters }, data } = this
 
-  onClose () {
-    this.setState({
+    this.chapters = Object.keys(data)
+      .filter(item => item !== 'cover')
+      .sort()
+      .map(item => {
+        const _item = parseInt(item)
+        let src = data[item][0]
+        if (chapters && chapters[_item]) {
+          const { cover } = chapters[_item]
+          src = find(
+            data[item], url => url.includes(cover)
+          ) || src
+        }
 
-      open: false
-
-    })
-  }
-
-  onChapterChoice (chapter) {
-    this.setState({
-
-      chapter: chapter,
-      open: true
-
-    })
-  }
-
-  renderChapters () {
-    const enumeratedChapters = this.data.volumes[this.props.num]
-    const chapterList = Object.keys(enumeratedChapters).filter(item => item !== 'cover').sort()
-
-    const { chapters } = this.jsonData
-    const cols = chapterList.map(item => {
-      const _item = parseInt(item)
-      let src = enumeratedChapters[item][0]
-      if (chapters && chapters[_item]) {
-        const { cover } = chapters[_item]
-        src = find(
-          enumeratedChapters[item], url => url.includes(cover)
-        ) || src
-      }
-      return (
-        <Col flex='15%' key={item} className='clickable chapter'>
-          <img
-            src={src} title={item} alt=''
-            onClick={() => this.onChapterChoice(item)}
-          />
-          <span> գլուխ #{item} </span>
-        </Col>
-      )
-    })
-
-    cols.push(
-      <Col flex='auto' key={cols.length}> </Col>
-    )
-
-    return <Row gutter={[20, 20]}> {cols} </Row>
-  }
-
-  renderOpenChapter () {
-    const { open, chapter } = this.state
-    if (!open || !chapter) {
-      return null
-    }
-
-    const { num } = this.props
-
-    return (
-      <Lightbox images={this.data.volumes[num][chapter]} onClose={this.handleClose} />
-    )
+        return {
+          cover: src,
+          text: `գլուխ #${_item}`,
+          name: 'chapter',
+          callback: () => this.setState({ item, open: true })
+        }
+      })
   }
 
   render () {
+    const { open, item } = this.state
     const { num, title: _title, superTitle } = this.props
     const { volumes } = this.jsonData
     const title = volumes[num] && volumes[num].title
@@ -130,8 +87,14 @@ class Volume extends Component {
           <CompletedIndication complete={volumes[parseInt(num)].complete} />
         </h4>
 
-        {this.renderChapters()}
-        {this.renderOpenChapter()}
+        <View data={this.chapters} />
+        <Custombox
+          read
+          on={open}
+          chapter={item}
+          volume={this.data}
+          onClose={() => this.setState({ open: false })}
+        />
 
       </>
 
