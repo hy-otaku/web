@@ -9,8 +9,9 @@ import { Layout } from 'antd'
 
 import Header from './header/Header.js'
 
-import About from './content/About.js'
 import Content from './content/Content.js'
+import About from './content/About.js'
+import Archive from './content/Archive.js'
 
 import Disclaimer from './footer/Disclaimer.js'
 
@@ -39,6 +40,12 @@ class App extends Component {
         path: 'manga',
         title: 'մանգա',
         content: () => <Content manga query={query} genre={genre} genreFunc={genre => this.setState({ genre })} />
+      },
+
+      archive: {
+        path: 'archive',
+        title: 'արխիվ',
+        content: () => <Archive />
       },
 
       about: {
