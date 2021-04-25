@@ -1428,6 +1428,43 @@ export const animeJson = [
 
 ]
 
+export const archiveJson = [
+
+  {
+    path: 'monsters',
+    title: 'հրեշներ',
+    team: {
+      translators: ['Namiko']
+    },
+    url: '18sOK6WRGLXKLRJRWMDqI_JLt--CHBMuGDV0j-hVl79g',
+    description: `
+    
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+      ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    `
+  },
+
+  {
+    path: 'խառը',
+    title: 'general',
+    team: {
+      translators: ['tado', 'Արի֊սան'],
+      editors: ['Արի֊սան']
+    },
+    url: '11elYW4YSmzcWH8OkdLaitV3MI8rDnzyYus0F5WjItJs',
+    description: `
+    
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  `
+  }
+
+]
+
 // lists the ideces of the anime and manga entries that should go to the ribbon
 export const newJson = {
   manga: [0, 3, 6],
