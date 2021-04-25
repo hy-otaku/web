@@ -11,7 +11,6 @@ import Header from './header/Header.js'
 
 import Content from './content/Content.js'
 import About from './content/About.js'
-import Archive from './content/Archive.js'
 
 import Disclaimer from './footer/Disclaimer.js'
 
@@ -28,24 +27,29 @@ class App extends Component {
     const { Footer } = Layout
 
     const { query, genre, theme } = this.state
+    const contentProps = {
+      query,
+      genre,
+      genreFunc: genre => this.setState({ genre })
+    }
     const sections = {
 
       anime: {
         path: 'anime',
         title: 'անիմե',
-        content: () => <Content anime query={query} genre={genre} genreFunc={genre => this.setState({ genre })} />
+        content: () => <Content anime {...contentProps} />
       },
 
       manga: {
         path: 'manga',
         title: 'մանգա',
-        content: () => <Content manga query={query} genre={genre} genreFunc={genre => this.setState({ genre })} />
+        content: () => <Content manga {...contentProps} />
       },
 
       archive: {
         path: 'archive',
         title: 'արխիվ',
-        content: () => <Archive />
+        content: () => <Content archive {...contentProps} />
       },
 
       about: {
