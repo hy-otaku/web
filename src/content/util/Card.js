@@ -185,20 +185,17 @@ class Card extends Component {
 
   render () {
     const { path, title, complete, onClick, narrow } = this.props
+    const linkProps = onClick
+      ? {
+          onClick: () => onClick()
+        }
+      : {
+          to: path
+        }
 
     return (
       <div className={`information-card${narrow ? ' narrow' : ''}`}>
-        {onClick
-          ? (
-            <>
-              <Link onClick={() => onClick()}> {title} </Link>
-            </>
-            )
-          : (
-            <>
-              <Link to={path}> «{title}» </Link> <CompletedIndication complete={complete} />
-            </>
-            )}
+        <Link {...linkProps}> «{title}» </Link> <CompletedIndication complete={complete} />
         <div className='content'>
           <div className='img-container'>
 
