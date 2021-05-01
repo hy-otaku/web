@@ -1437,13 +1437,7 @@ export const archiveJson = [
       translators: ['Namiko']
     },
     url: '18sOK6WRGLXKLRJRWMDqI_JLt--CHBMuGDV0j-hVl79g',
-    description: `
-    
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-      ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-    `
+    release: '2013'
   },
 
   {
@@ -1454,13 +1448,7 @@ export const archiveJson = [
       editors: ['Արի֊սան']
     },
     url: '11elYW4YSmzcWH8OkdLaitV3MI8rDnzyYus0F5WjItJs',
-    description: `
-    
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-      ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-    `
+    release: '2016'
   },
 
   {
@@ -1471,6 +1459,7 @@ export const archiveJson = [
       translators: ['tado-mi', 'Արի֊սան']
     },
     url: '1U7SdJdzKM3YZRnFKYoqr8kAXPC8i-jjQcA8YSaWmz8g',
+    release: '2016',
     description: `
 
       Այս գիրքը կազմված է ուղիղ հարյուր և մեկ առակներից, որոնք ամփոփում են չինացի և ճապոնացի Ձեն ուսուցիչների ավելի քան 
@@ -1496,11 +1485,32 @@ export const archiveJson = [
     url: '1eW86EuWV8-2lhG7XiYx1Lh2AbOuVbJ3GEhxw5Q_ebZI',
     description: `
     
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-      ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Այստեղ ներկայացված են Րյունոսկե Ակուտագավայի երկու գործերը․ «Օիշի Կուրանոսկէն օրերից մի օր» և «Րաշոմոն դարպասը»։ 
 
-    `
+    `,
+    entries: [
+
+      {
+        path: 'gates-to-rashomon',
+        description: `
+
+          Վերջին երկու-երեք տարիների ընթացքում Կիոտոյի վրա մեկը մյուսի հետևից դժբախտություններ էին թափվում. մեկ երկրաշարժ, 
+          մեկ փոթորիկ, մեկ հրդեհ, հիմա էլ՝ սով: 
+
+        `
+      },
+
+      {
+        path: 'oishi-kuranosuke',
+        description: `
+
+          Կուրանոսկէն կանգնած էր անշարժ՝ աչքերը հառած այդ ամուր սառը ծաղիկներին, որոնք կարծես մխրճվել էին կապույտ երկինքը։
+
+        `
+
+      }
+
+    ]
   },
 
   {
@@ -1526,6 +1536,7 @@ export const archiveJson = [
       translators: ['Արի֊սան']
     },
     url: '1NGFeWLLr7mdwjdP-8jNTzjjq63YZPPoE6jAYrixJBds',
+    release: '2016',
     description: `
     
       Ամենից առաջ սամուրայը միշտ պետք է հիշի՝ զօր ու գիշեր, այն առավոտվանից, ինչ նա վերցնում է փայտիկները՝ ճաշակելու համար 
@@ -1535,23 +1546,23 @@ export const archiveJson = [
     `
   },
 
-  {
+  // {
 
-    path: 'hokku',
-    title: 'հոքքուներ',
-    team: {
-      translators: ['Նունե Մովսիսյան']
-    },
-    authors: ['Մացուո Բաշո'],
-    url: '1WQUEu_UOZgcEZvFaUTsvbXs1ZLx476VNfAajJh0LcnU',
-    description: `
+  //   path: 'hokku',
+  //   title: 'հոքքուներ',
+  //   team: {
+  //     translators: ['Նունե Մովսիսյան']
+  //   },
+  //   authors: ['Մացուո Բաշո'],
+  //   url: '1WQUEu_UOZgcEZvFaUTsvbXs1ZLx476VNfAajJh0LcnU',
+  //   description: `
 
-      Մացուո Բաշոն Ճապոնիայի Էդո ժամանակաշրջանի ամենահայտնի բանաստեղծներից է: Նույնսիկ այսօր՝ նրա մահից դարեր անց, Բաշոն համարվում է 
-      հայքուի լավագույն վարպետ: Չնայած սրան, բանաստեղծը իրեն վերագրել է րենքու ոճին:
+  //     Մացուո Բաշոն Ճապոնիայի Էդո ժամանակաշրջանի ամենահայտնի բանաստեղծներից է: Նույնսիկ այսօր՝ նրա մահից դարեր անց, Բաշոն համարվում է
+  //     հայքուի լավագույն վարպետ: Չնայած սրան, բանաստեղծը իրեն վերագրել է րենքու ոճին:
 
-    `
+  //   `
 
-  },
+  // },
 
   {
 
@@ -1561,31 +1572,31 @@ export const archiveJson = [
       translators: ['Արի֊սան']
     },
     url: '19aECpBNllvqwW98h2jPmrq4X7Io4cdfsrnZAE66H4Jo',
+    release: '2016',
     description: `
     
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-      ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Այստեղ ներկայացված են տեղեկություններ Ճապոնիայում տոնվող չորս տոների մասին․ Նոր տարի, Չափահասության տոն, Պետության տոն և Սիրո տոն։
 
     `
 
-  },
-
-  {
-
-    path: 'diagnosis',
-    title: 'դիագնոզ',
-    authors: ['Արի֊սան'],
-    genres: ['հեղինակային'],
-    url: '1BOJxNKsSFnO0ITbq1LRRJpaSlFrR87T32TwSOlKG-1g',
-    description: `
-    
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-      ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-    `
   }
+
+  // {
+
+  //   path: 'diagnosis',
+  //   title: 'դիագնոզ',
+  //   authors: ['Արի֊սան'],
+  //   genres: ['հեղինակային'],
+  //   url: '1BOJxNKsSFnO0ITbq1LRRJpaSlFrR87T32TwSOlKG-1g',
+  //   release: '2016',
+  //   description: `
+
+  //     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+  //     ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+  //     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  //   `
+  // }
 
 ]
 
