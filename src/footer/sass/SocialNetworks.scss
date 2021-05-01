@@ -2,22 +2,31 @@
 
 .social-networks {
 
-    img {
+    padding: 5px;
 
-        float: left;
+    .ant-btn {
 
-        margin: 5px;
-        height: 25px;
-        border: unset;
+        margin-left: 5px;
+    
+        img {
 
-        filter: grayscale(100%);
+            float: left;
 
-        &:hover {
+            display: block;
 
-            filter: unset;
+            margin: 5px;
+            height: 20px;
+            border: unset;
+
+            filter: grayscale(100%);
+        
+            &:hover {
+
+                filter: unset;
+
+            }
 
         }
-
     }
 
 }
