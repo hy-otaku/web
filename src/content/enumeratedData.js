@@ -428,7 +428,7 @@ export const animeData = {
     url: 'https://peertube.interhop.org/videos/embed/7b731859-4d37-4ec6-95e9-a6a566ace65f'
   },
   {
-    name: 'մակոտո շինկայ 02 | ինչ֊որ մեկի հայացքը',
+    name: 'մակոտո շինկայ 02 | ինչ-որ մեկի հայացքը',
     thumbnail: 'https://peertube.interhop.org/lazy-static/previews/b54a59cc-4ad2-435b-9eee-d7697cac1c61.jpg',
     url: 'https://peertube.interhop.org/videos/embed/b54a59cc-4ad2-435b-9eee-d7697cac1c61'
   }],

@@ -343,7 +343,7 @@ export const mangaJson = [
     },
     description: `
     
-      Երբ Նարուտո Ուզումակին հայտարարում է, որ մի օր Հոքագե է դառնալու, ոչ֊ոք իրեն լուրջ չի ընդունում։ Ծնված օրվանից Նարուտոյի հասակակիցներն ու
+      Երբ Նարուտո Ուզումակին հայտարարում է, որ մի օր Հոքագե է դառնալու, ոչ-ոք իրեն լուրջ չի ընդունում։ Ծնված օրվանից Նարուտոյի հասակակիցներն ու
       համագյուղացիները ծաղրում են նրան ու խուսափում իրենից։ Սա Նարուտոյի ոչ թե շատախոսության, չարաճճիության կամ նինջաների արվեստում թերարժեքության 
       պատճառով է, այլ՝ նրա ներսում կնքված հրեշի։
 
@@ -478,7 +478,7 @@ export const mangaJson = [
   // k-on
   {
     path: 'k-on',
-    title: 'քեյ֊օն',
+    title: 'քեյ-օն',
     meta: {
       en: ['k-on!'],
       jp: ['けいおん!'],
@@ -927,9 +927,9 @@ export const animeJson = [
     description: `
     
       «Արաբական գիշերների» ամբողջ աշխարհով մեկ կանգնած են վիթխարի աշտարակներ՝ լի հարստություններով և կախարդական իրերով: Որտեղի՞ց են նրանք․
-      ոչ֊ոք չգիտի, բայց նրանք, ովքեր կարողանում են մտնել աշտարակ ու կենդանի դուրս գալ այնտեղից, դառնում է հարուստ և ճանաչված: 
+      ոչ-ոք չգիտի, բայց նրանք, ովքեր կարողանում են մտնել աշտարակ ու կենդանի դուրս գալ այնտեղից, դառնում է հարուստ և ճանաչված: 
       Հենց այսպիսի ճակատագրի մասին է երազում վտարված արքայազն Ալի-Բաբան։ Օրերից մի օր հանդիպելով Ալադինին՝ երիտասարդ կախարդի ու ջինի տիրակալի,
-      Ալի֊Բաբան ու Ալադինը սկսում են իրենց արկածների ճանապարհը։
+      Ալի-Բաբան ու Ալադինը սկսում են իրենց արկածների ճանապարհը։
       
     `,
     rating: '14+',
@@ -944,12 +944,12 @@ export const animeJson = [
       en: ['makoto shinkai'],
       jp: ['新海 誠'],
       ru: ['макото синкай'],
-      keywords: ['ինչ֊որ մեկի հայացքը', 'someone\'s gaze', 'խաչմերուկ', 'crossroad']
+      keywords: ['ինչ-որ մեկի հայացքը', 'someone\'s gaze', 'խաչմերուկ', 'crossroad']
     },
     shorts: true,
     list: {
       1: {
-        title: 'ինչ֊որ մեկի հայացքը',
+        title: 'ինչ-որ մեկի հայացքը',
         meta: {
           en: ['someone\'s gaze']
         }
@@ -1066,7 +1066,7 @@ export const animeJson = [
         title: 'Ուլտրամերին'
       },
       3: {
-        title: 'Լուսնա֊մանուշակագույն'
+        title: 'Լուսնա-մանուշակագույն'
       },
       4: {
         title: 'Դառը նարինջ'
@@ -1398,7 +1398,7 @@ export const animeJson = [
 
   // {
   //   path: 'kami-sama-hajimemashite',
-  //   title: 'կամի֊սամա, շատ հաճելի է',
+  //   title: 'կամի-սամա, շատ հաճելի է',
   //   episodes: {
   //     1: {
   //       title: 'Նանամին դառնում է Աստվածուհի'
@@ -1444,8 +1444,8 @@ export const archiveJson = [
     path: 'interviews',
     title: 'հարցազրույցներ',
     team: {
-      translators: ['tado-mi', 'Արի֊սան'],
-      editors: ['Արի֊սան']
+      translators: ['tado-mi', 'Արի-սան'],
+      editors: ['Արի-սան']
     },
     url: '11elYW4YSmzcWH8OkdLaitV3MI8rDnzyYus0F5WjItJs',
     release: '2016'
@@ -1456,7 +1456,7 @@ export const archiveJson = [
     path: '101-zen-stories',
     title: '101 ձեն պատմություն',
     team: {
-      translators: ['tado-mi', 'Արի֊սան']
+      translators: ['tado-mi', 'Արի-սան']
     },
     url: '1U7SdJdzKM3YZRnFKYoqr8kAXPC8i-jjQcA8YSaWmz8g',
     release: '2016',
@@ -1479,7 +1479,7 @@ export const archiveJson = [
     path: 'akutagawa',
     title: 'ակուտագավա',
     team: {
-      translators: ['Արի֊սան']
+      translators: ['Արի-սան']
     },
     authors: ['Րյունոսկե Ակուտագավա'],
     url: '1eW86EuWV8-2lhG7XiYx1Lh2AbOuVbJ3GEhxw5Q_ebZI',
@@ -1518,7 +1518,7 @@ export const archiveJson = [
     path: 'fables',
     title: 'ասացվածքներ',
     team: {
-      translators: ['Արի֊սան']
+      translators: ['Արի-սան']
     },
     url: '1fzVTg5k2Pg9Z-rtQhCIhRM4jesFlNkIHNOA1fCEZPu0',
     description: `
@@ -1533,7 +1533,7 @@ export const archiveJson = [
     path: 'bushido',
     title: 'բուշիդո',
     team: {
-      translators: ['Արի֊սան']
+      translators: ['Արի-սան']
     },
     url: '1NGFeWLLr7mdwjdP-8jNTzjjq63YZPPoE6jAYrixJBds',
     release: '2016',
@@ -1569,7 +1569,7 @@ export const archiveJson = [
     path: 'holidays',
     title: 'տոներ',
     team: {
-      translators: ['Արի֊սան']
+      translators: ['Արի-սան']
     },
     url: '19aECpBNllvqwW98h2jPmrq4X7Io4cdfsrnZAE66H4Jo',
     release: '2016',
@@ -1585,7 +1585,7 @@ export const archiveJson = [
 
   //   path: 'diagnosis',
   //   title: 'դիագնոզ',
-  //   authors: ['Արի֊սան'],
+  //   authors: ['Արի-սան'],
   //   genres: ['հեղինակային'],
   //   url: '1BOJxNKsSFnO0ITbq1LRRJpaSlFrR87T32TwSOlKG-1g',
   //   release: '2016',
