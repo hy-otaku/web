@@ -13,6 +13,7 @@ import Content from './content/Content.js'
 import About from './content/About.js'
 
 import Disclaimer from './footer/Disclaimer.js'
+import SocialNetworks from './footer/SocialNetworks.js'
 
 class App extends Component {
   constructor (props) {
@@ -92,6 +93,7 @@ class App extends Component {
 
             <Footer>
               <Disclaimer />
+              <SocialNetworks />
             </Footer>
 
           </div>

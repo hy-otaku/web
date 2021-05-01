@@ -127,7 +127,7 @@ $left: 20px;
 
   }
 
-  .button {
+  .button, .ant-btn {
 
     background-color: $white3;
     border-color: $outline-color;
@@ -171,6 +171,7 @@ $left: 20px;
     }
 
   }
+
 }
 
 @mixin dark-base {
@@ -231,7 +232,7 @@ $left: 20px;
     
   }
 
-  .button {
+  .button, .ant-btn {
 
     background-color: $black4;
     border-color: $outline-color;
