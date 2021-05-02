@@ -4,11 +4,13 @@ most of the files and logic live here.
 
 * `<About />` is a very simple component, returning a stylized text.
 
-* `<Content />` is using the data from `constants.js` to display a list of `<Card />` components, linking to the appropriate route.
+* `<Content />` is using the data from `constants.js` to display a list of `<Card />` components, linking to the appropriate route or modifying the state of Content.
 
   * this is where the search function and filtering functions are actually implemented.
 
-  * both `/anime` and `/manga` pages use this component. The difference is the data they are enumerated from.
+  * `/anime`, `/manga` and `/archive` pages use this component. The difference is the data they are enumerated from.
+
+    * for `/archive` page, `<Content />` also maintains a hidden `<Custombox />`, which can be turned on by clicking on a `<Card />`
 
 * **data enumeration** is done through a python script `enumerate_data.py`. It isn't a particularly exciting piece of code, and simply automates the process of writing out the urls to episodes and manga pages.
 
