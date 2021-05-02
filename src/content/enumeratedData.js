@@ -2348,7 +2348,8 @@ export const mangaData = {
             'https://raw.githubusercontent.com/high-otaku/manga-data/master//hellsing/dawn/01/06/10.jpg',
             'https://raw.githubusercontent.com/high-otaku/manga-data/master//hellsing/dawn/01/06/11.jpg',
             'https://raw.githubusercontent.com/high-otaku/manga-data/master//hellsing/dawn/01/06/12.jpg',
-            'https://raw.githubusercontent.com/high-otaku/manga-data/master//hellsing/dawn/01/06/13.jpg']
+            'https://raw.githubusercontent.com/high-otaku/manga-data/master//hellsing/dawn/01/06/13.jpg'],
+          cover: 'https://raw.githubusercontent.com/high-otaku/manga-data/master//hellsing/dawn/01/cover.jpg'
         }
       }
     },
