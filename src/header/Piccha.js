@@ -18,7 +18,7 @@ class Piccha extends Component {
           themeSwitchFunction={themeSwitchFunction}
         />
 
-        {
+        {/* {
           !collapsed && (
             <div className='info'>
               <h1> կարդալո՛ւ ու դիտելո՛ւ </h1>
@@ -28,7 +28,7 @@ class Piccha extends Component {
               </span>
             </div>
           )
-        }
+        } */}
 
       </div>
     )

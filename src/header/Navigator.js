@@ -6,7 +6,7 @@ import './sass/Navigator.scss'
 import { Switch } from 'antd'
 
 import SearchBar from './SearchBar.js'
-import Logo from './Logo.js'
+// import Logo from './Logo.js'
 
 class Navigator extends Component {
   render () {
@@ -35,9 +35,9 @@ class Navigator extends Component {
 
         <div className='theme-switch'>
           <Switch
-            checkedChildren='լույս'
-            unCheckedChildren='մութ'
-            onChange={(isLight) => themeSwitchFunction(isLight ? 'light' : 'dark')}
+            checkedChildren='մութ'
+            unCheckedChildren='լույս'
+            onChange={(isDark) => themeSwitchFunction(isDark ? 'dark' : 'light')}
             defaultChecked
           />
         </div>
@@ -49,9 +49,9 @@ class Navigator extends Component {
               searchFunction={searchFunction}
             />
           </div>
-          <div className='logo'>
+          {/* <div className='logo'>
             <Logo />
-          </div>
+          </div> */}
         </div>
       </div>
     )

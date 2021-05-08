@@ -11,6 +11,7 @@ import Header from './header/Header.js'
 
 import Content from './content/Content.js'
 import About from './content/About.js'
+import Main from './content/Main.js'
 
 import Disclaimer from './footer/Disclaimer.js'
 import SocialNetworks from './footer/SocialNetworks.js'
@@ -20,7 +21,7 @@ class App extends Component {
     super(props)
     this.state = {
       query: '',
-      theme: 'light'
+      theme: 'dark'
     }
   }
 
@@ -62,6 +63,14 @@ class App extends Component {
     }
 
     const routes = []
+
+    routes.push(
+      <Route
+        exact path='/' key='/'
+        component={() => <Main />}
+      />
+    )
+
     for (const { path, content } of Object.values(sections)) {
       routes.push(
         <Route

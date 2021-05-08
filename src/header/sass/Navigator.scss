@@ -22,13 +22,7 @@
 
             // make it a horizontal list
             display: inline;
-            padding-bottom: 6px;
-        
-            &.selected {
-
-                border-bottom: 5px solid;
-                
-            }
+            padding-bottom: 5px;
 
         }  
 
@@ -64,7 +58,7 @@
 
                 width: 20vw;
                 // location
-                position: absolute;
+                // position: absolute;
                 bottom: 0px;
                 right: 18.5vw;
 

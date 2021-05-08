@@ -57,16 +57,26 @@ class Content extends Component {
     )
   }
 
-  genreBar () {
-    const { genre, genreFunc } = this.props
-    if (!genre) {
-      return null
-    }
+  informationBar (len) {
+    const { query, genre, genreFunc } = this.props
 
     return (
       <div className='inform-msg'>
-        բոլոր <span className='highlighted button'>{genre}</span>ները |
-        <span className='clickable button' onClick={() => genreFunc(undefined)}> մաքրե՞լ </span> ընտրությունը
+        {genre
+          ? (
+            <div className='genre'>
+              բոլոր <span className='highlighted button'>{genre}</span>ները |
+              <span className='clickable button' onClick={() => genreFunc(undefined)}> մաքրե՞լ </span> ընտրությունը
+            </div>
+            )
+          : null}
+        {query && len === 0
+          ? (
+            <div className='query'>
+              «<b>{query}</b>» հարցմամբ արդյունքներ չկան։
+            </div>
+            )
+          : null}
       </div>
     )
   }
@@ -74,7 +84,7 @@ class Content extends Component {
   render () {
     const { path: self } = this.props.match
 
-    const { query, anime, manga, archive, genreFunc } = this.props
+    const { anime, manga, archive, genreFunc } = this.props
     const json = anime ? animeJson : manga ? mangaJson : archive ? archiveJson : null
     if (!json) {
       console.error('content called neither for manga, nor for anime, nor for archive.')
@@ -105,20 +115,15 @@ class Content extends Component {
     return (
       <div className='main-content'>
         {
-          this.genreBar()
+          this.informationBar(list.length)
         }
-        {list.length > 0
-          ? (
-            <div className={`${archive ? 'archive-list' : ''}`}>
-              {list}
-            </div>
-            )
-          : <span className='inform-msg'> «<b>{query}</b>» հարցմամբ արդյունքներ չկան։ </span>}
+        <div className={`${archive ? 'archive-list' : ''}`}>
+          {list}
+        </div>
 
         <Custombox
-          pdf
+          pdf on={open}
           doc={`https://docs.google.com/document/d/${url}/preview`}
-          on={open}
           onClose={() => this.setState({ open: false })}
         />
       </div>

@@ -11,7 +11,13 @@
 
     .inform-msg {
 
-        margin-left: 40%;
+        padding-bottom: 10px;
+
+        .genre, .query {
+            
+            text-align: center;
+            padding: 5px;
+        }
 
         .clickable {
 
@@ -26,6 +32,21 @@
         .highlighted {
 
             font-weight: bold;
+
+        }
+    }
+
+}
+
+.main {
+
+    img {
+        
+        filter: grayscale(100%);
+        
+        &:hover {
+
+            filter: unset;
 
         }
     }

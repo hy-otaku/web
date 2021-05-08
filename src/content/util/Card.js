@@ -197,11 +197,19 @@ class Card extends Component {
       <div className={`information-card${narrow ? ' narrow' : ''}`}>
         <Link {...linkProps}> «{title}» </Link> <CompletedIndication complete={complete} />
         <div className='content'>
-          <div className='img-container'>
+          {
+            narrow
+              ? null
+              : (
 
-            <img src={`https://raw.githubusercontent.com/high-otaku/assets/master/${path}.png`} alt='' />
+                <div className='img-container'>
 
-          </div>
+                  <img src={`https://raw.githubusercontent.com/high-otaku/assets/master/${path}.png`} alt='' />
+
+                </div>
+
+                )
+          }
 
           <table>
             <tbody>

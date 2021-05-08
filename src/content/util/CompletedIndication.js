@@ -12,7 +12,7 @@ class CompletedIndication extends Component {
     return (
       complete
         ? <span className='complete true'> ամբողջը </span>
-        : <span className='complete false'> շարունակելի </span>
+        : <span className='complete false'> դադարեցված (թարգմանությունը) </span>
     )
   }
 }

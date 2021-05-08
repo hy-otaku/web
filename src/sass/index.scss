@@ -65,6 +65,17 @@ $left: 20px;
 
   }
 
+  .social-networks .ant-btn {
+
+    border-radius: 20px;
+    border: 2px solid;
+
+    &:hover {
+      border-color: $color0;
+    }
+
+  }
+
 }
 
 @mixin light-base {
@@ -94,7 +105,8 @@ $left: 20px;
 
   .navigator {
     
-    background-color: rgba($white3, 0.7);
+    background-color: rgba($black0, 0.7);
+    border-bottom: 2px solid $outline-color;
 
     .menu {
 
@@ -131,6 +143,10 @@ $left: 20px;
 
     background-color: $white3;
     border-color: $outline-color;
+
+    &:hover {
+
+    }
 
   }
 
@@ -202,6 +218,7 @@ $left: 20px;
   .navigator {
     
     background-color: rgba($black6, 0.7);
+    border-bottom: 2px solid $outline-color;
 
     .menu {
 
@@ -305,15 +322,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @include base;
   &.light-theme {
 
+    @include base;
     @include light-base;
 
   }
 
   &.dark-theme {
 
+    @include base;
     @include dark-base;
 
   }
