@@ -3,32 +3,25 @@ import { withRouter } from 'react-router-dom'
 
 import './sass/Piccha.scss'
 
-import Navigator from './Navigator.js'
+import SearchBar from './SearchBar.js'
 
 class Piccha extends Component {
   render () {
-    const { sections, searchFunction, themeSwitchFunction, location: { pathname } } = this.props
-    const collapsed = pathname.startsWith('/anime') || pathname.startsWith('/manga') || pathname.startsWith('/archive')
+    const { searchFunction, location: { pathname } } = this.props
+
     return (
-      <div className={`piccha${collapsed ? ' collapsed' : ''}`}>
+      <div className='piccha'>
 
-        <Navigator
-          sections={sections}
-          searchFunction={searchFunction}
-          themeSwitchFunction={themeSwitchFunction}
-        />
+        <div className='right-pane'>
 
-        {/* {
-          !collapsed && (
-            <div className='info'>
-              <h1> կարդալո՛ւ ու դիտելո՛ւ </h1>
-              <span>
-                կատակերգություն, արկածային, դրամա, սարսափ, գերբնական...<br />
-                - տասնյակ սերիաներ ու հատորներ, բացառապես հայերե՛ն ու հայատա՛ռ
-              </span>
-            </div>
-          )
-        } */}
+          <div className='searchbar'>
+            <SearchBar
+              show={['/anime', '/manga', '/archive'].includes(pathname)}
+              searchFunction={searchFunction}
+            />
+          </div>
+
+        </div>
 
       </div>
     )

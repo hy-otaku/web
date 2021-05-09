@@ -2,40 +2,32 @@
 
 .piccha {
 
-    height: 700px;
+    height: $menu-height;
 
     margin-bottom: 30px;
 
-    &.collapsed {
-        height: $menu-height;
-    }
-
     position: relative;
 
-    .info {
+    .right-pane {
 
-        padding: 20px;
-
-        // set dimensions
-        width: 40%;
-        height: 35%;
-
-        // put it at the right bottom corner
         position: absolute;
-        bottom: 0;
-        right: 2%;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
-
-        h1 {
-            text-transform: uppercase;
-
+        right: 0;
+        
+        div {
+            display: inline-block;
+            padding: 10px;
         }
 
-        span {
+        .searchbar {
 
-            font-size: 18px;
+            .ant-input-search {
+
+                width: 20vw;
+                // location
+                bottom: 0px;
+                right: 18.5vw;
+
+            }
 
         }
 

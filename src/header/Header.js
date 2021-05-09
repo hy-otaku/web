@@ -7,7 +7,7 @@ class Header extends Component {
   render () {
     return (
       <>
-        <Ribbon />
+        <Ribbon {...this.props} />
         <Piccha {...this.props} />
       </>
     )

@@ -38,11 +38,11 @@
 
 }
 
-.main {
+.the {
 
     img {
-        
-        filter: grayscale(100%);
+
+        filter: grayscale(80%);
         
         &:hover {
 
@@ -50,6 +50,8 @@
 
         }
     }
+
+    margin-bottom: 200px;
 
 }
 

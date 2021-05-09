@@ -34,6 +34,12 @@ class App extends Component {
     }
     const sections = {
 
+      main: {
+        path: '',
+        title: 'գլխավոր',
+        content: () => <Main />
+      },
+
       anime: {
         path: 'anime',
         title: 'անիմե',
@@ -61,13 +67,6 @@ class App extends Component {
     }
 
     const routes = []
-
-    routes.push(
-      <Route
-        exact path='/' key='/'
-        component={() => <Main />}
-      />
-    )
 
     for (const { path, content } of Object.values(sections)) {
       routes.push(
