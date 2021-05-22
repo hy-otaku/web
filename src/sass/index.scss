@@ -27,32 +27,6 @@ $menu-height: 10px;
 
 @mixin base {
 
-  .ribbon {
-
-    .menu {
-
-      a {
-
-        &:hover {
-          color: $color0;
-        }
-
-      }
-
-      .selected {
-
-        a {
-
-          color: $color0;
-
-        }
-        
-      }
-      
-    }
-
-  }
-
   .button {
 
     margin: 0px 5px 0px 5px;
@@ -94,8 +68,22 @@ $menu-height: 10px;
 
       a {
 
-        color: $black8;
+        color: $black2;
 
+        &:hover {
+          color: $black8;
+        }
+
+      }
+
+      .selected {
+
+        a {
+
+          color: $black8;
+
+        }
+        
       }
       
     }
@@ -175,8 +163,22 @@ $menu-height: 10px;
 
       a {
 
-        color: $white0;
+        color: $black2;
 
+        &:hover {
+          color: $white0;
+        }
+
+      }
+
+      .selected {
+
+        a {
+
+          color: $white0;
+
+        }
+        
       }
       
     }
