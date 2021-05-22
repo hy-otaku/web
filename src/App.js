@@ -28,11 +28,9 @@ class App extends Component {
   render () {
     const { Footer } = Layout
 
-    const { query, genre, theme } = this.state
+    const { query, theme } = this.state
     const contentProps = {
-      query,
-      genre,
-      genreFunc: genre => this.setState({ genre })
+      query
     }
     const sections = {
 

@@ -19,7 +19,7 @@ class Content extends Component {
   }
 
   byGenre (item) {
-    const { genre } = this.props
+    const { genre } = this.state
     if (!genre) { // ignore genre when none is selected
       return true
     }
@@ -58,7 +58,8 @@ class Content extends Component {
   }
 
   informationBar (len) {
-    const { query, genre, genreFunc } = this.props
+    const { query } = this.props
+    const { genre } = this.state
 
     return (
       <div className='inform-msg'>
@@ -66,7 +67,7 @@ class Content extends Component {
           ? (
             <div className='genre'>
               բոլոր <span className='highlighted button'>{genre}</span>ները |
-              <span className='clickable button' onClick={() => genreFunc(undefined)}> մաքրե՞լ </span> ընտրությունը
+              <span className='clickable button' onClick={() => this.setState({ genre: undefined })}> մաքրե՞լ </span> ընտրությունը
             </div>
             )
           : null}
@@ -84,7 +85,7 @@ class Content extends Component {
   render () {
     const { path: self } = this.props.match
 
-    const { anime, manga, archive, genreFunc } = this.props
+    const { anime, manga, archive } = this.props
     const json = anime ? animeJson : manga ? mangaJson : archive ? archiveJson : null
     if (!json) {
       console.error('content called neither for manga, nor for anime, nor for archive.')
@@ -103,7 +104,7 @@ class Content extends Component {
         <Card
           {...item}
           path={path} key={path}
-          onGenreSelected={genre => genreFunc(genre)}
+          onGenreSelected={genre => this.setState({ genre })}
           narrow={archive}
           onClick={archive ? () => this.setState({ open: true, url: item.url }) : null}
         />
