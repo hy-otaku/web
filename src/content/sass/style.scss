@@ -36,6 +36,38 @@
         }
     }
 
+    .right-pane-container {
+
+        height: $menu-height;
+        margin-bottom: 30px;
+        position: relative;
+
+        .right-pane {
+
+            position: absolute;
+            right: 0;
+
+            div {
+                display: inline-block;
+                padding: 10px;
+            }
+
+            .searchbar {
+
+                .ant-input-search {
+
+                    width: 20vw;
+                    // location
+                    bottom: 0px;
+                    right: 18.5vw;
+
+                }
+
+            }
+
+        }
+    }
+
 }
 
 .the {

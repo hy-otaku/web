@@ -20,7 +20,6 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      query: '',
       theme: 'dark'
     }
   }
@@ -146,10 +145,7 @@ class App extends Component {
   render () {
     const { Footer } = Layout
 
-    const { query, theme } = this.state
-    const contentProps = {
-      query
-    }
+    const { theme } = this.state
     const sections = {
 
       main: {
@@ -161,19 +157,19 @@ class App extends Component {
       anime: {
         path: 'anime',
         title: 'անիմե',
-        content: () => <Content anime {...contentProps} />
+        content: () => <Content anime />
       },
 
       manga: {
         path: 'manga',
         title: 'մանգա',
-        content: () => <Content manga {...contentProps} />
+        content: () => <Content manga />
       },
 
       archive: {
         path: 'archive',
         title: 'արխիվ',
-        content: () => <Content archive {...contentProps} />
+        content: () => <Content archive />
       },
 
       about: {
@@ -211,7 +207,6 @@ class App extends Component {
 
           <Header
             sections={sections}
-            searchFunction={query => this.setState({ query })}
             themeSwitchFunction={theme => this.setState({ theme })}
           />
 

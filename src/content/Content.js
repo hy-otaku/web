@@ -9,12 +9,14 @@ import './sass/style.scss'
 
 import Card from './util/Card.js'
 import Custombox from './util/Custombox.js'
+import SearchBar from './util/SearchBar.js'
 
 class Content extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      open: false
+      open: false,
+      query: ''
     }
   }
 
@@ -33,7 +35,7 @@ class Content extends Component {
   }
 
   byQuery (item) {
-    const { query } = this.props
+    const { query } = this.state
 
     const helper = (data) => {
       if (!data) {
@@ -57,9 +59,27 @@ class Content extends Component {
     )
   }
 
+  searchBar () {
+    const { location: { pathname } } = this.props
+
+    return (
+      <div className='right-pane-container'>
+        <div className='right-pane'>
+
+          <div className='searchbar'>
+            <SearchBar
+              show={['/anime', '/manga', '/archive'].includes(pathname)}
+              searchFunction={query => this.setState({ query })}
+            />
+          </div>
+
+        </div>
+      </div>
+    )
+  }
+
   informationBar (len) {
-    const { query } = this.props
-    const { genre } = this.state
+    const { query, genre } = this.state
 
     return (
       <div className='inform-msg'>
@@ -115,6 +135,9 @@ class Content extends Component {
 
     return (
       <div className='main-content'>
+        {
+          this.searchBar()
+        }
         {
           this.informationBar(list.length)
         }
