@@ -67,11 +67,14 @@ $left: 20px;
 
   .social-networks .ant-btn {
 
-    border-radius: 20px;
+    filter: grayscale(0.7);
+
+    border-radius: 10px;
     border: 2px solid;
 
     &:hover {
       border-color: $color0;
+      filter: unset;
     }
 
   }
