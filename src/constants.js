@@ -347,28 +347,28 @@ export const mangaJson = [
   },
 
   // naruto western
-  {
-    path: 'naruto-wst',
-    title: 'նարուտո (արևմտահայերեն)',
-    meta: {
-      en: ['naruto (western armenian)'],
-      jp: ['ナルト (西アルメニア語)'],
-      ru: ['наруто (западноармянский)']
-    },
-    complete: false,
-    volumes: {
-      60: {
-        complete: false,
-        title: 'Քուրամա'
-      }
-    },
-    authors: ['Մասաշի Քիշիմոտո'],
-    genres: ['շոնեն'],
-    team: {
-      translators: ['մարգար']
-    },
-    release: '1999'
-  },
+  // {
+  //   path: 'naruto-wst',
+  //   title: 'նարուտո (արևմտահայերեն)',
+  //   meta: {
+  //     en: ['naruto (western armenian)'],
+  //     jp: ['ナルト (西アルメニア語)'],
+  //     ru: ['наруто (западноармянский)']
+  //   },
+  //   complete: false,
+  //   volumes: {
+  //     60: {
+  //       complete: false,
+  //       title: 'Քուրամա'
+  //     }
+  //   },
+  //   authors: ['Մասաշի Քիշիմոտո'],
+  //   genres: ['շոնեն'],
+  //   team: {
+  //     translators: ['մարգար']
+  //   },
+  //   release: '1999'
+  // },
 
   // one piece
   {
