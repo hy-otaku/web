@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://raw.githubusercontent.com/high-otaku'
+export const BASE_URL = 'https://raw.githubusercontent.com/hy-otaku'
 
 export const mangaJson = [
   // bleach

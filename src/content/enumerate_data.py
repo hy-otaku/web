@@ -150,7 +150,7 @@ def get_manga():
         return ans
 
     root = '../../../manga-data'
-    data = get_mangajson(root, root, 'https://raw.githubusercontent.com/high-otaku/manga-data/master')
+    data = get_mangajson(root, root, 'https://raw.githubusercontent.com/hy-otaku/manga-data/master')
     return data
 
 def main():
