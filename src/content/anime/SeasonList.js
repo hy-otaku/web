@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
-import { animeJson } from '../../constants.js'
+import { animeJson, BASE_URL } from '../../constants.js'
 
 import { normalize } from '../../functions.js'
 
@@ -31,7 +31,7 @@ class SeasonList extends Component {
       }
 
       if (ext) {
-        obj.cover = `https://raw.githubusercontent.com/high-otaku/assets/master/anime/season/${path}-${_index}.${ext}`
+        obj.cover = `${BASE_URL}/assets/master/anime/season/${path}-${_index}.${ext}`
       }
 
       this.seasonList.push(obj)
@@ -45,7 +45,7 @@ class SeasonList extends Component {
       ? (
         <View
           data={this.seasonList}
-          defaultCover='https://raw.githubusercontent.com/high-otaku/assets/master/anime/season/default.png'
+          defaultCover={`${BASE_URL}/assets/master/anime/season/default.png`}
         />
         )
       : <Season anime={this.props.anime} />

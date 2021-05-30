@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+import { BASE_URL } from '../../constants.js'
+
 import './sass/Card.scss'
 
 import CompletedIndication from './CompletedIndication.js'
@@ -45,7 +47,7 @@ class Card extends Component {
         return null
       }
 
-      const url = `https://raw.githubusercontent.com/high-otaku/assets/master/flags/${lang}.png`
+      const url = `${BASE_URL}/assets/master/flags/${lang}.png`
       return (
         <div className='icon-container'>
           <img className='flag' src={url} title={title} alt={title} />
@@ -204,7 +206,7 @@ class Card extends Component {
 
                 <div className='img-container'>
 
-                  <img src={`https://raw.githubusercontent.com/high-otaku/assets/master/${path}.png`} alt='' />
+                  <img src={`${BASE_URL}/assets/master/${path}.png`} alt='' />
 
                 </div>
 

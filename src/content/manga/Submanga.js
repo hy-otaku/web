@@ -3,6 +3,8 @@ import { withRouter } from 'react-router-dom'
 
 import { get } from 'lodash'
 
+import { BASE_URL } from '../../constants.js'
+
 import { mangaData } from '../enumeratedData.js'
 
 import CompletedIndication from '../util/CompletedIndication.js'
@@ -37,7 +39,7 @@ class Submanga extends Component {
         <h2> {title} <CompletedIndication complete={complete} /></h2>
         <View
           data={list}
-          defaultCover='https://raw.githubusercontent.com/high-otaku/assets/master/manga/submanga/default.png'
+          defaultCover={`${BASE_URL}/assets/master/manga/submanga/default.png`}
         />
       </>
     )

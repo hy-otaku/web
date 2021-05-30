@@ -1,3 +1,5 @@
+export const BASE_URL = 'https://raw.githubusercontent.com/high-otaku'
+
 export const mangaJson = [
   // bleach
   {
@@ -1577,9 +1579,3 @@ export const archiveJson = [
   // }
 
 ]
-
-// lists the ideces of the anime and manga entries that should go to the ribbon
-export const newJson = {
-  manga: [0, 3, 6],
-  anime: [0, 7, 8]
-}
