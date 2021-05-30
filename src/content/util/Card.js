@@ -204,7 +204,7 @@ class Card extends Component {
 
                 <div className='img-container'>
 
-                  <img src={`https://raw.githubusercontent.com/high-otaku/assets/master/min/${path}.png`} alt='' />
+                  <img src={`https://raw.githubusercontent.com/high-otaku/assets/master/${path}.png`} alt='' />
 
                 </div>
 

@@ -13,7 +13,7 @@ class Main extends Component {
         <Link to='/anime'>
           <img
             alt='anime' text='անիմե'
-            src='https://raw.githubusercontent.com/high-otaku/assets/master/common/anime-2.png'
+            src='https://raw.githubusercontent.com/high-otaku/assets/master/common/anime.png'
           />
         </Link>
       </Col>,
@@ -22,7 +22,7 @@ class Main extends Component {
         <Link to='/manga'>
           <img
             alt='manga' text='մանգա'
-            src='https://raw.githubusercontent.com/high-otaku/assets/master/common/manga-3.png'
+            src='https://raw.githubusercontent.com/high-otaku/assets/master/common/manga.png'
           />
         </Link>
       </Col>
