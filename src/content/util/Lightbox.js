@@ -222,8 +222,8 @@ export default class Lightbox extends React.Component {
 
         let videoProps = {
             allowFullScreen: true,
-            width: '720px',
-            height: '405px'
+            width: '980px',
+            height: '550px'
         }
 
         let pdfProps = {

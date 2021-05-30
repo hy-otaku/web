@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 import './sass/Disclaimer.scss'
 
@@ -41,36 +42,11 @@ class Disclaimer extends Component {
           Թարգմանության օգտագործումն ազատ է։ Ցանկալի է նշել թարգմանիչների անուններն ու գործող հղում տալ կայքին։
         </p>
 
-        <p>Օգտագործված ֆան֊արտը․</p>
-
-        <ul>
-          <li>
-            <a target='_blank' rel='noreferrer' href='https://www.deviantart.com/agussumeong/art/Kirito-Asuna-SAO-Minimalist-Wallpaper-523508558'>
-              agussumeong
-            </a>
-          </li>
-          <li>
-            <a target='_blank' rel='noreferrer' href='https://www.deviantart.com/jesstalksalot/art/Minimalist-Ja-Far-Magi-596224216'>
-              jesstalksalot
-            </a>
-          </li>
-          <li>
-            <a target='_blank' rel='noreferrer' href='https://www.deviantart.com/greenmapple17/art/Yuko-Ichihara-xxxHolic-Minimalist-Wallpaper-532753728'>
-              greenmapple17
-            </a>
-          </li>
-          <li>
-            <a target='_blank' rel='noreferrer' href='https://www.deviantart.com/max028/art/Levi-Ackerman-from-Shingeki-no-Kyojin-Minimal-Wall-653459194'>
-              max028
-            </a>
-          </li>
-          <li>
-            <a target='_blank' rel='noreferrer' href='https://www.deviantart.com/lucifer012/art/K-ON-Minimalist-Anime-Wallpaper-664262777'>
-              lucifer012
-            </a>
-          </li>
-        </ul>
-
+        <p>Օգտագործված ֆան֊արտը․
+          <Link to='/art-credits' onClick={() => this.setState({ visible: false })}>
+            այստեղ
+          </Link>:
+        </p>
       </>
     )
   }

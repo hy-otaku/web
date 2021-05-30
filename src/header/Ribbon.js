@@ -1,37 +1,39 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 
-import { mangaJson, animeJson, newJson } from '../constants.js'
-
 import './sass/Ribbon.scss'
+
+import { Switch } from 'antd'
 
 class Ribbon extends Component {
   render () {
-    const val = []
-    newJson.manga.forEach(index => {
-      const { path, title } = mangaJson[index]
-      val.push(
-        <li key={path} className='ribbon-manga'>
-          <Link to={`/manga/${path}`}>{title}</Link>
-        </li>
-      )
-    })
+    const { sections, themeSwitchFunction, location: { pathname } } = this.props
+    const selected = pathname.split('/')[1]
 
-    newJson.anime.forEach(index => {
-      const { path, title } = animeJson[index]
+    const val = []
+    for (const { path, title } of Object.values(sections)) {
       val.push(
-        <li key={path} className='ribbon-anime'>
-          <Link to={`/anime/${path}`}>{title}</Link>
+        <li key={`/${path}`} className={path === selected ? 'selected' : ''}>
+          <Link to={`/${path}`}> {title} </Link>
         </li>
       )
-    })
+    }
 
     return (
       <div className='ribbon'>
 
-        <ul>
+        <ul className='menu'>
           {val}
         </ul>
+
+        <div className='theme-switch'>
+          <Switch
+            checkedChildren='մութ'
+            unCheckedChildren='լույս'
+            onChange={(isDark) => themeSwitchFunction(isDark ? 'dark' : 'light')}
+            defaultChecked
+          />
+        </div>
 
       </div>
     )

@@ -28,6 +28,8 @@
 
     .content {
 
+        $img-size: 230px;
+        $rad-size: 15px;
         min-height: 250px;
 
         .img-container {
@@ -35,14 +37,18 @@
             float: left;
             margin: 10px;
 
-            width: 225px;
-            height: 225px;
+            width: $img-size;
+            height: $img-size;
 
             border: 2px solid;
-            border-radius: 60px;
+            border-radius: $rad-size;
 
             img {
-                border-color: transparent
+
+                filter: grayscale(0.1);
+                border-color: transparent;
+                border-radius: $rad-size;
+                
             }
 
         }

@@ -30,7 +30,7 @@ class Main extends Component {
     ]
 
     return (
-      <div className='main main-content '>
+      <div className='the main-content '>
 
         <Row
           justify='space-around' align='middle'
