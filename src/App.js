@@ -216,8 +216,10 @@ class App extends Component {
               {routes}
             </Switch>
 
+            <br />
             <Footer>
               <Disclaimer />
+              <br />
               <SocialNetworks />
             </Footer>
 

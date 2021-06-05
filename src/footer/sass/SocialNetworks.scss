@@ -2,23 +2,50 @@
 
 .social-networks {
 
-    padding: 5px;
+                
+    img {
+        
+        float: left;
+        filter: unset;
 
-    .ant-btn {
+        display: block;
+
+        margin: 3px;
+        height: 30px;
+        border: unset;
+
+    }
+
+
+    .ant-btn {    
 
         margin-left: 5px;
-    
-        img {
+        height: 40px;
+        border-radius: 8px;
 
-            float: left;
-
-            display: block;
-
-            margin: 3px;
-            height: 20px;
-            border: unset;
-
-        }
     }
+
+    .ant-modal-body {
+
+        padding: 5px;
+        position: relative;
+
+        .buttons {
+
+            margin-left: 25%;
+        
+            .ant-btn {
+
+                background-color: unset;
+                border: 1px solid $black0;
+            
+            }
+    
+        }
+
+    }
+
+
+
 
 }

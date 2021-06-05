@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import './sass/style.scss'
 
+import SocialNetworks from '../footer/SocialNetworks.js'
+
 class About extends Component {
   flatbread () {
     return (
@@ -64,7 +66,7 @@ class About extends Component {
         </p>
 
         <p>
-          եթե ցանկանում ես անիմեներ կամ մանգաներ թարգմանել, կամ կիսվելու մտքեր ու առաջարկներ ունես, անպայման <a href='mailto: high_otaku@yahoo.com'>գրի՛ր մեզ</a>։
+          եթե ցանկանում ես անիմեներ կամ մանգաներ թարգմանել, կամ կիսվելու մտքեր ու առաջարկներ ունես, անպայման <SocialNetworks popup />։
         </p>
 
         <h2> հիմնադիրները </h2>
@@ -139,7 +141,7 @@ class About extends Component {
         </p>
 
         <p>
-          սա նշանակում է, որ հնարավորություն կա միանալու ծրագրին ու առաջնորդելու։ եթե կարծում ես, որ լավ ղեկավար կլինես ու զարգացման մտքեր ունես՝ <a href='mailto: high_otaku@yahoo.com'>գրի՛ր մեզ</a>։
+          սա նշանակում է, որ հնարավորություն կա միանալու ծրագրին ու առաջնորդելու։ եթե կարծում ես, որ լավ ղեկավար կլինես ու զարգացման մտքեր ունես՝ <SocialNetworks popup />։
         </p>
 
       </div>
