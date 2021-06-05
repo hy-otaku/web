@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+import { EMAIL } from '../constants'
+
 import './sass/Disclaimer.scss'
 
 import { Modal } from 'antd'
@@ -36,7 +38,7 @@ class Disclaimer extends Component {
           Կայքը պատասխանատվություն չի կրում դրանց օգտագործման հետևանքով առաջացած հնարավոր վնասի համար։
         </p>
         <p>
-          Եթե հանդիսանում եք կայքում առկա որևէ նյութի հեղինակային իրավունքների իրավատերը և ցանկանում եք հեռացնել այն կայքից, <a href='mailto: high_otaku@yahoo.com'>գրեք մեզ</a>:
+          Եթե հանդիսանում եք կայքում առկա որևէ նյութի հեղինակային իրավունքների իրավատերը և ցանկանում եք հեռացնել այն կայքից, <a href={`mailto: ${EMAIL}`}>գրեք մեզ</a>:
         </p>
         <p>
           Թարգմանության օգտագործումն ազատ է։ Ցանկալի է նշել թարգմանիչների անուններն ու գործող հղում տալ կայքին։
@@ -55,6 +57,7 @@ class Disclaimer extends Component {
     return (
       <div className='disclaimer'>
         <Modal
+          centered
           visible={this.state.visible}
           onCancel={() => this.setState({ visible: false })}
           maskClosable keyboard

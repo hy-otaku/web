@@ -1,4 +1,5 @@
 export const BASE_URL = 'https://raw.githubusercontent.com/hy-otaku'
+export const EMAIL = 'high_otaku@yahoo.com'
 
 export const mangaJson = [
   // bleach
