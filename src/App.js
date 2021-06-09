@@ -212,11 +212,14 @@ class App extends Component {
 
           <div className='app-content'>
 
-            <Switch>
-              {routes}
-            </Switch>
+            <div className='nested'>
 
-            <br />
+              <Switch>
+                {routes}
+              </Switch>
+
+            </div>
+
             <Footer>
               <Disclaimer />
               <br />

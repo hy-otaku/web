@@ -57,7 +57,7 @@ class Card extends Component {
     }
 
     const { meta } = this.props
-    if (!meta) {
+    if (!meta || !(meta.jp || meta.en || meta.ru)) {
       return null
     }
 
