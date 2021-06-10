@@ -109,6 +109,11 @@ export const animeData = {
     url: 'https://peertube.interhop.org/videos/embed/01f7aa11-aad2-40b6-b1b0-71928472cee2'
   },
   {
+    name: 'հայաո միյաձակի 01 | սենի ու չիհիրոյի խորհրդավոր անհետացումը',
+    thumbnail: 'https://peertube.interhop.org/lazy-static/previews/3a9ebc53-a700-4cdf-9241-40283a63620a.jpg',
+    url: 'https://peertube.interhop.org/videos/embed/da6587e4-1750-437b-ba83-7f3bd00bedd3'
+  },
+  {
     name: 'հայաո միյաձակի 02 | քամին ուժգնանում է',
     thumbnail: 'https://peertube.interhop.org/lazy-static/previews/11c44184-ffc3-4c63-a5cb-967104353c31.jpg',
     url: 'https://peertube.interhop.org/videos/embed/efe0b168-9047-4b9f-bd6f-5bac08fdcf79'
