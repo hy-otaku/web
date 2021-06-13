@@ -21,10 +21,10 @@ class Write extends Component {
         <Button href={`mailto: ${EMAIL}`} target='_blank' rel='noreferrer'>
           <img src={`${self}/mail-logo.png`} alt='mail' title='մեր էլեկտրոնային փոստը' />
         </Button>
-        <Button href='https://www.facebook.com/armenianmanga' target='_blank' rel='noreferrer'>
+        <Button href='https://www.facebook.com/hy.hyotaku' target='_blank' rel='noreferrer'>
           <img src={`${self}/fb-logo.png`} alt='fb' title='մենք fb.com - ում' />
         </Button>
-        <Button href='https://discord.gg/ydQjHACd' target='_blank' rel='noreferrer'>
+        <Button href='https://discord.gg/cMbHtDCTdU' target='_blank' rel='noreferrer'>
           <img src={`${self}/discord-logo.png`} alt='discord' title='մեր discord սպասարկիչը' />
         </Button>
       </div>
