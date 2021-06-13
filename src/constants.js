@@ -235,6 +235,7 @@ export const mangaJson = [
       ru: ['тетрадь смерти']
     },
     complete: false,
+    progress: true,
     volumes: {
       1: {
         complete: true

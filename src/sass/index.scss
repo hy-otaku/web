@@ -20,7 +20,8 @@ $black8: #000000;
 // tri chromatic color scheme
 $color0: #1890ff;
 $color1: #1abc9c;
-$color2: #f27935;
+$color2-light: #389e0d;
+$color2-dark: #d9f7be;
 
 $left: 20px;
 $menu-height: 10px;
@@ -95,6 +96,12 @@ $menu-height: 10px;
     &.false {
       
       color: $black3;
+
+    }
+
+    &.in-progress {
+
+      color: $color2-light;
 
     }
 
@@ -192,6 +199,13 @@ $menu-height: 10px;
       color: $black1;
 
     }
+
+    &.in-progress {
+
+      color: $color2-dark;
+      
+    }
+
     
   }
 

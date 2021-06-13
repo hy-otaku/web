@@ -186,7 +186,7 @@ class Card extends Component {
   }
 
   render () {
-    const { path, title, complete, onClick, narrow } = this.props
+    const { path, title, complete, progress, onClick, narrow } = this.props
     const linkProps = onClick
       ? {
           onClick: () => onClick()
@@ -197,7 +197,7 @@ class Card extends Component {
 
     return (
       <div className={`information-card${narrow ? ' narrow' : ''}`}>
-        <Link {...linkProps}> «{title}» </Link> <CompletedIndication complete={complete} />
+        <Link {...linkProps}> «{title}» </Link> <CompletedIndication complete={complete} progress={progress} />
         <div className='content'>
           {
             narrow
