@@ -10,7 +10,7 @@ import CompletedIndication from '../util/CompletedIndication.js'
 
 class VolumeList extends Component {
   render () {
-    const { manga, volumes, title, superTitle, complete, match: { path } } = this.props
+    const { manga, volumes, title, superTitle, complete, progress, match: { path } } = this.props
 
     let data = mangaData
     if (manga.includes('/')) {
@@ -23,7 +23,7 @@ class VolumeList extends Component {
     const volumeList = Object.keys(volumes).map(item => {
       const _item = normalize(item)
 
-      const { complete } = volumes[item]
+      const { complete, progress } = volumes[item]
 
       const { cover } = data.volumes[_item]
       const src = cover || Object.values(data.volumes[_item])[0][0]
@@ -31,6 +31,7 @@ class VolumeList extends Component {
       return {
         path: `${path}/${_item}`,
         complete,
+        progress,
         cover: src,
         text: `հատոր #${_item}`
       }
@@ -40,10 +41,10 @@ class VolumeList extends Component {
       ? (
         <>
           <h2> {superTitle} </h2>
-          <h3> {title} <CompletedIndication complete={complete} /> </h3>
+          <h3> {title} <CompletedIndication complete={complete} progress={progress} /> </h3>
         </>
         )
-      : <h2> {title} <CompletedIndication complete={complete} /> </h2>
+      : <h2> {title} <CompletedIndication complete={complete} progress={progress} /> </h2>
 
     return (
       <>

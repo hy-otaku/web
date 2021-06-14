@@ -13,10 +13,10 @@ import View from '../util/view/View.js'
 class Submanga extends Component {
   render () {
     const { path: self } = this.props.match
-    const { data, title, complete } = this.props
+    const { data, title, complete, progress } = this.props
 
     const list = []
-    for (const { path, title, complete: _complete } of data) {
+    for (const { path, title, complete: _complete, progress: _progress } of data) {
       const { cover } = get(mangaData,
         `${self.split('/')[2]}.${path}` // constructing a string for lodash
       )
@@ -24,6 +24,7 @@ class Submanga extends Component {
       const obj = {
         path: `${self}/${path}`,
         complete: _complete,
+        progress: _progress,
         text: `«${title}»`
       }
 
@@ -36,7 +37,7 @@ class Submanga extends Component {
 
     return (
       <>
-        <h2> {title} <CompletedIndication complete={complete} /></h2>
+        <h2> {title} <CompletedIndication complete={complete} progress={progress} /></h2>
         <View
           data={list}
           defaultCover={`${BASE_URL}/assets/master/manga/submanga/default.png`}

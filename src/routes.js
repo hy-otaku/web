@@ -22,12 +22,12 @@ const mangaRoutes = () => {
     source = source ? `${source}/` : ''
     const routes = []
 
-    for (const { path: mangaPath, volumes, submanga, title, complete } of mangaList) {
+    for (const { path: mangaPath, volumes, submanga, title, complete, progress } of mangaList) {
       const manga = `${source}${mangaPath}`
       const path = `${self}/${manga}`
       const content = volumes
-        ? () => <VolumeList volumes={volumes} manga={manga} title={title} superTitle={superTitle} complete={complete} />
-        : () => <Submanga data={submanga} title={title} complete={complete} />
+        ? () => <VolumeList volumes={volumes} manga={manga} title={title} superTitle={superTitle} complete={complete} progress={progress} />
+        : () => <Submanga data={submanga} title={title} complete={complete} progress={progress} />
 
       routes.push(
         <Route

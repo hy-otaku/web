@@ -11,7 +11,7 @@ class Grid extends Component {
   render () {
     const { data, defaultCover } = this.props
     const cols = []
-    for (const { path, thumbnail, cover, complete, text, callback, name } of data) {
+    for (const { path, thumbnail, cover, complete, progress, text, callback, name } of data) {
       const content = (
         <>
           {
@@ -31,7 +31,7 @@ class Grid extends Component {
               />
               )
         }
-          <span> {text} </span> <CompletedIndication complete={complete} />
+          <span> {text} </span> <CompletedIndication complete={complete} progress={progress} />
 
         </>
       )

@@ -7,10 +7,10 @@ class List extends Component {
   render () {
     const { data } = this.props
     const list = []
-    for (const { path, complete, text, callback, name } of data) {
+    for (const { path, complete, progress, text, callback, name } of data) {
       const content = (
         <>
-          <span> {text} </span> <CompletedIndication complete={complete} />
+          <span> {text} </span> <CompletedIndication complete={complete} progress={progress} />
         </>
       )
 
