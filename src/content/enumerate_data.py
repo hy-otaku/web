@@ -44,7 +44,7 @@ def get_anime():
         return videos
 
     data = {}
-    for channel in ['toradora', 'xxxholic', 'attack_on_titans', 'magi', 'no_game_no_life', 'gurren_lagann', 'sword_art_online', 'kyoukai_no_kanata', 'feature', 'shorts']:
+    for channel in ['gurren_lagann', 'xxxholic', 'sword_art_online', 'magi', 'nogame_nolife', 'kyoukai_no_kanata', 'attack_on_titan', 'toradora', 'feature', 'shorts']:
         data[channel] = get(channel, channel in ['feature', 'shorts'])
 
     return data
