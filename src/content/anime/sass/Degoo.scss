@@ -1,0 +1,21 @@
+@import '../../../sass/index';
+
+
+.degoo-buttons {
+
+    align-items: center;
+    text-align: center;
+
+    .ant-btn {    
+
+        height: 50px;
+    }
+    
+    img {
+            
+        display: inline;
+        height: 40px;
+
+    }
+
+}
