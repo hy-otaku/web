@@ -4,9 +4,11 @@ import { animeData } from '../enumeratedData.js'
 import { animeJson } from '../../constants.js'
 import { normalize } from '../../functions.js'
 
-import View from '../util/view/View.js'
+// import View from '../util/view/View.js'
 import CompletedIndication from '../util/CompletedIndication.js'
 import Custombox from '../util/Custombox.js'
+
+import Degoo from './Degoo'
 
 class Season extends Component {
   constructor (props) {
@@ -50,7 +52,7 @@ class Season extends Component {
   render () {
     const { num, anime } = this.props
     const { item, open } = this.state
-    const { title, channel } = this.jsonData
+    const { title, channel, degoo } = this.jsonData
 
     return (
       <>
@@ -59,7 +61,7 @@ class Season extends Component {
             ? <h2> {title} | եթերաշրջան #{normalize(num)} <CompletedIndication complete={this.season.complete} /> </h2>
             : null
         }
-        <View data={this.season} />
+        <Degoo hash={degoo} />
         <Custombox
           stream
           channel={channel} anime={anime}
