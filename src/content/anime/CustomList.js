@@ -6,7 +6,9 @@ import { animeData } from '../enumeratedData.js'
 import { animeJson } from '../../constants.js'
 
 import Custombox from '../util/Custombox.js'
-import View from '../util/view/View.js'
+// import View from '../util/view/View.js'
+
+import Degoo from './Degoo.js'
 
 class CustomList extends Component {
   constructor (props) {
@@ -38,13 +40,13 @@ class CustomList extends Component {
   }
 
   render () {
-    const { title } = this.jsonData
+    const { title, degoo } = this.jsonData
     const { url, on } = this.state
 
     return (
       <>
         <h2> {title} </h2>
-        <View data={this.data} />
+        <Degoo hash={degoo} />
         <Custombox stream url={url} on={on} onClose={() => this.setState({ on: false })} />
       </>
     )
