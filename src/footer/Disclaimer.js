@@ -65,8 +65,10 @@ class Disclaimer extends Component {
         >
           {this.flatbread()}
         </Modal>
+        <b>ուշադրությո՛ւն, հեղինակային իրավունքների իրավատերեր․ </b>
         կայքում առկա նյութերը բացառապես ճանաչողական դիտման և ընթերցման համար են նախատեսված։
         <span onClick={() => this.setState({ visible: true })} className='clickable highlight'> ավելին․․․ </span>
+
       </div>
     )
   }

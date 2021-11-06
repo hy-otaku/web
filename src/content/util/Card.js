@@ -133,6 +133,20 @@ class Card extends Component {
     )
   }
 
+  originalScans () {
+    const { originalScans } = this.props
+    if (!originalScans) {
+      return null
+    }
+
+    return (
+      <tr>
+        <td>սքաները՝</td>
+        <td>վերցված են <i>{originalScans}</i> կայքից</td>
+      </tr>
+    )
+  }
+
   description () {
     const { description } = this.props
     if (!description) {
@@ -221,6 +235,7 @@ class Card extends Component {
               {this.team()}
               {this.rating()}
               {this.releaseDate()}
+              {this.originalScans()}
 
               <tr />
             </tbody>
