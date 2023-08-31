@@ -6,7 +6,7 @@ import { BASE_URL } from '../../constants.js'
 import './sass/Card.scss'
 
 import CompletedIndication from './CompletedIndication.js'
-import { CommentOutlined, CheckOutlined } from '@ant-design/icons'
+import { CommentOutlined, CheckOutlined, FormatPainterOutlined } from '@ant-design/icons'
 
 class Card extends Component {
   authors () {
@@ -93,7 +93,7 @@ class Card extends Component {
       return null
     }
 
-    const { translators, editors } = team
+    const { translators, editors, graphics } = team
     return (
       <tr>
         <td>հայաֆիկացրին`</td>
@@ -111,6 +111,14 @@ class Card extends Component {
               <div className='icon-container'>
                 <CheckOutlined title='խմբագրություն' className='icon' />
                 <span className='editors'> {editors.sort().join(', ')} </span>
+              </div>
+              )
+            : null}
+          {graphics
+            ? (
+              <div className='icon-container'>
+                <FormatPainterOutlined title='ֆոտոշոփ' className='icon' />
+                <span className='graphics'> {graphics.sort().join(', ')} </span>
               </div>
               )
             : null}
