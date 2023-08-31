@@ -95,7 +95,7 @@ export const mangaJson = [
       1: { }
     },
     chapters: {
-      1: { cover: '05.png' },
+      1: { cover: '05.png' }
     },
     authors: ['Իչիկավա Հարուկո'],
     genres: ['էքշն', 'արկածային', 'ֆենթեզի'],
@@ -288,6 +288,9 @@ export const mangaJson = [
       },
       5: {
         complete: true
+      },
+      6: {
+        complete: true
       }
     },
     chapters: {
@@ -333,7 +336,16 @@ export const mangaJson = [
       40: {},
       41: {},
       42: {},
-      43: {}
+      43: {},
+      44: { cover: '03.png' },
+      45: {},
+      46: {},
+      47: {},
+      48: {},
+      49: {},
+      50: {},
+      51: {},
+      52: { cover: '02.png' }
     },
     authors: ['Ցուգումի Օբա', 'Օբատա Տաքեշի'],
     genres: ['դրամա', 'միստիկա', 'շոնեն', 'գերբնական', 'հոգեբանական'],
