@@ -2696,6 +2696,52 @@ export const mangaData = {
       }
     }
   },
+  'houseki-no-kuni': {
+    volumes: {
+      '01': {
+        '01': ['https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/01.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/02.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/03.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/04.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/05.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/06.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/07.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/08.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/09.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/10.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/11.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/12.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/13.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/14.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/15.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/16.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/17.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/18.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/19.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/20.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/21.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/22.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/23.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/24.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/25.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/26.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/27.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/28.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/29.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/30.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/31.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/32.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/33.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/34.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/35.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/36.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/37.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/38.png',
+          'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/01/39.png'],
+        cover: 'https://raw.githubusercontent.com/hy-otaku/manga-data/master//houseki-no-kuni/01/cover.png'
+      }
+    }
+  },
   'k-on': {
     volumes: {
       '01': {

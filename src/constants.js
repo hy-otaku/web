@@ -80,6 +80,40 @@ export const mangaJson = [
     release: '2001'
   },
 
+  // houseki no kuni
+  {
+    path: 'houseki-no-kuni',
+    title: 'գանձերի երկիր',
+    meta: {
+      en: ['houseki no kuni', 'land of the lustrous'],
+      jp: ['宝石の国'],
+      ru: ['страна самоцветов']
+    },
+    complete: false,
+    progress: true,
+    volumes: {
+      1: { }
+    },
+    chapters: {
+      1: { cover: '05.png' },
+    },
+    authors: ['Իչիկավա Հարուկո'],
+    genres: ['էքշն', 'արկածային', 'ֆենթեզի'],
+    team: {
+      translators: ['AniAniAni'],
+      graphics: ['AniAniAni', 'tado-mi']
+    },
+    originalScans: 'readmanga.live',
+    description: `
+
+      «Գանձերի երկիրը» մանգայի իրադարձությունները տեղի են ունենում հեռավոր ապագայում, որտեղ երկնաքարերը վեց անգամ հարվածել են Երկիր
+      մոլորակին՝ այն քայքայելով։ Հողերից միայն մի ծովափ է մնացել, մինչդեռ գրեթե ամբողջ օրգանական կյանքը՝ ոչնչացել։ Անհաշվելի ժամանակ անց,
+      զգայական էակների մի նոր ռասա է ձևավորվել։ Նրանք անմահ, մարդակերպ թանկարժեք քարեր են։
+
+    `,
+    release: '2012'
+  },
+
   // kuroko no basuke
   {
     path: 'kuroko-no-baske',
